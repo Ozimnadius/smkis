@@ -1,0 +1,32 @@
+[
+  {
+    "img": "/upload/images/catalog-items/1.jpg",
+    "name": "Временная анкерная линия",
+    "price": "47 000 ₽",
+    "category": "CROSS LINE"
+  },
+  {
+    "img": "/upload/images/catalog-items/2.jpg",
+    "name": "Анкерный столбик",
+    "price": "18 000 ₽",
+    "category": "BASC"
+  },
+  {
+    "img": "/upload/images/catalog-items/3.jpg",
+    "name": "Анкерная точка",
+    "price": "4 950 ₽",
+    "category": "L-BRUS"
+  },
+  {
+    "img": "https://smkis.ru/wp-content/uploads/2021/12/opora_kontsevaya-891x2048.jpg",
+    "name": "Временная анкерная линия",
+    "price": "47 000 ₽",
+    "category": "CROSS LINE"
+  },
+  {
+    "img": "https://smkis.ru/wp-content/uploads/2022/11/yuntaflex_markirovka-1024x819.png",
+    "name": "Анкерный столбик",
+    "price": "18 000 ₽",
+    "category": "BASC"
+  }
+]

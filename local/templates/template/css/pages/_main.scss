@@ -1,0 +1,66 @@
+@use "../helpers" as *;
+
+.main {
+
+  &__block {
+    padding-block: 120px;
+    border-radius: 56px;
+    @include xlg-block{
+      padding-block: 110px;
+      border-radius: 36px;
+    }
+    @include lg-block{
+      padding-block: 100px;
+    }
+    @include md-block{
+      padding-block: 90px;
+      border-radius: 16px;
+    }
+    @include xs-block{
+      padding-block: 80px;
+      border-radius: 0;
+    }
+    &--bg-secondary {
+      background: var(--bg-secondary, #F4F4F5);
+    }
+  }
+
+  &__top {
+    margin-top: 150px;
+    margin-inline: 70px;
+    @include xlg-block {
+      margin-top: 90px;
+      margin-inline: 30px;
+    }
+    @include lg-block {
+      margin-top: 120px;
+    }
+    @include md-block {
+      background: var(--bg-secondary, #F4F4F5);
+      margin: 0;
+      padding-top: 170px;
+      padding-inline: 45px;
+    }
+    @include xs-block {
+      padding-top: 160px;
+      padding-inline: 20px;
+    }
+  }
+
+  &__zones {
+    margin-top: 50px;
+  }
+
+  &__catalog,
+  &__about,
+  &__block,
+  &__applications{
+    margin-top: 100px;
+    @include md-block {
+      margin-top: 90px;
+    }
+    @include xs-block {
+      margin-top: 80px;
+    }
+  }
+}

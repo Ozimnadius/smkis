@@ -1,0 +1,36 @@
+@use "../helpers/index" as *;
+
+.main-application {
+  border-radius: 24px;
+  background: var(--bg-primary, #FFF);
+  color: var(--text-primary, #15182A);
+  overflow: hidden;
+  display: grid;
+
+
+  &--blue {
+    background: var(--bg-accent, #005AFF);
+    color: var(--text-inverted, #FFF);
+  }
+
+  &__info {
+    padding: 50px 96px 26px 40px;
+    display: grid;
+    gap: 16px;
+    position: relative;
+  }
+
+  &__text {
+    max-width: 25ch;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

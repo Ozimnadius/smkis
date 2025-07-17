@@ -1,0 +1,77 @@
+@use "../helpers/index" as *;
+
+.catalog-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include hover {
+    .catalog-item {
+      &__img {
+        background: rgba(#15182A, 0.1);
+      }
+
+      &__look {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+
+  }
+
+  &__img {
+    aspect-ratio: 498/556;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: var(--bg-secondary, #F4F4F5);
+    @include tr;
+
+    img {
+      max-height: 100%;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__look {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: var(--bg-inverted, #15182A);
+    opacity: 0;
+    pointer-events: none;
+    @include tr;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 'name price' 'category category';
+    gap: 8px 10px;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__price {
+    grid-area: price;
+  }
+
+  &__category {
+    grid-area: category;
+  }
+
+}

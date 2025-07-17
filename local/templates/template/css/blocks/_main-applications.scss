@@ -1,0 +1,19 @@
+@use "../helpers/index" as *;
+
+.main-applications {
+
+  &__title {
+    text-align: center;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__grid {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}

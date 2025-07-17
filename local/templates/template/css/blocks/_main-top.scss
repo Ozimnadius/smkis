@@ -1,0 +1,174 @@
+@use "../helpers/index" as *;
+
+.main-top {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  position: relative;
+  @include xlg-block {
+    gap: 30px;
+  }
+  @include lg-block {
+    align-items: start;
+  }
+  @include md-block {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 'title yt' 'title line';
+    padding-bottom: 182px;
+  }
+  @include xs-block {
+    grid-template-columns: 1fr 130px;
+    grid-template-areas: 'title title' 'line yt';
+    align-items: center;
+    gap: 0 24px;
+    padding-bottom: 280px;
+  }
+
+  &__title {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    @include md-block {
+      grid-area: title;
+    }
+    @include xs-block{
+      margin-bottom: -30px;
+    }
+  }
+
+  &__left {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  &__word-2 {
+    margin-left: 3.7ch;
+    @include xs-block{
+      margin-left: 0;
+    }
+  }
+
+  &__word-3 {
+    padding-left: 2ch;
+    position: relative;
+    @include lg-block {
+      padding-left: 2.5ch;
+    }
+    @include md-block {
+      padding-left: 2.8ch;
+    }
+    @include xs-block{
+      padding-left: 0;
+      position: static;
+    }
+  }
+
+  &__left {
+    position: absolute;
+    bottom: 50%;
+    translate: 0 50%;
+    left: 0;
+    max-width: 12ch;
+
+    @include md-block {
+      translate: initial;
+      bottom: initial;
+      top: -15px;
+      font-size: 14px;
+    }
+    @include xs-block{
+      top: initial;
+      bottom: calc(100% + 9px);
+    }
+  }
+
+  &__right {
+    position: absolute;
+    left: calc(100% + 60px);
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    width: 100vw;
+    @include xlg-block {
+      gap: 50px;
+    }
+    @include lg-block {
+      left: calc(100% + 40px);
+    }
+    @include md-block {
+      bottom: 0;
+      top: calc(100% + 62px);
+      left: 0;
+    }
+    @include xs-block{
+      top: initial;
+      bottom: 80px;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 15px;
+    }
+  }
+
+  &__desc{
+    @include xs-block{
+        br{
+          display: none;
+        }
+    }
+  }
+
+  &__btn {
+    padding-inline: 60px;
+    @include xlg-block {
+      padding-inline: 45px;
+    }
+  }
+
+  &__line {
+    height: 14px;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    @include lg-block {
+      margin-left: -70px;
+      translate: 0 37px;
+    }
+    @include md-block {
+      grid-area: line;
+      translate: 0 -20px;
+      margin-left: -15ch;
+    }
+    @include xs-block{
+      translate: initial;
+      margin-left: 0;
+    }
+
+    svg {
+      position: absolute;
+      right: 0;
+      top: 0;
+      max-width: initial;
+    }
+  }
+
+  &__yt {
+    flex-shrink: 0;
+    @include xlg-block {
+      width: 144px;
+    }
+    @include lg-block {
+      translate: 0 -30px;
+    }
+    @include md-block {
+      grid-area: yt;
+      translate: initial;
+      width: 130px;
+    }
+  }
+}
