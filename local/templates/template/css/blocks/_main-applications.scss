@@ -9,11 +9,20 @@
   &__subtitle {
     text-align: center;
     margin-bottom: 40px;
+    @include lg-block{
+      margin-bottom: 30px;
+    }
+    @include xs-block{
+      margin-bottom: 20px;
+    }
   }
 
   &__grid {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    @include md-block{
+        grid-template-columns: 100%;
+    }
   }
 }

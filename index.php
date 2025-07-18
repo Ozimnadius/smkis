@@ -240,7 +240,9 @@
               <div class="main-selection__text">
                 Изготовлен из нержавеющей стали. Используется
               </div>
-              <a href="/" class="main-selection__btn btn btn--large btn--black">
+              <a href="/"
+                 class="main-selection__btn btn btn--large btn--black"
+              >
                 Начать
               </a>
             </div>
@@ -251,16 +253,32 @@
               <div class="main-applications__subtitle subtitle">Изготовлен из нержавеющей стали. Используется</div>
               <div class="main-applications__grid">
                 <div class="main-applications__col">
-                  <a href="/" class="main-application main-application--blue">
+                  <a href="/"
+                     class="main-application main-application--blue"
+                  >
                     <span class="main-application__info">
                       <span class="main-application__title h5">Планировщик кровли</span>
                       <span class="main-application__text">
                         Изготовлен из нержавеющей стали. Используется
                       </span>
                       <span class="main-application__arrow">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="25" cy="25" r="24" stroke="#DDDEE2" stroke-width="1.4"/>
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M30.9062 25L23.2875 17.3813C22.9458 17.0396 22.3918 17.0396 22.0501 17.3813C21.7084 17.723 21.7084 18.277 22.0501 18.6187L28.4314 25L22.0501 31.3813C21.7084 31.723 21.7084 32.277 22.0501 32.6187C22.3918 32.9604 22.9458 32.9604 23.2875 32.6187L30.9062 25Z" fill="white"/>
+                        <svg width="50"
+                             height="50"
+                             viewBox="0 0 50 50"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="25"
+                                  cy="25"
+                                  r="24"
+                                  stroke="#DDDEE2"
+                                  stroke-width="1.4"
+                          />
+                          <path fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M30.9062 25L23.2875 17.3813C22.9458 17.0396 22.3918 17.0396 22.0501 17.3813C21.7084 17.723 21.7084 18.277 22.0501 18.6187L28.4314 25L22.0501 31.3813C21.7084 31.723 21.7084 32.277 22.0501 32.6187C22.3918 32.9604 22.9458 32.9604 23.2875 32.6187L30.9062 25Z"
+                                fill="white"
+                          />
                         </svg>
                       </span>
                     </span>
@@ -276,7 +294,9 @@
                   </a>
                 </div>
                 <div class="main-applications__col">
-                  <a href="/calculator/" class="main-application">
+                  <a href="/calculator/"
+                     class="main-application"
+                  >
                     <span class="main-application__info">
                       <span class="main-application__title h5">
                         Калькулятор
@@ -285,9 +305,23 @@
                         Изготовлен из нержавеющей стали. Используется
                       </span>
                       <span class="main-application__arrow">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="25" cy="25" r="24" stroke="#DDDEE2" stroke-width="1.4"/>
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M30.9062 25L23.2875 17.3813C22.9458 17.0396 22.3918 17.0396 22.0501 17.3813C21.7084 17.723 21.7084 18.277 22.0501 18.6187L28.4314 25L22.0501 31.3813C21.7084 31.723 21.7084 32.277 22.0501 32.6187C22.3918 32.9604 22.9458 32.9604 23.2875 32.6187L30.9062 25Z" fill="#15182A"/>
+                        <svg width="50"
+                             height="50"
+                             viewBox="0 0 50 50"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="25"
+                                  cy="25"
+                                  r="24"
+                                  stroke="#DDDEE2"
+                                  stroke-width="1.4"
+                          />
+                          <path fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M30.9062 25L23.2875 17.3813C22.9458 17.0396 22.3918 17.0396 22.0501 17.3813C21.7084 17.723 21.7084 18.277 22.0501 18.6187L28.4314 25L22.0501 31.3813C21.7084 31.723 21.7084 32.277 22.0501 32.6187C22.3918 32.9604 22.9458 32.9604 23.2875 32.6187L30.9062 25Z"
+                                fill="#15182A"
+                          />
                         </svg>
                       </span>
                     </span>
@@ -305,7 +339,10 @@
               </div>
             </div>
           </section>
-          <section class="main__projects"></section>
+          <section class="main__projects">
+            <? component('slider-projects',['title'=>'Реализованные проекты с помощью наших анкерных устройстве',
+              'desc'=>'Изготовлен из нержавеющей стали. Используется'],'/src/data/slider-projects.json') ?>
+          </section>
         </div>
       </div>
     </div>

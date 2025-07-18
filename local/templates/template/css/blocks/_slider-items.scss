@@ -16,6 +16,7 @@
   &__nav {
     display: flex;
     gap: 24px;
+    flex-shrink: 0;
     @include md-block{
         gap: 14px;
     }
@@ -25,6 +26,7 @@
   }
 
   &__btn {
+    flex-shrink: 0;
     @include tr;
     @include hover {
       color: var(--icon-accent-hover);

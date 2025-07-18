@@ -1,0 +1,81 @@
+@use "../helpers/index" as *;
+
+.slider-projects {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: end;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    max-width: 25ch;
+  }
+
+  &__bottom {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    width: 697px;
+
+    & > * {
+      height: 100%;
+    }
+  }
+
+  &__all {
+    border: 1px solid var(--border-secondary, #15182A);
+  }
+}
+
+.slider-project {
+  display: flex;
+
+
+  &__img {
+    aspect-ratio: 610/390;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #F5F5F5;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13, 15, 40, 0.70) 0%, rgba(217, 217, 217, 0.00) 61.16%);
+      border-radius: 24px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(1.1);
+    }
+  }
+
+  &__info {
+    position: absolute;
+    z-index: 2;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    display: grid;
+    gap: 16px;
+  }
+
+  &__category {
+    color: var(--text-inverted, #FFF);
+  }
+
+  &__name {
+    color: var(--text-inverted, #FFF);
+    max-width: 21ch;
+  }
+}

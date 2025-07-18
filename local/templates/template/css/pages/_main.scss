@@ -54,7 +54,8 @@
   &__catalog,
   &__about,
   &__block,
-  &__applications{
+  &__applications,
+  &__projects{
     margin-top: 100px;
     @include md-block {
       margin-top: 90px;

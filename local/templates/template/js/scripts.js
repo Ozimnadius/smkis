@@ -40,6 +40,29 @@ function initSliders() {
       }
     });
   });
+
+
+  document.querySelectorAll('.slider-projects').forEach(e => {
+    const swiper = new Swiper(e.querySelector('.swiper'), {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      loop: true,
+      speed: 700,
+      navigation: {
+        nextEl: e.querySelector('.slider-projects__next'),
+        prevEl: e.querySelector('.slider-projects__prev'),
+      },
+      /*autoplay: {
+          delay: 5000,
+      },*/
+      breakpoints: {
+        // when window width is >= 768px
+        768: {
+          spaceBetween: 20
+        }
+      }
+    });
+  });
 }
 
 function initValidators() {
