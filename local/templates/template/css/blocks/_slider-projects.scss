@@ -3,24 +3,58 @@
 .slider-projects {
 
   &__top {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 20px;
     align-items: end;
     margin-bottom: 40px;
+    @include md-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
     margin-bottom: 30px;
     max-width: 25ch;
+    @include md-block {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    @include md-block {
+      max-width: 35ch;
+    }
+  }
+
+  &__top-right {
+    @include md-block {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    @include xs-block {
+      display: none;
+    }
   }
 
   &__bottom {
     margin-bottom: 40px;
+    @include md-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
     width: 697px;
+    @include md-block {
+      width: 502px;
+    }
+    @include xs-block {
+      width: 320px;
+    }
 
     & > * {
       height: 100%;
@@ -35,12 +69,21 @@
 .slider-project {
   display: flex;
 
-
   &__img {
     aspect-ratio: 610/390;
     border-radius: 24px;
     overflow: hidden;
     background: #F5F5F5;
+    @include xlg-block {
+      aspect-ratio: 628/341;
+    }
+    @include md-block {
+      aspect-ratio: 502/555;
+      border-radius: 12px;
+    }
+    @include xs-block {
+      aspect-ratio: 320/414;
+    }
 
     &:before {
       content: '';
@@ -50,6 +93,12 @@
       inset: 0;
       background: linear-gradient(180deg, rgba(13, 15, 40, 0.70) 0%, rgba(217, 217, 217, 0.00) 61.16%);
       border-radius: 24px;
+      @include md-block {
+        border-radius: 12px;
+      }
+      @include xs-block {
+        rotate: 180deg;
+      }
     }
 
     img {
@@ -68,6 +117,17 @@
     right: 40px;
     display: grid;
     gap: 16px;
+    @include md-block {
+      top: 50px;
+      left: 30px;
+      right: 30px;
+    }
+    @include xs-block {
+      top: initial;
+      bottom: 30px;
+      left: 20px;
+      right: 20px;
+    }
   }
 
   &__category {
@@ -77,5 +137,11 @@
   &__name {
     color: var(--text-inverted, #FFF);
     max-width: 21ch;
+    @include xlg-block {
+      font-size: 30px;
+    }
+    @include md-block {
+      font-size: 26px;
+    }
   }
 }
