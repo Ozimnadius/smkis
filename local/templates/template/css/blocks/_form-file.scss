@@ -1,0 +1,68 @@
+@use "../helpers/index" as *;
+
+.form-file {
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.50);
+  background: #337BFF;
+  width: 100%;
+  height: 286px;
+  position: relative;
+  @include tr;
+
+  &.active {
+    border: 1px dashed rgba(255, 255, 255, 1);
+  }
+
+  &__input{
+    display: none;
+  }
+
+  &__sub {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  &__btn {
+    width: 200px;
+  }
+
+  &__info{
+    position: absolute;
+    inset: 1px;
+    border-radius: 16px;
+    background: #337BFF;
+    opacity: 0;
+    pointer-events: none;
+    padding: 30px;
+    @include tr;
+
+    &.active{
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__list{
+    display:grid;
+    gap: 10px;
+  }
+
+  &__clear{
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    svg{
+      path{
+        fill: currentColor;
+      }
+    }
+  }
+}

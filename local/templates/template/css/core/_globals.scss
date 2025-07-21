@@ -126,7 +126,7 @@ h6, .h6 {
   color: var(--text-secondary);
 }
 
-.text-main{
+.text-main {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -155,6 +155,22 @@ button {
 
 .page {
   overflow: hidden;
+
+  &__main {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__feedback {
+    display: block;
+    margin-top: -60px;
+    background: var(--bg-accent, #005AFF);
+    position: relative;
+    z-index: 0;
+    padding-top: 180px;
+    padding-bottom: 120px;
+  }
 }
 
 .icon-fill {
@@ -203,7 +219,9 @@ button {
   display: flex;
   padding-inline: 27px;
   justify-content: center;
+  cursor: pointer;
   @include tr;
+
 
   &--large {
     padding-block: 18px;
@@ -270,18 +288,21 @@ button {
 
     @media (any-hover: hover) {
       &:hover {
+        color: var(--icon-on-color);
         background: var(--bg-inverted-hover);
         border-color: var(--bg-inverted-hover);
       }
     }
 
     &:active {
+      color: var(--icon-on-color);
       background: var(--bg-inverted-active);
       border-color: var(--bg-inverted-active);
     }
 
     @media (any-hover: none) {
       &:active {
+        color: var(--icon-on-color);
         background: var(--bg-inverted-hover);
         border-color: var(--bg-inverted-hover);
       }
@@ -317,7 +338,7 @@ button {
 
 }
 
-.btn-play{
+.btn-play {
   display: flex;
   width: 128px;
   height: 128px;

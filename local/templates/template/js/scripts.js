@@ -1,6 +1,10 @@
 window.addEventListener('DOMContentLoaded', function () {
 
   new Events();
+  document.querySelectorAll('.form-file').forEach(function (element) {
+    new FormDrop(element.closest('form'));
+  });
+
 
   initSliders();
   initValidators();
@@ -66,12 +70,53 @@ function initSliders() {
 }
 
 function initValidators() {
-
+  document.querySelectorAll('.form').forEach(form => {
+    new JustValidate(
+      form,
+      {
+        errorFieldCssClass: 'form__error-input',
+        errorLabelCssClass: 'form__error-label'
+      }
+    ).addField('input[type="email"]', [
+      {
+        rule: 'required',
+        errorMessage: 'Введите Email',
+      },
+      {
+        rule: 'email',
+        errorMessage: 'Некорректный email',
+      },
+    ]).addField('input[name="accept"]', [
+      {
+        rule: 'required',
+        errorMessage: 'Нам нужно Ваше согласие, чтобы оформить заявку',
+      }
+    ]);
+  });
 }
 
-function initOther(){
+function initOther() {
   setInlinePadding();
   window.addEventListener('resize', setInlinePadding);
+
+
+  /*const dropArea = document.querySelector('.form-file');
+  dropArea.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropArea.classList.add('active');
+  });
+
+  dropArea.addEventListener('dragleave', () => {
+    dropArea.classList.remove('active');
+  });
+
+  dropArea.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropArea.classList.remove('active');
+    const files = e.dataTransfer.files;
+    console.log('Файлы:', files);
+  });*/
+
 }
 
 class Events {
@@ -145,6 +190,67 @@ class Events {
     });
   }
 
+}
+
+class FormDrop {
+  constructor(element) {
+    this.root = element;
+
+    this.dropArea = this.root.querySelector('.form-file__label');
+    this.dropInput = this.root.querySelector('.form-file__input');
+    this.fileInfo = this.root.querySelector('.form-file__info');
+    this.fileList = this.root.querySelector('.form-file__list');
+    this.fileClear = this.root.querySelector('.form-file__clear');
+    this.dataTransfer = new DataTransfer();
+
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    this.dropArea.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      this.dropArea.classList.add('active');
+    });
+
+    this.dropArea.addEventListener('dragleave', () => {
+      this.dropArea.classList.remove('active');
+    });
+
+    this.dropArea.addEventListener('drop', (e) => {
+      e.preventDefault();
+      this.dropArea.classList.remove('active');
+      this.appendFiles(e.dataTransfer.files)
+    });
+
+    this.dropInput.addEventListener('change', this.showFiles);
+
+    this.fileClear.addEventListener('click', this.clearFiles);
+  }
+
+  appendFiles(files){
+    Array.from(files).forEach((file) => {
+      this.dataTransfer.items.add(file);
+    });
+    this.dropInput.files = this.dataTransfer.files;
+    this.showFiles();
+  }
+
+  showFiles=()=>{
+    this.fileList.innerHTML = '';
+    this.fileInfo.classList.add('active');
+    Array.from(this.dropInput.files).forEach((file) => {
+      const li = document.createElement('span');
+      li.appendChild(document.createTextNode(file.name));
+      this.fileList.appendChild(li);
+    });
+  }
+
+  clearFiles=()=> {
+    this.dataTransfer = new DataTransfer(); // сброс
+    this.dropInput.files = this.dataTransfer.files;
+    this.fileList.innerHTML = '';
+    this.fileInfo.classList.remove('active');
+  }
 }
 
 function setInlinePadding() {

@@ -1,0 +1,25 @@
+@use "../helpers/index" as *;
+
+.form-accept{
+
+  &__input{
+    display: none;
+    &:checked+.form-accept__fake{
+      path{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__fake{
+    cursor: pointer;
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+
+    path{
+      @include tr;
+      opacity: 0;
+    }
+  }
+}
