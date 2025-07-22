@@ -188,13 +188,594 @@
       </section>
       <section class="main__zones">
         <div class="main-zones">
-          <img
-            src="/upload/images/main-zones/img.jpg"
-            width="1920"
-            height="1007"
-            alt=""
-            loading="lazy"
-          />
+          <div class="main-zones__img">
+            <img
+              src="/upload/images/main-zones/img.jpg"
+              width="1920"
+              height="1007"
+              alt=""
+              loading="lazy"
+            />
+            <div class="main-zones__items">
+              <a href="/"
+                 class="main-zones__item"
+              >
+              <span class="main-zones__item-bg">
+                  <img
+                    src="/upload/images/main-zones/bg1.png"
+                    width="1920"
+                    height="1080"
+                    alt="Кровля из металл. профиля"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="main-zones__item-wrapper">
+                <span class="main-zones__point">
+                <svg width="68"
+                     height="76"
+                     viewBox="0 0 68 76"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+<g filter="url(#filter0_d_243_11498)">
+<foreignObject x="5"
+               y="-7.28418"
+               width="58"
+               height="66.2842"
+><div xmlns="http://www.w3.org/1999/xhtml"
+      style="backdrop-filter:blur(4.5px);clip-path:url(#bgblur_0_243_11498_clip_path);height:100%;width:100%"
+  ></div></foreignObject><path data-figma-bg-blur-radius="9"
+                               d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z"
+                               fill="white"
+  />
+<circle cx="34.0015"
+        cy="30.0005"
+        r="14.7827"
+        fill="#15182A"
+/>
+</g>
+<defs>
+<filter id="filter0_d_243_11498"
+        x="0.499999"
+        y="0.215819"
+        width="67"
+        height="75.2842"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+>
+<feFlood flood-opacity="0"
+         result="BackgroundImageFix"
+/>
+<feColorMatrix in="SourceAlpha"
+               type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+               result="hardAlpha"
+/>
+<feOffset dy="12" />
+<feGaussianBlur stdDeviation="6.75" />
+<feComposite in2="hardAlpha"
+             operator="out"
+/>
+<feColorMatrix type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+/>
+<feBlend mode="normal"
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_243_11498"
+/>
+<feBlend mode="normal"
+         in="SourceGraphic"
+         in2="effect1_dropShadow_243_11498"
+         result="shape"
+/>
+</filter>
+<clipPath id="bgblur_0_243_11498_clip_path"
+          transform="translate(-5 7.28418)"
+><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
+</clipPath></defs>
+</svg>
+                <span class="main-zones__label">
+                Кровля из металл. профиля
+                <svg width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+                <path d="M19.4969 12.6364C19.8484 12.2849 19.8484 11.7151 19.4969 11.3636L13.7693 5.63604C13.4179 5.28457 12.848 5.28457 12.4965 5.63604C12.1451 5.98751 12.1451 6.55736 12.4965 6.90883L17.5877 12L12.4965 17.0912C12.1451 17.4426 12.1451 18.0125 12.4965 18.364C12.848 18.7154 13.4179 18.7154 13.7693 18.364L19.4969 12.6364ZM4.28906 12V12.9H18.8605V12V11.1H4.28906V12Z"
+                      fill="black"
+                />
+                </svg>
+              </span>
+              </span>
+              </span>
+              </a>
+              <a href="/"
+                 class="main-zones__item"
+              >
+              <span class="main-zones__item-bg">
+                  <img
+                    src="/upload/images/main-zones/bg2.png"
+                    width="1920"
+                    height="1080"
+                    alt="Плоская кровля"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="main-zones__item-wrapper">
+              <span class="main-zones__point">
+                <svg width="68"
+                     height="76"
+                     viewBox="0 0 68 76"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+<g filter="url(#filter0_d_243_11498)">
+<foreignObject x="5"
+               y="-7.28418"
+               width="58"
+               height="66.2842"
+><div xmlns="http://www.w3.org/1999/xhtml"
+      style="backdrop-filter:blur(4.5px);clip-path:url(#bgblur_0_243_11498_clip_path);height:100%;width:100%"
+  ></div></foreignObject><path data-figma-bg-blur-radius="9"
+                               d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z"
+                               fill="white"
+  />
+<circle cx="34.0015"
+        cy="30.0005"
+        r="14.7827"
+        fill="#15182A"
+/>
+</g>
+<defs>
+<filter id="filter0_d_243_11498"
+        x="0.499999"
+        y="0.215819"
+        width="67"
+        height="75.2842"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+>
+<feFlood flood-opacity="0"
+         result="BackgroundImageFix"
+/>
+<feColorMatrix in="SourceAlpha"
+               type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+               result="hardAlpha"
+/>
+<feOffset dy="12" />
+<feGaussianBlur stdDeviation="6.75" />
+<feComposite in2="hardAlpha"
+             operator="out"
+/>
+<feColorMatrix type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+/>
+<feBlend mode="normal"
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_243_11498"
+/>
+<feBlend mode="normal"
+         in="SourceGraphic"
+         in2="effect1_dropShadow_243_11498"
+         result="shape"
+/>
+</filter>
+<clipPath id="bgblur_0_243_11498_clip_path"
+          transform="translate(-5 7.28418)"
+><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
+</clipPath></defs>
+</svg>
+                <span class="main-zones__label">
+                Плоская кровля
+                <svg width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+                <path d="M19.4969 12.6364C19.8484 12.2849 19.8484 11.7151 19.4969 11.3636L13.7693 5.63604C13.4179 5.28457 12.848 5.28457 12.4965 5.63604C12.1451 5.98751 12.1451 6.55736 12.4965 6.90883L17.5877 12L12.4965 17.0912C12.1451 17.4426 12.1451 18.0125 12.4965 18.364C12.848 18.7154 13.4179 18.7154 13.7693 18.364L19.4969 12.6364ZM4.28906 12V12.9H18.8605V12V11.1H4.28906V12Z"
+                      fill="black"
+                />
+                </svg>
+              </span>
+              </span>
+              </span>
+              </a>
+              <a href="/"
+                 class="main-zones__item"
+              >
+              <span class="main-zones__item-bg">
+                  <img
+                    src="/upload/images/main-zones/bg3.png"
+                    width="1920"
+                    height="1080"
+                    alt="Фальцевая кровля"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="main-zones__item-wrapper">
+              <span class="main-zones__point">
+                <svg width="68"
+                     height="76"
+                     viewBox="0 0 68 76"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+<g filter="url(#filter0_d_243_11498)">
+<foreignObject x="5"
+               y="-7.28418"
+               width="58"
+               height="66.2842"
+><div xmlns="http://www.w3.org/1999/xhtml"
+      style="backdrop-filter:blur(4.5px);clip-path:url(#bgblur_0_243_11498_clip_path);height:100%;width:100%"
+  ></div></foreignObject><path data-figma-bg-blur-radius="9"
+                               d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z"
+                               fill="white"
+  />
+<circle cx="34.0015"
+        cy="30.0005"
+        r="14.7827"
+        fill="#15182A"
+/>
+</g>
+<defs>
+<filter id="filter0_d_243_11498"
+        x="0.499999"
+        y="0.215819"
+        width="67"
+        height="75.2842"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+>
+<feFlood flood-opacity="0"
+         result="BackgroundImageFix"
+/>
+<feColorMatrix in="SourceAlpha"
+               type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+               result="hardAlpha"
+/>
+<feOffset dy="12" />
+<feGaussianBlur stdDeviation="6.75" />
+<feComposite in2="hardAlpha"
+             operator="out"
+/>
+<feColorMatrix type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+/>
+<feBlend mode="normal"
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_243_11498"
+/>
+<feBlend mode="normal"
+         in="SourceGraphic"
+         in2="effect1_dropShadow_243_11498"
+         result="shape"
+/>
+</filter>
+<clipPath id="bgblur_0_243_11498_clip_path"
+          transform="translate(-5 7.28418)"
+><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
+</clipPath></defs>
+</svg>
+                <span class="main-zones__label">
+                Фальцевая кровля
+                <svg width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+                <path d="M19.4969 12.6364C19.8484 12.2849 19.8484 11.7151 19.4969 11.3636L13.7693 5.63604C13.4179 5.28457 12.848 5.28457 12.4965 5.63604C12.1451 5.98751 12.1451 6.55736 12.4965 6.90883L17.5877 12L12.4965 17.0912C12.1451 17.4426 12.1451 18.0125 12.4965 18.364C12.848 18.7154 13.4179 18.7154 13.7693 18.364L19.4969 12.6364ZM4.28906 12V12.9H18.8605V12V11.1H4.28906V12Z"
+                      fill="black"
+                />
+                </svg>
+              </span>
+              </span>
+              </span>
+              </a>
+              <a href="/"
+                 class="main-zones__item"
+              >
+              <span class="main-zones__item-bg">
+                  <img
+                    src="/upload/images/main-zones/bg4.png"
+                    width="1920"
+                    height="1080"
+                    alt="Лестницы"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="main-zones__item-wrapper">
+              <span class="main-zones__point">
+                <svg width="68"
+                     height="76"
+                     viewBox="0 0 68 76"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+<g filter="url(#filter0_d_243_11498)">
+<foreignObject x="5"
+               y="-7.28418"
+               width="58"
+               height="66.2842"
+><div xmlns="http://www.w3.org/1999/xhtml"
+      style="backdrop-filter:blur(4.5px);clip-path:url(#bgblur_0_243_11498_clip_path);height:100%;width:100%"
+  ></div></foreignObject><path data-figma-bg-blur-radius="9"
+                               d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z"
+                               fill="white"
+  />
+<circle cx="34.0015"
+        cy="30.0005"
+        r="14.7827"
+        fill="#15182A"
+/>
+</g>
+<defs>
+<filter id="filter0_d_243_11498"
+        x="0.499999"
+        y="0.215819"
+        width="67"
+        height="75.2842"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+>
+<feFlood flood-opacity="0"
+         result="BackgroundImageFix"
+/>
+<feColorMatrix in="SourceAlpha"
+               type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+               result="hardAlpha"
+/>
+<feOffset dy="12" />
+<feGaussianBlur stdDeviation="6.75" />
+<feComposite in2="hardAlpha"
+             operator="out"
+/>
+<feColorMatrix type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+/>
+<feBlend mode="normal"
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_243_11498"
+/>
+<feBlend mode="normal"
+         in="SourceGraphic"
+         in2="effect1_dropShadow_243_11498"
+         result="shape"
+/>
+</filter>
+<clipPath id="bgblur_0_243_11498_clip_path"
+          transform="translate(-5 7.28418)"
+><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
+</clipPath></defs>
+</svg>
+                <span class="main-zones__label">
+                Лестницы
+                <svg width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+                <path d="M19.4969 12.6364C19.8484 12.2849 19.8484 11.7151 19.4969 11.3636L13.7693 5.63604C13.4179 5.28457 12.848 5.28457 12.4965 5.63604C12.1451 5.98751 12.1451 6.55736 12.4965 6.90883L17.5877 12L12.4965 17.0912C12.1451 17.4426 12.1451 18.0125 12.4965 18.364C12.848 18.7154 13.4179 18.7154 13.7693 18.364L19.4969 12.6364ZM4.28906 12V12.9H18.8605V12V11.1H4.28906V12Z"
+                      fill="black"
+                />
+                </svg>
+              </span>
+              </span>
+              </span>
+              </a>
+              <a href="/"
+                 class="main-zones__item"
+              >
+              <span class="main-zones__item-bg">
+                  <img
+                    src="/upload/images/main-zones/bg5.png"
+                    width="1920"
+                    height="1080"
+                    alt="Эстакада"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="main-zones__item-wrapper">
+              <span class="main-zones__point">
+                <svg width="68"
+                     height="76"
+                     viewBox="0 0 68 76"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+<g filter="url(#filter0_d_243_11498)">
+<foreignObject x="5"
+               y="-7.28418"
+               width="58"
+               height="66.2842"
+><div xmlns="http://www.w3.org/1999/xhtml"
+      style="backdrop-filter:blur(4.5px);clip-path:url(#bgblur_0_243_11498_clip_path);height:100%;width:100%"
+  ></div></foreignObject><path data-figma-bg-blur-radius="9"
+                               d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z"
+                               fill="white"
+  />
+<circle cx="34.0015"
+        cy="30.0005"
+        r="14.7827"
+        fill="#15182A"
+/>
+</g>
+<defs>
+<filter id="filter0_d_243_11498"
+        x="0.499999"
+        y="0.215819"
+        width="67"
+        height="75.2842"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+>
+<feFlood flood-opacity="0"
+         result="BackgroundImageFix"
+/>
+<feColorMatrix in="SourceAlpha"
+               type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+               result="hardAlpha"
+/>
+<feOffset dy="12" />
+<feGaussianBlur stdDeviation="6.75" />
+<feComposite in2="hardAlpha"
+             operator="out"
+/>
+<feColorMatrix type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+/>
+<feBlend mode="normal"
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_243_11498"
+/>
+<feBlend mode="normal"
+         in="SourceGraphic"
+         in2="effect1_dropShadow_243_11498"
+         result="shape"
+/>
+</filter>
+<clipPath id="bgblur_0_243_11498_clip_path"
+          transform="translate(-5 7.28418)"
+><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
+</clipPath></defs>
+</svg>
+                <span class="main-zones__label">
+                Эстакада
+                <svg width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+                <path d="M19.4969 12.6364C19.8484 12.2849 19.8484 11.7151 19.4969 11.3636L13.7693 5.63604C13.4179 5.28457 12.848 5.28457 12.4965 5.63604C12.1451 5.98751 12.1451 6.55736 12.4965 6.90883L17.5877 12L12.4965 17.0912C12.1451 17.4426 12.1451 18.0125 12.4965 18.364C12.848 18.7154 13.4179 18.7154 13.7693 18.364L19.4969 12.6364ZM4.28906 12V12.9H18.8605V12V11.1H4.28906V12Z"
+                      fill="black"
+                />
+                </svg>
+              </span>
+              </span>
+              </span>
+              </a>
+              <a href="/"
+                 class="main-zones__item"
+              >
+              <span class="main-zones__item-bg">
+                  <img
+                    src="/upload/images/main-zones/bg6.png"
+                    width="1920"
+                    height="1080"
+                    alt="Автотранспорт"
+                    loading="lazy"
+                  />
+                </span>
+                <span class="main-zones__item-wrapper">
+              <span class="main-zones__point">
+                <svg width="68"
+                     height="76"
+                     viewBox="0 0 68 76"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+<g filter="url(#filter0_d_243_11498)">
+<foreignObject x="5"
+               y="-7.28418"
+               width="58"
+               height="66.2842"
+><div xmlns="http://www.w3.org/1999/xhtml"
+      style="backdrop-filter:blur(4.5px);clip-path:url(#bgblur_0_243_11498_clip_path);height:100%;width:100%"
+  ></div></foreignObject><path data-figma-bg-blur-radius="9"
+                               d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z"
+                               fill="white"
+  />
+<circle cx="34.0015"
+        cy="30.0005"
+        r="14.7827"
+        fill="#15182A"
+/>
+</g>
+<defs>
+<filter id="filter0_d_243_11498"
+        x="0.499999"
+        y="0.215819"
+        width="67"
+        height="75.2842"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+>
+<feFlood flood-opacity="0"
+         result="BackgroundImageFix"
+/>
+<feColorMatrix in="SourceAlpha"
+               type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+               result="hardAlpha"
+/>
+<feOffset dy="12" />
+<feGaussianBlur stdDeviation="6.75" />
+<feComposite in2="hardAlpha"
+             operator="out"
+/>
+<feColorMatrix type="matrix"
+               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+/>
+<feBlend mode="normal"
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_243_11498"
+/>
+<feBlend mode="normal"
+         in="SourceGraphic"
+         in2="effect1_dropShadow_243_11498"
+         result="shape"
+/>
+</filter>
+<clipPath id="bgblur_0_243_11498_clip_path"
+          transform="translate(-5 7.28418)"
+><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
+</clipPath></defs>
+</svg>
+                <span class="main-zones__label">
+                Автотранспорт
+                <svg width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg"
+                >
+                <path d="M19.4969 12.6364C19.8484 12.2849 19.8484 11.7151 19.4969 11.3636L13.7693 5.63604C13.4179 5.28457 12.848 5.28457 12.4965 5.63604C12.1451 5.98751 12.1451 6.55736 12.4965 6.90883L17.5877 12L12.4965 17.0912C12.1451 17.4426 12.1451 18.0125 12.4965 18.364C12.848 18.7154 13.4179 18.7154 13.7693 18.364L19.4969 12.6364ZM4.28906 12V12.9H18.8605V12V11.1H4.28906V12Z"
+                      fill="black"
+                />
+                </svg>
+              </span>
+              </span>
+              </span>
+              </a>
+            </div>
+          </div>
+          <div class="main-zones__btns">
+            <a href="#"
+               class="main-zonez__btn1"
+            >
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="60" height="60" rx="30" fill="white"/>
+                <path d="M13.0531 28.5426C13.0531 27.8648 13.3765 27.1256 14.1566 26.3527C14.9406 25.576 16.1286 24.8282 17.681 24.1777C20.7813 22.8786 25.1372 22.0502 30.0031 22.0502C34.8691 22.0502 39.225 22.8786 42.3253 24.1777C43.8776 24.8282 45.0656 25.576 45.8496 26.3527C46.6298 27.1256 46.9531 27.8648 46.9531 28.5426C46.9531 29.6497 46.0569 30.946 43.8848 32.1556C41.7717 33.3325 38.724 34.2579 35.1203 34.7177C34.545 34.791 34.1382 35.3168 34.2116 35.8921C34.285 36.4673 34.8108 36.8742 35.386 36.8008C39.1624 36.319 42.4897 35.3363 44.9066 33.9903C47.2645 32.6771 49.0531 30.8359 49.0531 28.5426C49.0531 27.1376 48.3691 25.8927 47.3276 24.8608C46.2899 23.8328 44.8418 22.9553 43.1368 22.2409C39.7224 20.8102 35.0783 19.9502 30.0031 19.9502C24.9279 19.9502 20.2838 20.8102 16.8694 22.2409C15.1644 22.9553 13.7164 23.8328 12.6787 24.8608C11.6371 25.8927 10.9531 27.1376 10.9531 28.5426C10.9531 30.7588 12.6261 32.5527 14.853 33.8498C16.589 34.861 18.8264 35.6757 21.3781 36.2407V39.0529C21.3781 39.6503 22.0425 40.0079 22.5412 39.6789L28.3044 35.8762C28.7536 35.5798 28.7536 34.9206 28.3044 34.6242L22.5412 30.8215C22.0425 30.4924 21.3781 30.8501 21.3781 31.4475V34.0862C19.1848 33.5649 17.3214 32.8573 15.9099 32.0352C13.8845 30.8555 13.0531 29.6105 13.0531 28.5426Z" fill="#15182A"/>
+              </svg>
+            </a>
+            <a href=""
+               class="main-zones__btn2"
+            >
+              <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="50" height="50" rx="25" fill="white"/>
+                <rect x="15" y="15" width="20" height="20" rx="10" fill="#15182A"/>
+              </svg>
+              <span class="main-zones__btn2-name">Промзона</span>
+            </a>
+          </div>
         </div>
       </section>
       <section class="main__catalog">

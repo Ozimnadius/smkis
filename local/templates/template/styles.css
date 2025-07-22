@@ -622,6 +622,21 @@ button {
 .main__zones {
   margin-top: 50px;
 }
+@media screen and (max-width: 1919.98px) {
+  .main__zones {
+    padding-inline: 40px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .main__zones {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .main__zones {
+    display: none;
+  }
+}
 .main__catalog, .main__about, .main__block, .main__applications, .main__projects {
   margin-top: 100px;
 }
@@ -901,6 +916,209 @@ button {
     translate: initial;
     width: 130px;
   }
+}
+
+.main-zones {
+  position: relative;
+  height: 1000px;
+  overflow: hidden;
+}
+@media screen and (max-width: 1919.98px) {
+  .main-zones {
+    border-radius: 24px;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .main-zones {
+    height: 530px;
+  }
+}
+.main-zones__img {
+  aspect-ratio: 1920/1080;
+  position: absolute;
+  top: -3%;
+  left: 0;
+  width: 100%;
+}
+@media screen and (max-width: 1919.98px) {
+  .main-zones__img {
+    top: -20%;
+  }
+}
+.main-zones__img img {
+  width: 100%;
+  height: 100%;
+}
+.main-zones__items {
+  position: absolute;
+  inset: 0;
+}
+.main-zones__item {
+  --color: var(--black-black-main);
+  --opacity: 0;
+  --pointer-events: none;
+  display: block;
+}
+@media (any-hover: hover) {
+  .main-zones__item:hover {
+    --color: var(--text-accent);
+    --opacity: 1;
+    --pointer-events: all;
+  }
+}
+@media (any-hover: none) {
+  .main-zones__item:active {
+    --color: var(--text-accent);
+    --opacity: 1;
+    --pointer-events: all;
+  }
+}
+.main-zones__item:nth-child(1) {
+  --pointTop: 30%;
+  --pointleft: 37%;
+  --aspect-ratio: 657/154;
+  --width: 34.45%;
+  --top: 38.6%;
+  --left: 0;
+}
+.main-zones__item:nth-child(2) {
+  --pointTop: 60%;
+  --pointleft: 73%;
+  --aspect-ratio: 456/45;
+  --width: 23.95%;
+  --top: 32.2%;
+  --left: 39%;
+}
+.main-zones__item:nth-child(3) {
+  --pointTop: 33%;
+  --pointleft: 29%;
+  --aspect-ratio: 534/127;
+  --width: 28.05%;
+  --top: 45.2%;
+  --right: 0;
+}
+.main-zones__item:nth-child(4) {
+  --pointTop: 30%;
+  --pointleft: -80%;
+  --aspect-ratio: 24.5/142;
+  --width: 1.3%;
+  --top: 53.3%;
+  --right: 24.1%;
+}
+.main-zones__item:nth-child(5) {
+  --pointTop: 30%;
+  --pointleft: 58%;
+  --aspect-ratio: 289/104;
+  --width: 15.2%;
+  --top: 68%;
+  --right: 13.4%;
+}
+.main-zones__item:nth-child(6) {
+  --pointTop: 37%;
+  --pointleft: 35.2%;
+  --aspect-ratio: 352/117;
+  --width: 18.5%;
+  --bottom: 13.9%;
+  --left: 26.5%;
+}
+.main-zones__item-bg {
+  position: absolute;
+  inset: 0;
+  opacity: var(--opacity);
+  pointer-events: none;
+  transition: var(--transition);
+}
+.main-zones__item-wrapper {
+  display: block;
+  position: absolute;
+  aspect-ratio: var(--aspect-ratio);
+  width: var(--width);
+  top: var(--top, initial);
+  bottom: var(--bottom, initial);
+  left: var(--left, initial);
+  right: var(--right, initial);
+}
+.main-zones__point {
+  display: block;
+  width: 70px;
+  position: absolute;
+  top: var(--pointTop);
+  left: var(--pointleft);
+  transition: var(--transition);
+}
+.main-zones__point circle {
+  fill: var(--color);
+}
+.main-zones__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  padding: 16px 20px;
+  width: auto;
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: var(--bg-primary, #FFF);
+  font-size: 14px;
+  font-weight: 500;
+  opacity: var(--opacity);
+  pointer-events: var(--pointer-events);
+  color: var(--color);
+  transition: var(--transition);
+}
+.main-zones__label:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 15px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.main-zones__label svg {
+  flex-shrink: 0;
+}
+.main-zones__btns {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 1919.98px) {
+  .main-zones__btns {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .main-zones__btns {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+.main-zones__btn2 {
+  width: 245px;
+  height: 60px;
+  border-radius: 100vmax;
+  background: var(--bg-inverted, #15182A);
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  padding: 5px;
+  color: var(--text-inverted, #FFF);
+  text-align: center;
+  font-weight: 500;
+}
+.main-zones__btn-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-about__title {
