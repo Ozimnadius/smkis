@@ -24,7 +24,7 @@ function initLibs() {
 
 function initSliders() {
   document.querySelectorAll('.slider-items').forEach(e => {
-    const swiper = new Swiper(e.querySelector('.swiper'), {
+    new Swiper(e.querySelector('.swiper'), {
       slidesPerView: 'auto',
       spaceBetween: 10,
       loop: true,
@@ -33,9 +33,9 @@ function initSliders() {
         nextEl: e.querySelector('.slider-items__next'),
         prevEl: e.querySelector('.slider-items__prev'),
       },
-      /*autoplay: {
-          delay: 5000,
-      },*/
+      autoplay: {
+        delay: 5000,
+      },
       breakpoints: {
         // when window width is >= 768px
         768: {
@@ -47,7 +47,7 @@ function initSliders() {
 
 
   document.querySelectorAll('.slider-projects').forEach(e => {
-    const swiper = new Swiper(e.querySelector('.swiper'), {
+    new Swiper(e.querySelector('.swiper'), {
       slidesPerView: 'auto',
       spaceBetween: 10,
       loop: true,
@@ -56,9 +56,9 @@ function initSliders() {
         nextEl: e.querySelector('.slider-projects__next'),
         prevEl: e.querySelector('.slider-projects__prev'),
       },
-      /*autoplay: {
-          delay: 5000,
-      },*/
+      autoplay: {
+        delay: 5000,
+      },
       breakpoints: {
         // when window width is >= 768px
         768: {
@@ -97,26 +97,9 @@ function initValidators() {
 
 function initOther() {
   setInlinePadding();
+  handleScroll();
   window.addEventListener('resize', setInlinePadding);
-
-
-  /*const dropArea = document.querySelector('.form-file');
-  dropArea.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    dropArea.classList.add('active');
-  });
-
-  dropArea.addEventListener('dragleave', () => {
-    dropArea.classList.remove('active');
-  });
-
-  dropArea.addEventListener('drop', (e) => {
-    e.preventDefault();
-    dropArea.classList.remove('active');
-    const files = e.dataTransfer.files;
-    console.log('Файлы:', files);
-  });*/
-
+  window.addEventListener('scroll', throttle(handleScroll, 150));
 }
 
 class Events {
@@ -172,21 +155,43 @@ class Events {
    * @param {Element} elem - the form element to be submitted
    */
   sendForm(e, elem) {
+    if (!elem.querySelector('.form__error-input')) {
+      fetch(elem.action, {
+        method: 'POST',
+        body: new FormData(elem)
+      }).then(response => response.json()).then(function (data) {
+        if (data.status) {
+          elem.reset();
+          alert("Мы скоро свяжемся с вами.", "Спасибо!");
+        } else {
+          alert("Произошла ошибка.", data.error);
+        }
+
+      }).catch(function (err) {
+        alert('Fetch Error :-S', err);
+      });
+    }
+  }
+
+  scrollTo(e, elem) {
     e.preventDefault();
+    const hash = elem.getAttribute('href');
+    const target = document.querySelector(hash);
 
-    fetch(elem.action, {
-      method: 'POST',
-      body: new FormData(elem)
-    }).then(response => response.json()).then(function (data) {
-      if (data.status) {
-        elem.reset();
-        alert("Мы скоро свяжемся с вами.", "Спасибо!");
-      } else {
-        alert("Произошла ошибка.", data.error);
-      }
+    if (!target) return;
 
-    }).catch(function (err) {
-      alert('Fetch Error :-S', err);
+    const top = target.getBoundingClientRect().top + window.scrollY - 60;
+
+    window.scrollTo({
+      top: top,
+      behavior: 'smooth'
+    });
+  }
+
+  scrollUp(e, elem) {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   }
 
@@ -227,7 +232,7 @@ class FormDrop {
     this.fileClear.addEventListener('click', this.clearFiles);
   }
 
-  appendFiles(files){
+  appendFiles(files) {
     Array.from(files).forEach((file) => {
       this.dataTransfer.items.add(file);
     });
@@ -235,7 +240,7 @@ class FormDrop {
     this.showFiles();
   }
 
-  showFiles=()=>{
+  showFiles = () => {
     this.fileList.innerHTML = '';
     this.fileInfo.classList.add('active');
     Array.from(this.dropInput.files).forEach((file) => {
@@ -245,7 +250,7 @@ class FormDrop {
     });
   }
 
-  clearFiles=()=> {
+  clearFiles = () => {
     this.dataTransfer = new DataTransfer(); // сброс
     this.dropInput.files = this.dataTransfer.files;
     this.fileList.innerHTML = '';
@@ -253,9 +258,39 @@ class FormDrop {
   }
 }
 
+function showScrollUpButton() {
+  const scrollUpButton = document.querySelector('.footer__up');
+  const oneScreen = window.innerHeight;
+  if (window.scrollY > oneScreen) {
+    scrollUpButton.classList.add('visible');
+  } else {
+    scrollUpButton.classList.remove('visible');
+  }
+}
+
 function setInlinePadding() {
   const windowWidth = document.documentElement.clientWidth;
   const containerWidth = document.querySelector('.container').offsetWidth;
   document.body.style.setProperty('--inlinePadding', `${(windowWidth - containerWidth) / 2}px`);
+}
+
+function throttle(fn, wait) {
+  let time = Date.now();
+  return function () {
+    if (Date.now() - time >= wait) {
+      fn();
+      time = Date.now();
+    }
+  };
+}
+
+function handleScroll() {
+  const scrollUpButton = document.querySelector('.footer__up');
+  const screenHeight = window.innerHeight;
+  if (window.scrollY > screenHeight) {
+    scrollUpButton.classList.add('visible');
+  } else {
+    scrollUpButton.classList.remove('visible');
+  }
 }
 

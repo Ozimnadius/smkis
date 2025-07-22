@@ -8,6 +8,12 @@
   height: 286px;
   position: relative;
   @include tr;
+  @include xlg-block{
+    height: 256px;
+  }
+  @include md-block{
+    height: 200px;
+  }
 
   &.active {
     border: 1px dashed rgba(255, 255, 255, 1);
@@ -26,6 +32,12 @@
     justify-content: center;
     text-align: center;
     gap: 20px;
+  }
+
+  &__icon{
+    @include md-block{
+      display: none;
+    }
   }
 
   &__btn {
@@ -49,7 +61,11 @@
   }
 
   &__list{
-    display:grid;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
     gap: 10px;
   }
 

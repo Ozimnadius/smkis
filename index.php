@@ -20,12 +20,12 @@
                   <br>
                   Используется для организации анкерной
                 </div>
-                <button type="button"
-                        class="btn btn--large btn--black main-top__btn"
-                        data-event="click.openForm"
+                <a href="#feedback"
+                   class="btn btn--large btn--black main-top__btn"
+                   data-event="click.scrollTo"
                 >
                   Оставить заявку
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -219,12 +219,12 @@
                   работы в области охраны труда. До этого, они более 10 лет трудились в сфере ОТ, связанной с широким
                   спектром СИЗ. С выходом в 2015 году новых правил
                 </div>
-                <button class="main-about__btn btn btn--large btn--black"
-                        type="button"
-                        data-event="click.openForm"
+                <a href="#feedback"
+                   class="main-about__btn btn btn--large btn--black"
+                   data-event="click.scrollTo"
                 >
                   Оставить заявку
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -349,10 +349,12 @@
   </main>
   <div class="page__feedback">
     <div class="container">
-      <form action="/"
+      <form action="/ajax/ajax.php"
             method="POST"
             class="form form--feedback"
+            id="feedback"
             enctype="multipart/form-data"
+            data-event="submit.sendForm"
       >
         <div class="form__top">
           <h2 class="form__title">

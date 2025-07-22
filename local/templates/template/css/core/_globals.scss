@@ -170,6 +170,18 @@ button {
     z-index: 0;
     padding-top: 180px;
     padding-bottom: 120px;
+    @include xlg-block{
+      padding-top: 160px;
+      padding-bottom: 100px;
+    }
+    @include md-block{
+      padding-top: 140px;
+      padding-bottom: 80px;
+    }
+    @include xs-block{
+      margin-top: 0;
+      padding-block: 80px;
+    }
   }
 }
 
