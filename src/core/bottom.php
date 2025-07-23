@@ -6,5 +6,6 @@
 </div>
 <!--wrapper END-->
 
+  <? component('nav',[],'/src/data/nav.json'); ?>
 </body>
 </html>

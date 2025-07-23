@@ -1,0 +1,51 @@
+@use "../helpers/index" as *;
+
+.cities{
+  padding: 60px 40px;
+  @include md-block{
+    padding: 40px 20px;
+  }
+  @include xs-block{
+    padding: 30px 15px;
+  }
+
+  &__top{
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 40px;
+    @include md-block{
+      margin-bottom: 30px;
+    }
+    @include xs-block{
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items{
+    column-count: 3;
+    gap: 10px;
+    margin-left: 110px;
+   justify-content: space-between;
+    @include md-block{
+      margin-left: 60px;
+    }
+    @include xs-block{
+      column-count: 2;
+      margin-left: 20px;
+    }
+  }
+
+  &__item{
+    display: block;
+    padding: 10px 0;
+    @include tr;
+    @include md-block{
+      padding: 5px 0;
+    }
+
+    @include hover{
+      color: var(--text-accent);
+    }
+  }
+}

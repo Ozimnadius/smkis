@@ -1,0 +1,100 @@
+@use "../helpers/index" as *;
+
+.nav {
+  position: fixed;
+  inset: 0;
+  z-index: 1001;
+  opacity: 0;
+  pointer-events: none;
+  @include tr;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: rgba(21, 24, 42, 0.12);
+    backdrop-filter: blur(16.5px);
+  }
+
+  &__wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 713px;
+    background: var(--white-white);
+    border-radius: 20px 0 0 20px;
+    padding: 60px;
+
+    display: flex;
+    align-items: center;
+    overflow-y: auto;
+    @include lg-block {
+      align-items: start;
+    }
+    @include md-block {
+      padding: 40px;
+      width: auto;
+    }
+    @include xs-block{
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    @include md-block {
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  &__items {
+    display: grid;
+  }
+
+  &__item {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    padding-block: 20px;
+    @include tr;
+    @include md-block {
+      padding-block: 10px;
+    }
+
+    @include hover {
+      padding-left: 52px;
+      svg {
+        opacity: 1;
+      }
+      @include xs-block{
+        padding-left: 0;
+        svg{
+          opacity: 0;
+        }
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      opacity: 0;
+      transition: .8s;
+      @include md-block{
+        top: 6px;
+      }
+    }
+  }
+}

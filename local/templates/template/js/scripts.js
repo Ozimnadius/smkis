@@ -4,6 +4,9 @@ window.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.form-file').forEach(function (element) {
     new FormDrop(element.closest('form'));
   });
+  document.querySelectorAll('.header-search').forEach(function (element) {
+    new Search(element);
+  });
 
 
   initSliders();
@@ -195,6 +198,104 @@ class Events {
     });
   }
 
+  openSearch(e, elem) {
+    e.preventDefault();
+    const overlay = document.querySelector('.header__overlay');
+    const overlayContainer = overlay.querySelector('.header__overlay-container');
+    const btns = document.querySelectorAll('.header__btn');
+    btns.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    elem.closest('.header__btn').classList.add('active');
+
+    fetch('/ajax/header-search.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+      },
+      body: JSON.stringify({
+        action: elem.dataset.action
+      })
+    }).then(response => response.json()).then((data) => {
+      if (data.status) {
+        this.disableScrollbar();
+        overlayContainer.innerHTML = data.html;
+        overlay.classList.add('active');
+        new Search(overlay.querySelector('.header-search'));
+
+      } else {
+        alert("Произошла ошибка.", data.error);
+      }
+    }).catch(function (err) {
+      alert('Fetch Error :-S', err);
+    });
+
+  }
+
+  closeSearch(e, elem) {
+    this.enableScrollbar();
+    const overlay = document.querySelector('.header__overlay');
+    const overlayContainer = overlay.querySelector('.header__overlay-container');
+    const btns = document.querySelectorAll('.header__btn');
+    btns.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    overlay.classList.remove('active');
+    overlayContainer.innerHTML='';
+  }
+
+  setCity(e,elem){
+    e.preventDefault();
+    const cityNameElem = document.querySelector('.cities__name');
+
+    fetch('/ajax/setCity.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8'
+      },
+      body: JSON.stringify({
+        name: elem.innerText,
+      })
+    }).then(response => response.json()).then((data) => {
+      if (data.status) {
+        cityNameElem.innerHTML = elem.innerText;
+      } else {
+        alert("Произошла ошибка.", data.error);
+      }
+    }).catch(function (err) {
+      alert('Fetch Error :-S', err);
+    });
+
+  }
+
+  openNav(e,elem){
+    e.preventDefault();
+    const navElem = document.querySelector('.nav');
+    navElem.classList.add('active');
+    this.disableScrollbar();
+  }
+
+  closeNav(e,elem){
+    e.preventDefault();
+    const navElem = document.querySelector('.nav');
+    navElem.classList.remove('active');
+    this.enableScrollbar();
+  }
+
+  enableScrollbar() {
+    const htmlElem = document.querySelector('html');
+    htmlElem.classList.remove('with-fancybox');
+    htmlElem.setAttribute('style', '');
+    document.querySelector("body").classList.remove("hide-scrollbar");
+  }
+
+  disableScrollbar() {
+    const htmlElem = document.querySelector('html');
+    htmlElem.classList.add('with-fancybox');
+    htmlElem.setAttribute('style', '--fancybox-scrollbar-compensate: 0px;');
+    document.querySelector("body").classList.add("hide-scrollbar");
+  }
+
 }
 
 class FormDrop {
@@ -258,6 +359,42 @@ class FormDrop {
   }
 }
 
+class Search {
+  constructor(elem) {
+    this.root = elem;
+    this.form = this.root.querySelector('.header-search__form');
+    this.input = this.root.querySelector('.header-search__input');
+    this.result = this.root.querySelector('.header-search__result');
+
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    this.form.addEventListener('input', debounce(this.sendRequest.bind(this), 300));
+    this.form.addEventListener('reset', debounce(this.sendRequest.bind(this), 100));
+  }
+
+  sendRequest(e) {
+    if (this.input.value.length>0) {
+      fetch(this.form.action, {
+        method: 'POST',
+        body: new FormData(this.form)
+      }).then(response => response.json()).then((data) => {
+        if (data.status) {
+          this.result.innerHTML = data.html;
+        } else {
+          alert("Произошла ошибка.", data.error);
+        }
+      }).catch(function (err) {
+        alert('Fetch Error :-S', err);
+      });
+    } else{
+      this.result.innerHTML = '';
+    }
+  }
+
+}
+
 function showScrollUpButton() {
   const scrollUpButton = document.querySelector('.footer__up');
   const oneScreen = window.innerHeight;
@@ -281,6 +418,19 @@ function throttle(fn, wait) {
       fn();
       time = Date.now();
     }
+  };
+}
+
+function debounce(func, delay = 300) {
+  let timeout;
+
+  return function (...args) {
+    const context = this;
+
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      func.apply(context, args);
+    }, delay);
   };
 }
 

@@ -2,7 +2,7 @@
 
 html {
   //  scrollbar-gutter: stable;
-//    scroll-behavior: smooth;
+  //    scroll-behavior: smooth;
 }
 
 body {
@@ -20,6 +20,13 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  &__header{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+  }
 
   &__content {
     flex-grow: 1;
