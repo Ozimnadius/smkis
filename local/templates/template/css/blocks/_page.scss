@@ -1,0 +1,100 @@
+@use "../helpers/index" as *;
+
+.page {
+  overflow: hidden;
+
+  &__breadcrumbs {
+    margin-top: 40px;
+    @include xlg-block {
+      margin-top: 30px;
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+    @include xlg-block {
+      margin-top: 20px;
+    }
+  }
+
+  &__border {
+    position: relative;
+    z-index: 1;
+    border-radius: 0 0 56px 56px;
+    background: var(--white-white);
+    overflow: hidden;
+    padding-bottom: 120px;
+    margin-top: 40px;
+    @include lg-block {
+      margin-top: 30px;
+      padding-bottom: 110px;
+      border-radius: 0 0 36px 36px;
+    }
+    @include md-block {
+      padding-bottom: 90px;
+      border-radius: 16px;
+    }
+    @include xs-block {
+      margin-top: 20px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    gap: 20px;
+    @include lg-block {
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+    @include md-block {
+      gap: 40px;
+    }
+
+    &--inner {
+      padding-bottom: 120px;
+    }
+  }
+
+  &__aside {
+    width: 442px;
+    flex-shrink: 0;
+    @include xlg-block {
+      width: 432px;
+    }
+    @include lg-block {
+      width: 100%;
+    }
+  }
+
+  &__main {
+    flex-grow: 1;
+    @include lg-block {
+      width: 100%;
+    }
+  }
+
+  &__feedback {
+    display: block;
+    margin-top: -60px;
+    background: var(--bg-accent, #005AFF);
+    position: relative;
+    z-index: 0;
+    padding-top: 180px;
+    padding-bottom: 120px;
+    @include xlg-block {
+      padding-top: 160px;
+      padding-bottom: 100px;
+    }
+    @include md-block {
+      padding-top: 140px;
+      padding-bottom: 80px;
+    }
+    @include xs-block {
+      margin-top: 0;
+      padding-block: 80px;
+    }
+  }
+
+
+}

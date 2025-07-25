@@ -2,14 +2,14 @@
 /** @var array $arParams */
 /** @var array $arResult */
 ?>
-<div class="slider-items">
-  <div class="slider-items__top">
-    <h3 class="slider-items__title">
-      <?= $arParams['title'] ?>
-    </h3>
-    <div class="slider-items__nav">
-      <button class="slider-items__btn slider-items__prev"
-              type="button"
+<div class="aside-projects">
+  <div class="aside-projects__top">
+    <h4 class="aside__title">
+      Проекты
+    </h4>
+    <div class="aside-projects__nav">
+      <button type="button"
+              class="aside-projects__btn aside-projects__prev"
       >
         <svg width="58"
              height="58"
@@ -35,8 +35,8 @@
           />
         </svg>
       </button>
-      <button class="slider-items__btn slider-items__next"
-              type="button"
+      <button type="button"
+              class="aside-projects__btn aside-projects__next"
       >
         <svg width="58"
              height="58"
@@ -64,16 +64,38 @@
       </button>
     </div>
   </div>
-  <div class="slider-items__bottom">
-    <div class="slider-items__swiper swiper">
+  <div class="aside-projects__bottom">
+    <div class="aside-projects__swiper swiper">
       <div class="swiper-wrapper">
         <? foreach ($arResult as $arItem): ?>
-          <div class="slider-items__item swiper-slide">
-            <? component('catalog-item', ["item"=>$arItem]); ?>
+          <div class="aside-projects__item swiper-slide">
+            <a href="/projects/detail/"
+               class="aside-project"
+            >
+              <span class="aside-project__img">
+                <img
+                  src="<?= $arItem['img'] ?>"
+                  alt="<?= $arItem['name'] ?>"
+                  loading="lazy"
+                />
+              </span>
+              <span class="aside-project__info">
+                <span class="aside-project__category caption">
+                  <?= $arItem['category'] ?>
+                </span>
+                <span class="aside-project__name h5">
+                  <?= $arItem['name'] ?>
+                </span>
+              </span>
+            </a>
           </div>
         <? endforeach; ?>
       </div>
     </div>
   </div>
+  <a href=""
+     class="aside-project__all btn btn--large btn--border"
+  >Все проекты
+  </a>
 </div>
 

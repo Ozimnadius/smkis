@@ -1,0 +1,48 @@
+@use "../helpers/index" as *;
+
+.aside-menu {
+  @include lg-block {
+    display: flex;
+    border-bottom: 1px solid var(--border-secondary, #15182A);
+    gap: 40px;
+    overflow-x: auto;
+  }
+  @include md-block{
+    margin-right: -40px;
+  }
+
+  &__item {
+    display: block;
+    padding-block: 24px;
+    border-bottom: 1px solid var(--border-secondary, #15182A);
+    color: var(--text-primary, #15182A);
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.3;
+    @include tr;
+    @include lg-block {
+      padding-block: 20px;
+      padding-right: 40px;
+      border-width: 3px;
+      border-color: transparent;
+      white-space: nowrap;
+      font-size: 22px;
+    }
+    @include md-block{
+      padding-block: 18px;
+    }
+
+
+    &.active {
+      color: var(--text-accent, #005AFF);
+      border-color: var(--border-accent, #005AFF);
+    }
+
+    @include hover {
+      color: var(--text-accent-hover, #005AFF);
+    }
+    @include active {
+      color: var(--text-accent-active, #005AFF);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+ @use "../helpers/index" as *;
+
+ .catalog-items{
+   display:grid;
+   grid-template-columns: repeat(3,1fr);
+   gap: 50px 20px;
+   @include xlg-block{
+     grid-template-columns: repeat(2,1fr);
+   }
+   @include lg-block{
+     grid-template-columns: repeat(3,1fr);
+   }
+   @include md-block{
+     grid-template-columns: repeat(2,1fr);
+     gap: 40px 20px;
+   }
+   @include xs-block{
+          grid-template-columns: 100%;
+   }
+
+   &__item{
+     &>*{
+       height: 100%;
+     }
+   }
+ }

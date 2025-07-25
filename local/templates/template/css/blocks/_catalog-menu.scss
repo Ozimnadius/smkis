@@ -1,0 +1,17 @@
+@use "../helpers/index" as *;
+
+.catalog-menu{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  @include xs-block{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-right: -20px;
+  }
+
+  &__item{
+    border-color:var(--border-secondary, #15182A);
+    padding-block: 8px;
+  }
+}

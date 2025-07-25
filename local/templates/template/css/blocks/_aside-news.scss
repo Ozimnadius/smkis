@@ -1,0 +1,102 @@
+@use "../helpers/index" as *;
+
+.aside-news {
+  position: relative;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__slider {
+    position: relative;
+    @include lg-block{
+      position: static;
+    }
+  }
+
+  &__slide {
+    border-radius: 24px;
+    border: 1px solid var(--border-primary, #E9E9EC);
+    background: var(--bg-primary, #FFF);
+    padding: 20px 20px 160px;
+    display: flex;
+    flex-direction: column;
+    @include hover {
+      color: var(--text-accent-hover);
+    }
+    @include active {
+      color: var(--text-accent-active);
+    }
+    @include lg-block{
+      padding: 20px 20px 40px;
+      border-radius: 12px;
+    }
+  }
+
+  &__img {
+    img {
+      aspect-ratio: 402/252;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+
+  &__cat {
+    margin-top: 30px;
+  }
+
+  &__name {
+    margin-top: 6px;
+    max-width: 24ch;
+  }
+
+  &__nav {
+    position: absolute;
+    z-index: 100;
+    bottom: 50px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include lg-block{
+      bottom: initial;
+      top: -6px;
+      right: 0;
+    }
+    @include xs-block{
+      display: none;
+    }
+  }
+
+  &__btn {
+    width: 42px;
+    flex-shrink: 0;
+    @include tr;
+    @include hover {
+      color: var(--icon-accent-hover);
+    }
+    @include active {
+      color: var(--icon-accent-active);
+    }
+    @include lg-block{
+      width: 60px;
+    }
+    @include md-block{
+      width: 50px;
+    }
+
+    svg {
+      aspect-ratio: 1/1;
+      width: 100%;
+      path {
+        &:nth-child(3) {
+          stroke: currentColor;
+        }
+      }
+    }
+  }
+
+  &__all {
+    margin-top: 30px;
+  }
+}

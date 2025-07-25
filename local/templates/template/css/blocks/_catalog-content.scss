@@ -1,0 +1,43 @@
+@use "../helpers/index" as *;
+
+.catalog-content {
+  display: grid;
+  gap: 30px;
+
+  &__title {
+    max-width: 40ch;
+  }
+
+  &__subtitle {
+    max-width: 75ch;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @include xlg-block {
+      grid-template-columns: 100%;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include md-block{
+        grid-template-columns: 100%;
+    }
+  }
+
+  &__col {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    border-radius: 24px;
+    border: 1px solid var(--border-on-primary, #DDDEE2);
+    background: var(--bg-primary, #FFF);
+    @include xs-block{
+      padding: 40px 20px;
+    }
+  }
+}

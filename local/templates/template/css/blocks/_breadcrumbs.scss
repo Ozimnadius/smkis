@@ -1,0 +1,19 @@
+@use "../helpers/index" as *;
+
+.breadcrumbs {
+  &__item{
+    color: var(--text-secondary, #797B8B);
+    font-size: 14px;
+    font-weight: 400;
+    @include tr;
+  }
+
+  a{
+    @include hover{
+      color: var(--text-accent-hover);
+    }
+    @include active{
+      color: var(--text-accent-active);
+    }
+  }
+}

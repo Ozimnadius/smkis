@@ -1,0 +1,32 @@
+@use "../helpers/index" as *;
+
+.catalog-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+    @include xlg-block {
+      grid-template-columns: 100%;
+    }
+    @include lg-block {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md-block {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    padding: 40px 30px;
+    border-radius: 12px;
+    background: var(--bg-secondary, #F4F4F5);
+    @include xs-block{
+      padding: 40px 20px;
+    }
+  }
+}

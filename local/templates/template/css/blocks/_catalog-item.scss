@@ -3,7 +3,7 @@
 .catalog-item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 
   @include hover {
     .catalog-item {
@@ -72,6 +72,38 @@
 
   &__category {
     grid-area: category;
+  }
+
+  &__description {
+    font-size: 14px;
+    margin-top: auto;
+  }
+
+  &__chars {
+    border-top: 1px solid var(--border-secondary, #15182A);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__char {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__char-name {
+    color: var(--text-secondary, #797B8B);
+    font-size: 14px;
+  }
+
+  &__char-value {
+    color: var(--text-primary, #15182A);
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
 
 }

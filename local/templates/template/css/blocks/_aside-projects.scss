@@ -1,0 +1,155 @@
+@use "../helpers/index" as *;
+
+.aside-projects {
+
+  &__top {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include xs-block {
+      display: none;
+    }
+  }
+
+  &__btn {
+    width: 60px;
+    flex-shrink: 0;
+    @include tr;
+    @include hover {
+      color: var(--icon-accent-hover);
+    }
+    @include active {
+      color: var(--icon-accent-active);
+    }
+    @include md-block {
+      width: 50px;
+    }
+
+    svg {
+      aspect-ratio: 1/1;
+      width: 100%;
+
+      path {
+        &:nth-child(3) {
+          stroke: currentColor;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    margin-bottom: 30px;
+  }
+
+  &__swiper {
+    @include lg-block {
+      margin-inline: -80px;
+      padding-inline: 80px;
+    }
+    @include md-block {
+      margin-inline: -40px;
+      padding-inline: 40px;
+    }
+  }
+
+  &__item {
+    @include lg-block {
+      width: 708px;
+    }
+    @include md-block {
+      width: 502px;
+    }
+    @include xs-block {
+      width: 320px;
+    }
+  }
+
+}
+
+.aside-project {
+  border-radius: 24px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  @include md-block {
+    border-radius: 12px;
+  }
+
+  &__img {
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13, 15, 40, 0.70) 0%, rgba(217, 217, 217, 0.00) 61.16%);
+      border-radius: 24px;
+      @include xs-block {
+        rotate: 180deg;
+      }
+    }
+
+    img {
+      aspect-ratio: 441/536;
+      object-fit: cover;
+      @include lg-block {
+        aspect-ratio: 708/381;
+      }
+      @include md-block {
+        aspect-ratio: 502/554;
+      }
+      @include xs-block {
+        aspect-ratio: 320/414;
+      }
+    }
+  }
+
+  &__info {
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    left: 30px;
+    right: 30px;
+    color: var(--text-inverted, #FFF);
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include lg-block {
+      left: 40px;
+      right: 40px;
+      top: 40px;
+    }
+    @include md-block {
+      top: 50px;
+      left: 30px;
+      right: 30px;
+    }
+    @include xs-block {
+      top: initial;
+      bottom: 30px;
+      left: 20px;
+      right: 20px;
+    }
+  }
+
+  &__category {
+    color: var(--text-inverted, #FFF);
+  }
+
+  &__name {
+    max-width: 14ch;
+    @include xs-block {
+      max-width: 100%;
+    }
+  }
+
+}

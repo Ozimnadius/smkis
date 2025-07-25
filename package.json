@@ -8,6 +8,7 @@
     "just-validate": "^4.3.0",
     "normalize.css": "^8.0.1",
     "ozimnad-reset": "0.1.0",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "tippy.js": "^6.3.7"
   }
 }

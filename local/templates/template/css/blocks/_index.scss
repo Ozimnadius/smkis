@@ -5,6 +5,16 @@
 
 @forward "menu";
 
+@forward "page";
+
+@forward "breadcrumbs";
+
+@forward "aside";
+@forward "aside-menu";
+@forward "aside-apps";
+@forward "aside-news";
+@forward "aside-projects";
+
 @forward "main-top";
 @forward "main-zones";
 @forward "main-about";
@@ -19,7 +29,13 @@
 @forward "form-file";
 @forward "form-accept";
 
+@forward "catalog-menu";
+@forward "catalog-items";
 @forward "catalog-item";
+@forward "catalog-content";
+@forward "catalog-advantages";
+
+@forward "pagination";
 
 @forward "news";
 

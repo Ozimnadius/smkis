@@ -153,36 +153,22 @@ button {
   margin: 0 auto;
 }
 
+.container-full {
+  width: 100%;
+  padding-inline: 50px;
+  @include lg-block{
+    padding-inline: 80px;
+  }
+  @include md-block{
+    padding-inline: 40px;
+  }
+  @include xs-block{
+    padding-inline: 20px;
+  }
+}
+
 .page {
-  overflow: hidden;
 
-  &__main {
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-
-  &__feedback {
-    display: block;
-    margin-top: -60px;
-    background: var(--bg-accent, #005AFF);
-    position: relative;
-    z-index: 0;
-    padding-top: 180px;
-    padding-bottom: 120px;
-    @include xlg-block{
-      padding-top: 160px;
-      padding-bottom: 100px;
-    }
-    @include md-block{
-      padding-top: 140px;
-      padding-bottom: 80px;
-    }
-    @include xs-block{
-      margin-top: 0;
-      padding-block: 80px;
-    }
-  }
 }
 
 .icon-fill {
@@ -333,7 +319,7 @@ button {
       }
     }
 
-    &:active {
+    &:active, &.active {
       color: var(--icon-on-color);
       background: var(--bg-inverted-active);
       border-color: var(--bg-inverted-active);
@@ -373,5 +359,37 @@ button {
   @include active {
     color: var(--text-accent-active);
   }
+}
+
+.tooltip {
+  pointer-events: all;
+
+  color: var(--text-primary, #15182A);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 14px;
+
+  border-radius: 100vmax;
+  background: var(--black-black-300, #DDDEE2);
+  transition: 200ms;
+  @include hover {
+    background: var(--bg-accent, #005AFF);
+    color: var(--text-inverted, #FFF);
+  }
+
+  &__content {
+    display: none;
+  }
+}
+
+.tippy-content {
+  width: 340px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  background: var(--bg-inverted, #15182A);
+
+  color: var(--text-inverted, #FFF);
+
+  font-size: 14px;
 }
 

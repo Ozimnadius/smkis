@@ -1,0 +1,74 @@
+@use "../helpers/index" as *;
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  &__arrow {
+    --bg: var(--bg-secondary);
+    --color: var(--black-black-main);
+    @include xs-block{
+      display: none;
+    }
+
+    @include hover{
+      --bg: var(--bg-accent-hover);
+      --color: var(--white-white);
+    }
+    @include active{
+      --bg: var(--bg-accent-active);
+      --color: var(--white-white);
+    }
+
+    svg{
+      rect{
+        fill: var(--bg);
+        @include tr;
+      }
+      path{
+        fill: var(--color);
+        @include tr;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__item {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1;
+
+    border-radius: 100%;
+    border: 1px solid var(--border-inverted, #FFF);
+    background: var(--bg-secondary, #F4F4F5);
+
+    color: var(--black-black-main, #15182A);
+    font-weight: 500;
+    @include tr;
+
+    &.active {
+      color: var(--white-white);
+      border: 1px solid var(--border-inverted, #FFF);
+      background: var(--bg-accent, #005AFF);
+    }
+
+    @include hover {
+      color: var(--white-white);
+      background: var(--bg-accent-hover);
+    }
+    @include active {
+      color: var(--white-white);
+      background: var(--bg-accent-active);
+    }
+  }
+}

@@ -2,15 +2,30 @@
 /** @var array $arParams */
 /** @var array $arResult */
 ?>
-<div class="slider-items">
-  <div class="slider-items__top">
-    <h3 class="slider-items__title">
-      <?= $arParams['title'] ?>
-    </h3>
-    <div class="slider-items__nav">
-      <button class="slider-items__btn slider-items__prev"
-              type="button"
-      >
+<div class="aside-news">
+  <h4 class="aside-news__title">Это важно</h4>
+  <div class="aside-news__slider">
+    <div class="aside-news__swiper swiper">
+      <div class="swiper-wrapper">
+        <? foreach ($arResult as $arItem): ?>
+        <a href="/"
+           class="aside-news__slide swiper-slide"
+        >
+          <span class="aside-news__img">
+            <img
+              src="<?=$arItem['img'] ?>"
+              alt="<?=$arItem['name'] ?>"
+              loading="lazy"
+            />
+          </span>
+          <span class="aside-news__cat caption"><?=$arItem['category'] ?></span>
+          <span class="aside-news__name h7"><?=$arItem['name'] ?></span>
+        </a>
+        <? endforeach; ?>
+      </div>
+    </div>
+    <div class="aside-news__nav">
+      <button type="button" class="aside-news__btn aside-news__prev">
         <svg width="58"
              height="58"
              viewBox="0 0 58 58"
@@ -35,9 +50,7 @@
           />
         </svg>
       </button>
-      <button class="slider-items__btn slider-items__next"
-              type="button"
-      >
+      <button type="button" class="aside-news__btn aside-news__next">
         <svg width="58"
              height="58"
              viewBox="0 0 58 58"
@@ -64,16 +77,7 @@
       </button>
     </div>
   </div>
-  <div class="slider-items__bottom">
-    <div class="slider-items__swiper swiper">
-      <div class="swiper-wrapper">
-        <? foreach ($arResult as $arItem): ?>
-          <div class="slider-items__item swiper-slide">
-            <? component('catalog-item', ["item"=>$arItem]); ?>
-          </div>
-        <? endforeach; ?>
-      </div>
-    </div>
-  </div>
+  <a href="/"
+     class="aside-news__all btn btn--large btn--border"
+  >Все статьи</a>
 </div>
-
