@@ -1,0 +1,18 @@
+@use "../helpers/index" as *;
+
+.form-select{
+  display:grid;
+  gap: 4px;
+
+  &__label{
+    color: var(--text-primary, #15182A);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  &__input{
+
+  }
+
+}

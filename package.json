@@ -4,6 +4,7 @@
   "description": "This is a dummy package.json file created by Prepros to manage packages with NPM. You can edit this file to add your own information.",
   "dependencies": {
     "@fancyapps/ui": "^6.0.14",
+    "choices.js": "^11.1.0",
     "inputmask": "^5.0.9",
     "just-validate": "^4.3.0",
     "normalize.css": "^8.0.1",

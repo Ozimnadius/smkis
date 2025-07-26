@@ -33,6 +33,13 @@ function initLibs() {
     allowHTML: true,
     placement: 'bottom-start',
   });
+
+  document.querySelectorAll('select').forEach(function (element) {
+    new Choices(element,{
+      searchEnabled: false,
+      itemSelectText:false
+    });
+  });
 }
 
 function initSliders() {
@@ -123,9 +130,9 @@ function initSliders() {
         nextEl: e.querySelector('.aside-projects__next'),
         prevEl: e.querySelector('.aside-projects__prev'),
       },
-      // autoplay: {
-      //   delay: 5000,
-      // },
+      autoplay: {
+        delay: 5000,
+      },
       breakpoints: {
         // when window width is >= 768px
         768: {
@@ -139,6 +146,32 @@ function initSliders() {
       }
     });
   });
+
+  document.querySelectorAll('.product__gallery').forEach(e => {
+    const thumbs = new Swiper(".product__thumbs-slider", {
+      spaceBetween: 20,
+      slidesPerView: 'auto',
+      watchSlidesProgress: true,
+      breakpoints: {
+        // when window width is >= 768px
+        768: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        }
+      }
+    });
+    new Swiper(".product__imgs-slider", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: e.querySelector(".product__thumbs-next"),
+        prevEl: e.querySelector(".product__thumbs-prev")
+      },
+      thumbs: {
+        swiper: thumbs,
+      },
+    });
+  })
 }
 
 function initValidators() {
@@ -476,8 +509,11 @@ function showScrollUpButton() {
 
 function setInlinePadding() {
   const windowWidth = document.documentElement.clientWidth;
-  const containerWidth = document.querySelector('.container').offsetWidth;
-  document.body.style.setProperty('--inlinePadding', `${(windowWidth - containerWidth) / 2}px`);
+  const containerElement = document.querySelector('.container');
+  if (containerElement) {
+    const containerWidth = containerElement.offsetWidth;
+    document.body.style.setProperty('--inlinePadding', `${(windowWidth - containerWidth) / 2}px`);
+  }
 }
 
 function throttle(fn, wait) {

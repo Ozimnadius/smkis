@@ -69,7 +69,7 @@
       <div class="swiper-wrapper">
         <? foreach ($arResult as $arItem): ?>
           <div class="slider-items__item swiper-slide">
-            <? component('catalog-item', ["item"=>$arItem]); ?>
+            <? component('catalog-item', ["item"=>$arItem,"showFull"=>$arParams['showFull']]); ?>
           </div>
         <? endforeach; ?>
       </div>

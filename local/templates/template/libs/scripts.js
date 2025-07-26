@@ -5,3 +5,4 @@
 // @prepros-append ../../../../node_modules/@fancyapps/ui/dist/index.umd.js
 // @prepros-append ../../../../node_modules/@popperjs/core/dist/umd/popper.js
 // @prepros-append ../../../../node_modules/tippy.js/dist/tippy-bundle.umd.js
+// @prepros-append ../../../../node_modules/choices.js/public/assets/scripts/choices.js

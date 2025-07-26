@@ -156,13 +156,13 @@ button {
 .container-full {
   width: 100%;
   padding-inline: 50px;
-  @include lg-block{
+  @include lg-block {
     padding-inline: 80px;
   }
-  @include md-block{
+  @include md-block {
     padding-inline: 40px;
   }
-  @include xs-block{
+  @include xs-block {
     padding-inline: 20px;
   }
 }
@@ -391,5 +391,39 @@ button {
   color: var(--text-inverted, #FFF);
 
   font-size: 14px;
+}
+
+.choices {
+
+  &__inner {
+    padding: 8px 0 !important;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-secondary, #15182A);
+    font-size: 16px;
+  }
+
+  &__list {
+
+    &--dropdown {
+      top: calc(100% + 10px) !important;
+      box-shadow: 0 16px 32px 0 rgba(31, 35, 62, 0.04);
+      border-radius: 8px !important;
+      background: #FFF;
+      border: none !important;
+
+      .choices__item {
+        padding: 20px !important;
+        font-size: 16px !important;
+
+        &.is-highlighted {
+          color: var(--text-accent-active);
+          background-color: transparent !important;
+        }
+      }
+    }
+
+  }
+
 }
 

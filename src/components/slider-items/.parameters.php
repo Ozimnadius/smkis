@@ -1,3 +1,4 @@
 <?php $arComponentParameters = [
-  "title"=>"Заголовок"
+  "title"=>"Заголовок",
+  "showFull"=>false,
 ];
