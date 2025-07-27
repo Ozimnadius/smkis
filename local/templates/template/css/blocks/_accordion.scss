@@ -1,0 +1,77 @@
+@use "../helpers/index" as *;
+
+.accordion {
+
+  &__item {
+    border-bottom: 1px solid var(--black-black-main, #15182A);
+  }
+
+  &__summary {
+    list-style: none;
+    cursor: pointer;
+
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+    padding-block: 38px;
+    padding-right: 45px;
+    position: relative;
+    @include xlg-block {
+      font-size: 30px;
+      padding-block: 30px;
+    }
+    @include md-block {
+      font-size: 26px;
+      padding-block: 25px;
+    }
+    @include xs-block{
+      font-size: 20px;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNDAnIGhlaWdodD0nMzYnIHZpZXdCb3g9JzAgMCA0MCAzNicgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMjAuMjc4NyAyMS4yNDY4QzIwLjM4OTggMjEuMzY1MiAyMC41ODg4IDIxLjM2NTIgMjAuNjk5OSAyMS4yNDY4TDI1LjUxOTQgMTYuMTExQzI1LjY3NTcgMTUuOTQ0NSAyNS41NDc1IDE1LjY4NTUgMjUuMzA4OCAxNS42ODU1SDE1LjY2OThDMTUuNDMxMSAxNS42ODU1IDE1LjMwMjkgMTUuOTQ0NSAxNS40NTkyIDE2LjExMUwyMC4yNzg3IDIxLjI0NjhaJyBmaWxsPScjMTUxODJBJy8+PC9zdmc+Cg==");
+      background-size: cover;
+      width: 40px;
+      height: 36px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      translate: 0 -50%;
+      @include tr;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition-duration: 0.3s;
+  }
+
+  &__content-body {
+    overflow: hidden;
+
+    & > * {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__details[open] + .accordion__content {
+    grid-template-rows: 1fr;
+  }
+
+  &__details[open] {
+    .accordion__summary {
+      &:after {
+        rotate: 180deg;
+      }
+    }
+  }
+}
+

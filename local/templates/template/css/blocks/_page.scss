@@ -12,8 +12,15 @@
 
   &__title {
     margin-top: 40px;
+    margin-bottom: 120px;
     @include xlg-block {
       margin-top: 20px;
+    }
+    @include lg-block{
+      margin-bottom: 30px;
+    }
+    @include xs-block{
+      margin-bottom: 20px;
     }
   }
 
@@ -24,18 +31,15 @@
     background: var(--white-white);
     overflow: hidden;
     padding-bottom: 120px;
-    margin-top: 40px;
     @include lg-block {
-      margin-top: 30px;
       padding-bottom: 110px;
       border-radius: 0 0 36px 36px;
     }
     @include md-block {
       padding-bottom: 90px;
-      border-radius: 16px;
+      border-radius:0 0 16px 16px;
     }
     @include xs-block {
-      margin-top: 20px;
       padding-bottom: 80px;
     }
   }
