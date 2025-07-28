@@ -178,7 +178,8 @@
                   <div class="form-select">
                     <label for="product"
                            class="form-select__label"
-                    >Выбор точки</label>
+                    >Выбор точки
+                    </label>
                     <select name="product"
                             id="product"
                             class="form-select__input"
@@ -417,7 +418,9 @@
               <div class="product-banner">
                 <h5 class="product-banner__title">Для проектировщиков</h5>
                 <div class="product-banner__desc">Изготовлен из нержавеющей стали. Используется</div>
-                <a href="/" class="product-banner__link">
+                <a href="/"
+                   class="product-banner__link"
+                >
                   <svg width="50"
                        height="50"
                        viewBox="0 0 50 50"

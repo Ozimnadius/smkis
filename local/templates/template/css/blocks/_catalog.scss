@@ -1,0 +1,48 @@
+@use "../helpers/index" as *;
+
+.catalog {
+  &__items {
+    margin-top: 24px;
+  }
+
+  &__pagination {
+    margin-top: 60px;
+    @include xs-block {
+      margin-top: 50px;
+    }
+  }
+
+  &__apps, &__news, &__projects {
+    display: none;
+    @include lg-block {
+      display: block;
+      margin-top: 110px;
+    }
+    @include md-block{
+      margin-top: 90px;
+    }
+  }
+
+  &__content {
+    margin-top: 120px;
+    @include xlg-block {
+      margin-top: 80px;
+    }
+    @include lg-block {
+      margin-top: 110px;
+    }
+    @include md-block{
+      margin-top: 90px;
+    }
+  }
+
+  &__advantages {
+    margin-top: 120px;
+    @include xlg-block {
+      margin-top: 80px;
+    }
+    @include md-block{
+      margin-top: 60px;
+    }
+  }
+}

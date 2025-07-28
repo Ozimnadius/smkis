@@ -15,6 +15,7 @@
 @forward "aside-news";
 @forward "aside-projects";
 
+@forward "main";
 @forward "main-top";
 @forward "main-zones";
 @forward "main-about";
@@ -30,6 +31,7 @@
 @forward "form-accept";
 @forward "form-select";
 
+@forward "catalog";
 @forward "catalog-menu";
 @forward "catalog-items";
 @forward "catalog-item";
@@ -43,6 +45,19 @@
 @forward "pagination";
 
 @forward "news";
+
+@forward "engineering";
+@forward "engineering-menu";
+@forward "engineering-items";
+
+
+@forward "status";
+
+@forward "registration";
+
+@forward "about";
+
+@forward "calculator";
 
 @forward "footer";
 @forward "footer-menu";

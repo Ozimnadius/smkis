@@ -1,0 +1,12 @@
+@use "../helpers/index" as *;
+
+.engineering{
+
+  &__menu{
+    margin-bottom: 40px;
+  }
+
+  &__nav{
+    display: none;
+  }
+}

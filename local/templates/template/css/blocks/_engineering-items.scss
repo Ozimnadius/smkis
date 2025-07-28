@@ -1,0 +1,33 @@
+@use "../helpers/index" as *;
+
+.engineering-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 20px;
+
+  &__item {
+    --bdColor: var(--border-primary, #E9E9EC);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include hover{
+      --bdColor: var(--border-accent);
+    }
+  }
+
+  &__img {
+    aspect-ratio: 440/311;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: 1px solid var(--bdColor);
+    overflow: hidden;
+    @include tr;
+
+    img {
+      max-height: 100%;
+    }
+  }
+}

@@ -171,7 +171,15 @@ function initSliders() {
         swiper: thumbs,
       },
     });
-  })
+  });
+
+  document.querySelectorAll('.engineering-menu').forEach(e => {
+    new Swiper(e, {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      speed: 700,
+    });
+  });
 }
 
 function initValidators() {
