@@ -1,10 +1,18 @@
 @use "../helpers/index" as *;
 
-.engineering-menu{
+.engineering-menu {
   border-bottom: 1px solid var(--border-secondary, #15182A);
   padding-right: 30px;
+  margin-right: -50px;
+  @include lg-block {
+    margin-right: -80px;
+  }
+  @include md-block {
+    margin-right: -40px;
+  }
 
-  &__item{
+
+  &__item {
     width: auto;
     font-size: 22px;
     font-weight: 500;
@@ -12,11 +20,15 @@
     padding: 24px 30px 24px 0;
     white-space: nowrap;
     position: relative;
+    @include md-block{
+      font-size: 17px;
+      padding: 16px 30px 16px 0;
+    }
 
-    &.active{
+    &.active {
       color: var(--text-accent, #005AFF);
 
-      &:before{
+      &:before {
         content: '';
         display: block;
         background: var(--border-accent, #005AFF);
@@ -27,10 +39,11 @@
         left: 0;
       }
     }
-    @include hover{
+
+    @include hover {
       color: var(--text-accent-hover);
     }
-    @include active{
+    @include active {
       color: var(--text-accent-active);
     }
   }

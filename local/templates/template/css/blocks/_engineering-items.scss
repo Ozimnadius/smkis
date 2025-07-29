@@ -4,6 +4,16 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 20px;
+  @include xlg-block{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md-block{
+      row-gap: 30px;
+  }
+  @include xs-block{
+      grid-template-columns: 100%;
+    row-gap: 40px;
+  }
 
   &__item {
     --bdColor: var(--border-primary, #E9E9EC);

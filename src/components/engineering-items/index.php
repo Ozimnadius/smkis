@@ -6,6 +6,7 @@
   <? foreach ($arResult as $arItem): ?>
     <a href="<?=$arItem['link'] ?>"
        class="engineering-items__item"
+       target="_blank"
     >
       <span class="engineering-items__img">
         <img

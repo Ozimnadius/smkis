@@ -176,7 +176,7 @@ function initSliders() {
   document.querySelectorAll('.engineering-menu').forEach(e => {
     new Swiper(e, {
       slidesPerView: 'auto',
-      spaceBetween: 20,
+      spaceBetween: 0,
       speed: 700,
     });
   });

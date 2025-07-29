@@ -14,6 +14,24 @@
 
   &[data-type="2"]{
     font-size: 20px;
+    @include lg-block{
+      display: block;
+      border-bottom: none;
+      overflow-x: visible;
+      gap: initial;
+    }
+    @include md-block{
+      margin-right: 0;
+    }
+
+    .aside-menu__item{
+      @include lg-block {
+        padding-block: 24px;
+        border-bottom: 1px solid var(--border-secondary, #15182A);
+        padding-right: 0;
+        font-size: 20px;
+      }
+    }
   }
 
   &__item {

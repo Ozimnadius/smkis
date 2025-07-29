@@ -1,0 +1,91 @@
+@use "../helpers/index" as *;
+
+.faq {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__items {
+    display: grid;
+    gap: 32px;
+    @include xs-block{
+        gap: 20px;
+    }
+  }
+
+  &__item {
+    border-radius: 24px;
+    border: 1px solid var(--border-on-primary, #DDDEE2);
+    background: var(--bg-primary, #FFF);
+  }
+
+  &__details {
+    --rotate: 90deg;
+
+    &[open] {
+      --rotate: 0deg;
+
+      & + .faq__content {
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+
+  &__summary {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding: 40px 60px 40px 30px;
+    @include xs-block{
+      padding: 30px 20px;
+      padding-right: 50px;
+    }
+  }
+
+  &__plus {
+    width: 18px;
+    height: 18px;
+
+    position: absolute;
+    top: 44px;
+    right: 30px;
+    @include xs-block{
+      top: 30px;
+      right: 20px;
+    }
+
+    &:before, &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: var(--bg-inverted);
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+
+    &:after {
+      rotate: var(--rotate);
+      @include tr;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: 0fr;
+    @include tr;
+  }
+
+  &__content-body {
+    overflow: hidden;
+  }
+
+  &__inner {
+    padding: 0 30px 40px 30px;
+    @include xs-block{
+      padding: 0 20px 30px 20px;
+    }
+  }
+
+}

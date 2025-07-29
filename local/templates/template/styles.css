@@ -608,6 +608,12 @@ button {
   background-color: transparent !important;
 }
 
+@media screen and (max-width: 767.98px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
 .header__container {
   padding: 20px 50px;
   display: flex;
@@ -1005,6 +1011,11 @@ button {
 .page__grid--inner {
   padding-bottom: 120px;
 }
+@media screen and (max-width: 1439.98px) {
+  .page__aside--lg-dn {
+    display: none;
+  }
+}
 .page__feedback {
   display: block;
   margin-top: -60px;
@@ -1082,6 +1093,27 @@ button {
 }
 .aside-menu[data-type="2"] {
   font-size: 20px;
+}
+@media screen and (max-width: 1439.98px) {
+  .aside-menu[data-type="2"] {
+    display: block;
+    border-bottom: none;
+    overflow-x: visible;
+    gap: initial;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .aside-menu[data-type="2"] {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .aside-menu[data-type="2"] .aside-menu__item {
+    padding-block: 24px;
+    border-bottom: 1px solid var(--border-secondary, #15182A);
+    padding-right: 0;
+    font-size: 20px;
+  }
 }
 .aside-menu__item {
   display: flex;
@@ -3413,13 +3445,71 @@ button {
 .engineering__menu {
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1919.98px) {
+  .engineering__menu {
+    margin-bottom: 30px;
+  }
+}
 .engineering__nav {
   display: none;
+}
+.engineering__lg-db {
+  display: none;
+  margin-top: 110px;
+}
+@media screen and (max-width: 1439.98px) {
+  .engineering__lg-db {
+    display: block;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .engineering__lg-db {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .engineering__lg-db {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .engineering__news, .engineering__projects {
+    margin-top: 110px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .engineering__news, .engineering__projects {
+    margin-top: 90px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .engineering__news, .engineering__projects {
+    margin-top: 80px;
+  }
+}
+.engineering__faq {
+  margin-top: 120px;
+}
+@media screen and (max-width: 1279.98px) {
+  .engineering__faq {
+    margin-top: 90px;
+  }
 }
 
 .engineering-menu {
   border-bottom: 1px solid var(--border-secondary, #15182A);
   padding-right: 30px;
+  margin-right: -50px;
+}
+@media screen and (max-width: 1439.98px) {
+  .engineering-menu {
+    margin-right: -80px;
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .engineering-menu {
+    margin-right: -40px;
+  }
 }
 .engineering-menu__item {
   width: auto;
@@ -3429,6 +3519,12 @@ button {
   padding: 24px 30px 24px 0;
   white-space: nowrap;
   position: relative;
+}
+@media screen and (max-width: 1279.98px) {
+  .engineering-menu__item {
+    font-size: 17px;
+    padding: 16px 30px 16px 0;
+  }
 }
 .engineering-menu__item.active {
   color: var(--text-accent, #005AFF);
@@ -3463,6 +3559,22 @@ button {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px 20px;
+}
+@media screen and (max-width: 1919.98px) {
+  .engineering-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1279.98px) {
+  .engineering-items {
+    row-gap: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .engineering-items {
+    grid-template-columns: 100%;
+    row-gap: 40px;
+  }
 }
 .engineering-items__item {
   --bdColor: var(--border-primary, #E9E9EC);
@@ -3896,6 +4008,162 @@ button {
 }
 .accordion__details[open] .accordion__summary:after {
   rotate: 180deg;
+}
+
+.faq__title {
+  margin-bottom: 30px;
+}
+.faq__items {
+  display: grid;
+  gap: 32px;
+}
+@media screen and (max-width: 767.98px) {
+  .faq__items {
+    gap: 20px;
+  }
+}
+.faq__item {
+  border-radius: 24px;
+  border: 1px solid var(--border-on-primary, #DDDEE2);
+  background: var(--bg-primary, #FFF);
+}
+.faq__details {
+  --rotate: 90deg;
+}
+.faq__details[open] {
+  --rotate: 0deg;
+}
+.faq__details[open] + .faq__content {
+  grid-template-rows: 1fr;
+}
+.faq__summary {
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+  padding: 40px 60px 40px 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .faq__summary {
+    padding: 30px 20px;
+    padding-right: 50px;
+  }
+}
+.faq__plus {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 44px;
+  right: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .faq__plus {
+    top: 30px;
+    right: 20px;
+  }
+}
+.faq__plus:before, .faq__plus:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--bg-inverted);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.faq__plus:after {
+  rotate: var(--rotate);
+  transition: var(--transition);
+}
+.faq__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: var(--transition);
+}
+.faq__content-body {
+  overflow: hidden;
+}
+.faq__inner {
+  padding: 0 30px 40px 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .faq__inner {
+    padding: 0 20px 30px 20px;
+  }
+}
+
+.faq-content__top {
+  margin-bottom: 40px;
+  display: grid;
+  gap: 16px;
+}
+@media screen and (max-width: 767.98px) {
+  .faq-content__top {
+    gap: 6px;
+  }
+}
+.faq-content__items {
+  display: grid;
+  gap: 40px;
+}
+.faq-content__item {
+  display: grid;
+  gap: 14px;
+}
+.faq-content__blocks {
+  display: grid;
+  gap: 20px;
+}
+.faq-content__block {
+  display: inline-flex;
+  padding: 40px 49px 40px 30px;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 12px;
+  background: var(--bg-secondary, #F4F4F5);
+}
+@media screen and (max-width: 767.98px) {
+  .faq-content__block {
+    padding: 30px 20px;
+  }
+}
+.faq-content ul {
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+@media screen and (max-width: 767.98px) {
+  .faq-content ul {
+    gap: 4px;
+  }
+}
+.faq-content ul[data-type="2"] li::marker {
+  color: var(--icon-error, #FC1A42);
+}
+.faq-content ul li {
+  list-style: disc;
+}
+.faq-content ul li::marker {
+  color: var(--bg-accent);
+}
+.faq-content a {
+  font-weight: 700;
+  color: var(--text-accent, #005AFF);
+}
+@media (any-hover: hover) {
+  .faq-content a:hover {
+    color: var(--text-accent-hover);
+  }
+}
+@media (any-hover: none) {
+  .faq-content a:active {
+    color: var(--text-accent-hover);
+  }
+}
+@media (any-hover: hover) {
+  .faq-content a:active {
+    color: var(--text-accent-active);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

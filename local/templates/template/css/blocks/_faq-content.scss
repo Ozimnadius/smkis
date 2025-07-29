@@ -1,0 +1,75 @@
+@use "../helpers/index" as *;
+
+.faq-content {
+  &__top {
+    margin-bottom: 40px;
+    display: grid;
+    gap: 16px;
+    @include xs-block{
+        gap: 6px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: 40px;
+  }
+
+  &__item {
+    display: grid;
+    gap: 14px;
+  }
+
+  &__blocks {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__block {
+    display: inline-flex;
+    padding: 40px 49px 40px 30px;
+    flex-direction: column;
+    gap: 12px;
+
+    border-radius: 12px;
+    background: var(--bg-secondary, #F4F4F5);
+    @include xs-block{
+      padding: 30px 20px;
+    }
+  }
+
+  ul {
+    padding-left: 18px;
+    display:grid;
+    gap: 6px;
+    @include xs-block{
+        gap: 4px;
+    }
+
+    &[data-type="2"] {
+      li::marker {
+        color: var(--icon-error, #FC1A42);
+      }
+    }
+
+    li {
+      list-style: disc;
+
+      &::marker {
+        color: var(--bg-accent);
+      }
+    }
+  }
+
+  a {
+    font-weight: 700;
+    color: var(--text-accent, #005AFF);
+    @include hover {
+      color: var(--text-accent-hover);
+    }
+    @include active {
+      color: var(--text-accent-active);
+    }
+  }
+
+}
