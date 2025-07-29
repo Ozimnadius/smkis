@@ -1,0 +1,62 @@
+@use "../helpers/index" as *;
+
+.content {
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  h5 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+
+  .h7 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  img, .subtitle {
+    margin-block: 30px;
+  }
+
+  ul {
+    padding-left: 18px;
+    display: grid;
+    gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    @include xs-block {
+      gap: 4px;
+    }
+
+    &[data-type="2"] {
+      li::marker {
+        color: var(--icon-error, #FC1A42);
+      }
+    }
+
+    li {
+      list-style: disc;
+
+      &::marker {
+        color: var(--bg-accent);
+      }
+    }
+  }
+
+  a {
+    font-weight: 700;
+    color: var(--text-accent, #005AFF);
+    @include hover {
+      color: var(--text-accent-hover);
+    }
+    @include active {
+      color: var(--text-accent-active);
+    }
+  }
+}

@@ -167,8 +167,24 @@ button {
   }
 }
 
-.page {
-
+.container-inner{
+  width: 100%;
+  max-width: var(--container-width);
+  padding: var(--container-padding);
+  margin: 0 auto;
+  @include xlg-block{
+    max-width: 100%;
+    padding-inline: 50px;
+  }
+  @include lg-block{
+    padding-inline: 80px;
+  }
+  @include lg-block{
+    padding-inline: 40px;
+  }
+  @include xs-block{
+    padding-inline: 20px;
+  }
 }
 
 .icon-fill {

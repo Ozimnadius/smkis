@@ -60,7 +60,7 @@
 
     &.active {
       color: var(--text-accent, #005AFF);
-      border-color: var(--border-accent, #005AFF);
+//      border-color: var(--border-accent, #005AFF);
     }
 
     @include hover {

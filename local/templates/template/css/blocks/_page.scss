@@ -77,6 +77,31 @@
     }
   }
 
+  &__aside-lg{
+    display: none;
+    @include lg-block{
+      display: block;
+      margin-top: 110px;
+    }
+    @include md-block{
+      margin-top: 90px;
+    }
+    @include xs-block{
+      margin-top: 80px;
+    }
+  }
+
+  &__aside-apps,&__aside-news,&__aside-projects{
+    margin-top: 110px;
+
+    @include md-block{
+      margin-top: 90px;
+    }
+    @include xs-block{
+      margin-top: 80px;
+    }
+  }
+
   &__feedback {
     display: block;
     margin-top: -60px;
