@@ -1,8 +1,11 @@
 @use "../helpers/index" as *;
 
 .aside{
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
   &__apps,&__news,&__projects{
-    margin-top: 80px;
     @include lg-block{
       display: none;
     }
