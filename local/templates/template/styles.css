@@ -1076,6 +1076,14 @@ button {
     margin-top: 80px;
   }
 }
+.page__contacts {
+  margin-top: 70px;
+}
+@media screen and (max-width: 1919.98px) {
+  .page__contacts {
+    margin-top: 40px;
+  }
+}
 .page__feedback {
   display: block;
   margin-top: -60px;
@@ -1102,6 +1110,42 @@ button {
     margin-top: 0;
     padding-block: 80px;
   }
+}
+
+.page-contacts {
+  display: flex;
+  padding: 40px 30px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  background: var(--bg-secondary, #F4F4F5);
+  text-align: center;
+}
+.page-contacts__desc {
+  margin-bottom: 40px;
+  font-size: 14px;
+  max-width: 60ch;
+}
+@media screen and (max-width: 1279.98px) {
+  .page-contacts__desc {
+    margin-bottom: 24px;
+  }
+}
+.page-contacts__title {
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 1279.98px) {
+  .page-contacts__title {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .page-contacts__title {
+    font-size: 24px;
+  }
+}
+.page-contacts__subtitle {
+  color: var(--text-secondary, #797B8B);
 }
 
 .breadcrumbs__item {
@@ -4395,6 +4439,9 @@ button {
 
 .content > *:first-child {
   margin-top: 0 !important;
+}
+.content > *:last-child {
+  margin-bottom: 0 !important;
 }
 .content h5 {
   margin-top: 80px;

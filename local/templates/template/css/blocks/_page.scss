@@ -102,6 +102,13 @@
     }
   }
 
+  &__contacts{
+    margin-top: 70px;
+    @include xlg-block{
+      margin-top: 40px;
+    }
+  }
+
   &__feedback {
     display: block;
     margin-top: -60px;
@@ -123,6 +130,7 @@
       padding-block: 80px;
     }
   }
+
 
 
 }
