@@ -2,6 +2,7 @@
 
 .aside-menu {
   font-size: 25px;
+  position: relative;
   @include lg-block {
     display: flex;
     border-bottom: 1px solid var(--border-secondary, #15182A);
@@ -12,22 +13,21 @@
     margin-right: -40px;
   }
 
-  &[data-type="2"]{
+  &[data-type="2"] {
     font-size: 20px;
-    @include lg-block{
+    @include lg-block {
       display: block;
       border-bottom: none;
       overflow-x: visible;
       gap: initial;
     }
-    @include md-block{
+    @include md-block {
       margin-right: 0;
     }
 
-    .aside-menu__item{
+    .aside-menu__link {
       @include lg-block {
         padding-block: 24px;
-        border-bottom: 1px solid var(--border-secondary, #15182A);
         padding-right: 0;
         font-size: 20px;
       }
@@ -35,11 +35,31 @@
   }
 
   &__item {
+    border-bottom: 1px solid var(--border-secondary, #15182A);
+    @include lg-block {
+      border: none;
+    }
+
+    &.open {
+
+      .aside-menu__link {
+        svg {
+          rotate: 180deg;
+        }
+      }
+
+      .aside-menu__dropdown {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__link {
     display: flex;
     align-items: center;
     gap: 10px;
     padding-block: 24px;
-    border-bottom: 1px solid var(--border-secondary, #15182A);
     color: var(--text-primary, #15182A);
 
     font-weight: 500;
@@ -57,10 +77,9 @@
       padding-block: 18px;
     }
 
-
     &.active {
       color: var(--text-accent, #005AFF);
-//      border-color: var(--border-accent, #005AFF);
+      border-bottom: 1px solid var(--border-accent, #005AFF);
     }
 
     @include hover {
@@ -69,5 +88,55 @@
     @include active {
       color: var(--text-accent-active, #005AFF);
     }
+
+    svg {
+      margin-left: auto;
+      @include lg-block {
+        display: none;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    margin-left: 20px;
+    @include lg-block {
+      display: none !important;
+    }
+  }
+
+  &__dropdown-link {
+    padding-block: 20px;
+
+    &.active {
+      color: var(--text-accent, #005AFF);
+      //      border-color: var(--border-accent, #005AFF);
+    }
+
+    @include hover {
+      color: var(--text-accent-hover, #005AFF);
+    }
+    @include active {
+      color: var(--text-accent-active, #005AFF);
+    }
+  }
+}
+
+.aside-dropdown{
+  margin-top: 40px;
+  display: none;
+  @include lg-block{
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+  }
+  @include xs-block{
+    margin-top: 30px;
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+
+  &__item{
+    white-space: nowrap;
   }
 }

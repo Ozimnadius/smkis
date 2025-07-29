@@ -1,3 +1,3 @@
 <?php $arComponentParameters = [
-  "dropDown"=>false
+
 ];
