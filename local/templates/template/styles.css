@@ -3665,6 +3665,58 @@ button {
   max-height: 100%;
 }
 
+.glossary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
+}
+@media screen and (max-width: 1279.98px) {
+  .glossary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .glossary {
+    grid-template-columns: 100%;
+  }
+}
+.glossary__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--transition);
+}
+@media screen and (max-width: 1279.98px) {
+  .glossary__item {
+    gap: 10px;
+  }
+}
+@media (any-hover: hover) {
+  .glossary__item:hover {
+    color: var(--text-accent-hover);
+  }
+}
+@media (any-hover: none) {
+  .glossary__item:active {
+    color: var(--text-accent-hover);
+  }
+}
+@media (any-hover: hover) {
+  .glossary__item:active {
+    color: var(--text-accent-active);
+  }
+}
+.glossary__img {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 453/340;
+}
+.glossary__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .footer__top {
   margin-top: 100px;
   margin-bottom: 50px;

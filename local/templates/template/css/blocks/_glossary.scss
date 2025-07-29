@@ -1,0 +1,43 @@
+@use "../helpers/index" as *;
+
+.glossary {
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px 20px;
+  @include md-block{
+      grid-template-columns: repeat(2,1fr);
+  }
+  @include xs-block{
+      grid-template-columns: 100%;
+  }
+
+
+  &__item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include tr;
+    @include md-block{
+        gap: 10px;
+    }
+
+    @include hover{
+      color: var(--text-accent-hover);
+    }
+    @include active{
+      color: var(--text-accent-active);
+    }
+  }
+
+  &__img{
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 453/340;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
