@@ -1,0 +1,40 @@
+@use "../helpers/index" as *;
+
+.company-partners {
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__items {
+    display: grid;
+    gap: 60px;
+  }
+}
+
+.company-partner {
+  display: grid;
+  gap: 20px;
+
+  &__contacts {
+    display: flex;
+    gap: 14px 50px;
+    @include xs-block {
+      flex-direction: column;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include hover {
+      color: var(--text-accent-hover);
+    }
+  }
+
+  &__site {
+    color: var(--text-accent, #005AFF);
+  }
+
+}

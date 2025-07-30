@@ -1,5 +1,6 @@
 @forward "header";
 @forward "header-search";
+@forward "content";
 
 @forward "cities";
 
@@ -64,6 +65,11 @@
 
 @forward "rec-list";
 
+@forward "company";
+@forward "company-partners";
+@forward "company-contacts";
+
+
 @forward "footer";
 @forward "footer-menu";
 
@@ -71,5 +77,3 @@
 @forward "accordion";
 @forward "faq";
 @forward "faq-content";
-
-@forward "content";

@@ -64,6 +64,8 @@
 
     font-weight: 500;
     line-height: 1.3;
+    border-bottom: 1px solid transparent;
+
     @include tr;
     @include lg-block {
       padding-block: 20px;
@@ -79,7 +81,9 @@
 
     &.active {
       color: var(--text-accent, #005AFF);
-      border-bottom: 1px solid var(--border-accent, #005AFF);
+      @include lg-block {
+        border-color: var(--border-accent, #005AFF);
+      }
     }
 
     @include hover {
@@ -122,21 +126,21 @@
   }
 }
 
-.aside-dropdown{
+.aside-dropdown {
   margin-top: 40px;
   display: none;
-  @include lg-block{
+  @include lg-block {
     display: flex;
     gap: 16px;
     overflow-x: auto;
   }
-  @include xs-block{
+  @include xs-block {
     margin-top: 30px;
     margin-right: -20px;
     padding-right: 20px;
   }
 
-  &__item{
+  &__item {
     white-space: nowrap;
   }
 }

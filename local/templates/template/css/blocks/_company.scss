@@ -1,0 +1,7 @@
+@use "../helpers/index" as *;
+
+.company{
+  &__partners,&__contacts{
+    margin-top: 90px;
+  }
+}

@@ -3,11 +3,16 @@
 .content {
 
   > *:first-child {
-    margin-top: 0!important;
+    margin-top: 0 !important;
   }
 
-  >*:last-child{
+  > *:last-child {
     margin-bottom: 0 !important;
+  }
+
+  h4{
+    margin-top: 110px;
+    margin-bottom: 20px;
   }
 
   h5 {
@@ -28,9 +33,9 @@
     margin-block: 30px;
   }
 
-  img{
+  img {
     border-radius: 16px;
-    @include xs-block{
+    @include xs-block {
       border-radius: 10px;
     }
   }
@@ -68,6 +73,27 @@
     }
     @include active {
       color: var(--text-accent-active);
+    }
+  }
+
+  blockquote{
+    border-radius: 16px;
+    background: var(--bg-secondary, #F4F4F5);
+    padding: 70px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    text-align: center;
+    margin-block: 50px;
+    font-size: 24px;
+    @include xs-block{
+      font-size: 20px;
+    }
+
+    p{
+      max-width: 44ch;
     }
   }
 }
