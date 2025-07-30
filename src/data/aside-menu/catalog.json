@@ -1,0 +1,22 @@
+[
+  {
+    "active": true,
+    "name": "Анкерные линии",
+    "url": "/catalog/detail/"
+  },
+  {
+    "active": false,
+    "name": "Анкерные точки",
+    "url": "/catalog/detail/"
+  },
+  {
+    "active": false,
+    "name": "Опорные конструкции",
+    "url": "/catalog/detail/"
+  },
+  {
+    "active": false,
+    "name": "Противовесные системы",
+    "url": "/catalog/detail/"
+  }
+]

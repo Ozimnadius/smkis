@@ -3,76 +3,29 @@
 .aside-menu {
   font-size: 25px;
   position: relative;
-  @include lg-block {
-    display: flex;
-    border-bottom: 1px solid var(--border-secondary, #15182A);
-    gap: 40px;
-    overflow-x: auto;
-  }
-  @include md-block {
-    margin-right: -40px;
-  }
 
-  &[data-type="2"] {
-    font-size: 20px;
-    @include lg-block {
-      display: block;
-      border-bottom: none;
-      overflow-x: visible;
-      gap: initial;
-    }
-    @include md-block {
-      margin-right: 0;
-    }
-
-    .aside-menu__link {
-      @include lg-block {
-        padding-block: 24px;
-        padding-right: 0;
+  &[data-type="2"]{
+    .aside-menu{
+      &__item{
         font-size: 20px;
       }
     }
   }
 
   &__item {
-    border-bottom: 1px solid var(--border-secondary, #15182A);
-    @include lg-block {
-      border: none;
-    }
-
-    &.open {
-
-      .aside-menu__link {
-        svg {
-          rotate: 180deg;
-        }
-      }
-
-      .aside-menu__dropdown {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-  }
-
-  &__link {
     display: flex;
     align-items: center;
     gap: 10px;
     padding-block: 24px;
     color: var(--text-primary, #15182A);
-
     font-weight: 500;
     line-height: 1.3;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid var(--border-secondary, #15182A);
 
     @include tr;
     @include lg-block {
       padding-block: 20px;
       padding-right: 40px;
-      border-width: 3px;
-      border-color: transparent;
-      white-space: nowrap;
       font-size: 22px;
     }
     @include md-block {
@@ -93,54 +46,8 @@
       color: var(--text-accent-active, #005AFF);
     }
 
-    svg {
-      margin-left: auto;
-      @include lg-block {
-        display: none;
-      }
+    svg{
+      flex-shrink: 0;
     }
-  }
-
-  &__dropdown {
-    display: none;
-    margin-left: 20px;
-    @include lg-block {
-      display: none !important;
-    }
-  }
-
-  &__dropdown-link {
-    padding-block: 20px;
-
-    &.active {
-      color: var(--text-accent, #005AFF);
-      //      border-color: var(--border-accent, #005AFF);
-    }
-
-    @include hover {
-      color: var(--text-accent-hover, #005AFF);
-    }
-    @include active {
-      color: var(--text-accent-active, #005AFF);
-    }
-  }
-}
-
-.aside-dropdown {
-  margin-top: 40px;
-  display: none;
-  @include lg-block {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-  }
-  @include xs-block {
-    margin-top: 30px;
-    margin-right: -20px;
-    padding-right: 20px;
-  }
-
-  &__item {
-    white-space: nowrap;
   }
 }

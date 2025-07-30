@@ -1,47 +1,29 @@
 @use "../helpers/index" as *;
 
-.engineering{
+.engineering {
 
-  &__menu{
+  &__menu {
     margin-bottom: 40px;
-    @include xlg-block{
+    @include xlg-block {
       margin-bottom: 30px;
     }
   }
 
-  &__nav{
-    display: none;
-  }
-
-  &__lg-db{
-    display: none;
-    margin-top: 110px;
-    @include lg-block{
-      display: block;
-    }
-    @include md-block{
-      margin-top: 90px;
-    }
-    @include xs-block{
-      margin-top: 80px;
-    }
-  }
-
-  &__news,&__projects{
-    @include lg-block{
+  &__news, &__projects {
+    @include lg-block {
       margin-top: 110px;
     }
-    @include md-block{
+    @include md-block {
       margin-top: 90px;
     }
-    @include xs-block{
+    @include xs-block {
       margin-top: 80px;
     }
   }
 
-  &__faq{
+  &__faq {
     margin-top: 120px;
-    @include md-block{
+    @include md-block {
       margin-top: 90px;
     }
   }

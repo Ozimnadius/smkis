@@ -15,7 +15,7 @@
   <div class="page__border">
     <div class="container-inner">
       <div class="page__grid">
-        <aside class="page__aside page__aside--lg-dn">
+        <aside class="page__aside">
           <div class="aside">
             <div class="aside__apps">
               <? component('aside-apps') ?>
@@ -116,15 +116,18 @@
               <div class="page-contacts__subtitle">Телефон технического отдела</div>
             </div>
           </div>
-          <div class="page__aside-lg">
-            <div class="page__aside-apps">
-              <? component('aside-apps') ?>
-            </div>
-            <div class="page__aside-news">
-              <? component('aside-news', [], '/src/data/slider-projects.json') ?>
-            </div>
-            <div class="page__aside-projects">
-              <? component('aside-projects', [], '/src/data/slider-projects.json') ?>
+          <div class="page__aside-mobile">
+            <div class="aside-mobile">
+              <div class="aside-mobile__apps">
+                <? component('aside-apps') ?>
+              </div>
+              <div class="aside-mobile__news">
+                <? component('aside-news', [], '/src/data/slider-projects.json') ?>
+              </div>
+              <div class="aside-mobile__projects">
+                <? component('aside-projects', [], '/src/data/slider-projects.json') ?>
+              </div>
+
             </div>
           </div>
         </main>

@@ -18,7 +18,7 @@
         <aside class="page__aside">
           <div class="aside">
             <div class="aside__menu">
-              <? component('aside-menu') ?>
+              <? component('aside-menu',[],'src/data/aside-menu/catalog.json') ?>
             </div>
             <div class="aside__apps">
               <? component('aside-apps') ?>
@@ -33,6 +33,9 @@
         </aside>
         <main class="page__main">
           <div class="catalog">
+            <div class="page__menu-mobile">
+              <? component('aside-mobile-menu',[],'src/data/aside-menu/catalog.json') ?>
+            </div>
             <div class="catalog__menu">
               <div class="catalog-menu">
                 <a href="/"
@@ -59,14 +62,19 @@
             <div class="catalog__pagination">
               <? component('pagination') ?>
             </div>
-            <div class="catalog__apps">
-              <? component('aside-apps') ?>
-            </div>
-            <div class="catalog__news">
-              <? component('aside-news', [], '/src/data/slider-projects.json') ?>
-            </div>
-            <div class="catalog__projects">
-              <? component('aside-projects', [], '/src/data/slider-projects.json') ?>
+            <div class="page__aside-mobile">
+              <div class="aside-mobile">
+                <div class="aside-mobile__apps">
+                  <? component('aside-apps') ?>
+                </div>
+                <div class="aside-mobile__news">
+                  <? component('aside-news', [], '/src/data/slider-projects.json') ?>
+                </div>
+                <div class="aside-mobile__projects">
+                  <? component('aside-projects', [], '/src/data/slider-projects.json') ?>
+                </div>
+
+              </div>
             </div>
             <div class="catalog__content">
               <div class="catalog-content">

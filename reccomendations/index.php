@@ -18,7 +18,7 @@
         <aside class="page__aside">
           <div class="aside">
             <div class="aside__menu">
-              <? component('aside-menu',['dropDown'=>true]) ?>
+              <? component('drop-menu',[],'src/data/rec-menu.json') ?>
             </div>
             <div class="aside__news">
               <? component('aside-news', [], '/src/data/slider-projects.json') ?>
@@ -29,15 +29,21 @@
           </div>
         </aside>
         <main class="page__main">
+          <div class="page__menu-mobile">
+            <? component('drop-menu-mobile',[],'src/data/rec-menu.json') ?>
+          </div>
           <div class="page__content">
             <? component('rec-list',[],'src/data/rec-list.json') ?>
           </div>
-          <div class="page__aside-lg">
-            <div class="page__aside-news">
-              <? component('aside-news', [], '/src/data/slider-projects.json') ?>
-            </div>
-            <div class="page__aside-projects">
-              <? component('aside-projects', [], '/src/data/slider-projects.json') ?>
+          <div class="page__aside-mobile">
+            <div class="aside-mobile">
+              <div class="aside-mobile__news">
+                <? component('aside-news', [], '/src/data/slider-projects.json') ?>
+              </div>
+              <div class="aside-mobile__projects">
+                <? component('aside-projects', [], '/src/data/slider-projects.json') ?>
+              </div>
+
             </div>
           </div>
         </main>

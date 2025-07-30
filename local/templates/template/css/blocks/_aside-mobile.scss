@@ -1,0 +1,13 @@
+@use "../helpers/index" as *;
+
+.aside-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+  @include md-block {
+    gap: 90px;
+  }
+  @include xs-block {
+    gap: 80px;
+  }
+}

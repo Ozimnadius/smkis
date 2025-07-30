@@ -70,18 +70,27 @@
   }
 
   &__aside {
-    &--lg-dn {
-      @include lg-block {
-        display: none;
-      }
+    @include lg-block {
+      display: none;
     }
   }
 
-  &__aside-lg {
+  &__menu-mobile{
     display: none;
+    @include lg-block{
+      display: block;
+      margin-bottom: 60px;
+    }
+    @include md-block{
+      margin-bottom: 40px;
+    }
+  }
+
+  &__aside-mobile {
+    display: none;
+    margin-top: 110px;
     @include lg-block {
       display: block;
-      margin-top: 110px;
     }
     @include md-block {
       margin-top: 90px;
@@ -89,6 +98,15 @@
     @include xs-block {
       margin-top: 80px;
     }
+  }
+
+  &__aside-lg {
+    display: none;
+    @include lg-block {
+      display: block;
+
+    }
+
   }
 
   &__aside-apps, &__aside-news, &__aside-projects {
@@ -102,9 +120,9 @@
     }
   }
 
-  &__contacts{
+  &__contacts {
     margin-top: 70px;
-    @include xlg-block{
+    @include xlg-block {
       margin-top: 40px;
     }
   }
@@ -130,7 +148,6 @@
       padding-block: 80px;
     }
   }
-
 
 
 }

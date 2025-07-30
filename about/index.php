@@ -19,7 +19,7 @@
         <aside class="page__aside">
           <div class="aside">
             <div class="aside__menu">
-              <? component('aside-menu') ?>
+              <? component('aside-menu',[],'src/data/aside-menu/contacts.json') ?>
             </div>
             <div class="aside__apps">
               <? component('aside-apps') ?>
@@ -33,6 +33,9 @@
           </div>
         </aside>
         <main class="page__main company">
+          <div class="page__menu-mobile">
+            <? component('aside-mobile-menu',[],'src/data/aside-menu/contacts.json') ?>
+          </div>
           <div class="page__content">
             <div class="content">
               <h4>«Линия Жизни»</h4>
@@ -232,15 +235,17 @@
               </div>
             </div>
           </div>
-          <div class="page__aside-lg">
-            <div class="page__aside-apps">
-              <? component('aside-apps') ?>
-            </div>
-            <div class="page__aside-news">
-              <? component('aside-news', [], '/src/data/slider-projects.json') ?>
-            </div>
-            <div class="page__aside-projects">
-              <? component('aside-projects', [], '/src/data/slider-projects.json') ?>
+          <div class="page__aside-mobile">
+            <div class="aside-mobile">
+              <div class="aside-mobile__apps">
+                <? component('aside-apps') ?>
+              </div>
+              <div class="aside-mobile__news">
+                <? component('aside-news', [], '/src/data/slider-projects.json') ?>
+              </div>
+              <div class="aside-mobile__projects">
+                <? component('aside-projects', [], '/src/data/slider-projects.json') ?>
+              </div>
             </div>
           </div>
         </main>

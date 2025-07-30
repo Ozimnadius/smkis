@@ -12,10 +12,17 @@
 @forward "breadcrumbs";
 
 @forward "aside";
+@forward "aside-mobile";
 @forward "aside-menu";
+@forward "aside-mobile-menu";
 @forward "aside-apps";
 @forward "aside-news";
 @forward "aside-projects";
+
+@forward "drop-menu";
+@forward "drop-menu-mobile";
+
+
 
 @forward "main";
 @forward "main-top";
@@ -68,6 +75,10 @@
 @forward "company";
 @forward "company-partners";
 @forward "company-contacts";
+
+@forward "projects-list";
+
+
 
 
 @forward "footer";

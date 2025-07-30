@@ -180,6 +180,22 @@ function initSliders() {
       speed: 700,
     });
   });
+
+  document.querySelectorAll('.aside-mobile-menu').forEach(e => {
+    new Swiper(e, {
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      speed: 700,
+      breakpoints: {
+        // when window width is >= 768px
+        768: {
+          spaceBetween: 40,
+        }
+      }
+    });
+  });
+
+
 }
 
 function initValidators() {

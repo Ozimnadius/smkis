@@ -1,0 +1,27 @@
+[
+  {
+    "active": true,
+    "name": "«Линия Жизни»",
+    "url": "/"
+  },
+  {
+    "active": false,
+    "name": "Производство",
+    "url": "/"
+  },
+  {
+    "active": false,
+    "name": "Проектное подразделение",
+    "url": "/"
+  },
+  {
+    "active": false,
+    "name": "Партнеры",
+    "url": "/"
+  },
+  {
+    "active": false,
+    "name": "Контакты",
+    "url": "/"
+  }
+]

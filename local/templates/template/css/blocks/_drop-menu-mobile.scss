@@ -1,0 +1,21 @@
+@use "../helpers/index" as *;
+
+.drop-menu-mobile{
+  &__top{
+    margin-bottom: 40px;
+  }
+
+  &__items{
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    margin-right: -40px;
+    padding-right: 40px;
+  }
+
+  &__item{
+    white-space: nowrap;
+    border-radius: 50px;
+    border-color: var(--border-secondary, #15182A);
+  }
+}
