@@ -32,11 +32,14 @@ h1, .h1 {
   @include xlg-block {
     font-size: 84px;
   }
+  @include lg-block{
+    font-size: 60px;
+  }
   @include md-block {
-    font-size: 64px;
+    font-size: 40px;
   }
   @include xs-block {
-    font-size: 44px;
+    font-size: 32px;
   }
 }
 
@@ -167,22 +170,22 @@ button {
   }
 }
 
-.container-inner{
+.container-inner {
   width: 100%;
   max-width: var(--container-width);
   padding: var(--container-padding);
   margin: 0 auto;
-  @include xlg-block{
+  @include xlg-block {
     max-width: 100%;
     padding-inline: 50px;
   }
-  @include lg-block{
+  @include lg-block {
     padding-inline: 80px;
   }
-  @include lg-block{
+  @include lg-block {
     padding-inline: 40px;
   }
-  @include xs-block{
+  @include xs-block {
     padding-inline: 20px;
   }
 }
@@ -443,8 +446,8 @@ button {
 
 }
 
-.title{
-  @include xs-block{
+.title {
+  @include xs-block {
     font-size: 32px;
   }
 }

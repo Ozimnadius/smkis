@@ -1,0 +1,23 @@
+@use "../helpers/index" as *;
+
+.project{
+
+  &__items{
+    margin-top: 30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap: 20px;
+    @include lg-block{
+      max-width: 1000px;
+      margin-inline: auto;
+    }
+    @include xs-block{
+        grid-template-columns: 100%;
+    }
+
+  }
+
+  &__gallery{
+    margin-top: 60px;
+  }
+}
