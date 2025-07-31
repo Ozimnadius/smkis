@@ -182,7 +182,7 @@
                   </div>
                 </div>
                 <div class="status-banner__right">
-                  <a href=""
+                  <a href="/registration/"
                      class="status-banner__link btn btn--large btn--white"
                   >Зарегистрировать
                   </a>

@@ -100,16 +100,16 @@
     }
   }
 
-  &__aside-lg {
+/*  &__aside-lg {
     display: none;
     @include lg-block {
       display: block;
 
     }
 
-  }
+  }*/
 
-  &__aside-apps, &__aside-news, &__aside-projects {
+/*  &__aside-apps, &__aside-news, &__aside-projects {
     margin-top: 110px;
 
     @include md-block {
@@ -118,7 +118,7 @@
     @include xs-block {
       margin-top: 80px;
     }
-  }
+  }*/
 
   &__contacts {
     margin-top: 70px;

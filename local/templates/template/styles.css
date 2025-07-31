@@ -1078,6 +1078,24 @@ button {
 
 .page {
   overflow: hidden;
+  /*  &__aside-lg {
+      display: none;
+      @include lg-block {
+        display: block;
+
+      }
+
+    }*/
+  /*  &__aside-apps, &__aside-news, &__aside-projects {
+      margin-top: 110px;
+
+      @include md-block {
+        margin-top: 90px;
+      }
+      @include xs-block {
+        margin-top: 80px;
+      }
+    }*/
 }
 .page__breadcrumbs {
   margin-top: 40px;
@@ -1193,27 +1211,6 @@ button {
 }
 @media screen and (max-width: 767.98px) {
   .page__aside-mobile {
-    margin-top: 80px;
-  }
-}
-.page__aside-lg {
-  display: none;
-}
-@media screen and (max-width: 1439.98px) {
-  .page__aside-lg {
-    display: block;
-  }
-}
-.page__aside-apps, .page__aside-news, .page__aside-projects {
-  margin-top: 110px;
-}
-@media screen and (max-width: 1279.98px) {
-  .page__aside-apps, .page__aside-news, .page__aside-projects {
-    margin-top: 90px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  .page__aside-apps, .page__aside-news, .page__aside-projects {
     margin-top: 80px;
   }
 }
