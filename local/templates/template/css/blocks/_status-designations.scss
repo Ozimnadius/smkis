@@ -1,0 +1,29 @@
+@use "../helpers/index" as *;
+
+.status-designations{
+  &__title{
+    margin-bottom: 30px;
+    @include xs-block{
+      margin-bottom: 15px;
+    }
+  }
+
+  &__items{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    @include md-block{
+        grid-template-columns: 100%;
+    }
+  }
+
+  &__item{
+    display: flex;
+    align-items: start;
+    gap: 6px;
+
+    svg{
+      flex-shrink: 0;
+    }
+  }
+}

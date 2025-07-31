@@ -1,0 +1,47 @@
+@use "../helpers/index" as *;
+
+.status-result {
+
+  &__error {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__success {
+    display: flex;
+    padding: 40px 50px;
+    gap: 120px;
+    border-radius: 16px;
+    background: var(--bg-secondary, #F4F4F5);
+    @include lg-block {
+      gap: 80px;
+    }
+    @include md-block {
+      flex-direction: column;
+      gap: 40px;
+      padding: 40px 30px;
+    }
+    @include xs-block {
+      padding: 40px 20px;
+      gap: 30px;
+    }
+  }
+
+  &__name {
+    color: var(--text-secondary, #797B8B);
+  }
+
+  &__val {
+    @include md-block {
+      font-size: 26px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+}

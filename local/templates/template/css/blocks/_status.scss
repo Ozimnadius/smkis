@@ -1,3 +1,89 @@
 @use "../helpers/index" as *;
 
-.status{}
+.status {
+  &__block {
+    padding: 60px 40px;
+    background: var(--bg-secondary, #F4F4F5);
+    border-radius: 16px;
+    @include md-block{
+      padding: 50px 30px;
+    }
+    @include xs-block{
+      padding: 40px 20px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    input {
+      width: 100%;
+      height: 60px;
+      border-radius: 58px;
+      background: var(--bg-primary, #FFF);
+      padding-left: 70px;
+      padding-right: 270px;
+      @include md-block{
+        padding-right: 190px;
+      }
+      @include xs-block{
+        padding-left: 57px;
+        padding-right: 16px;
+      }
+    }
+  }
+
+  &__form-icon {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    translate: 0 -50%;
+  }
+
+  &__submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 265px;
+    @include md-block{
+      width: 183px;
+    }
+    @include xs-block{
+      position: static;
+      width: 100%;
+    }
+  }
+
+  &__result{
+    margin-top: 10px;
+  }
+
+  &__info{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    @include md-block{
+      margin-bottom: 50px;
+    }
+
+    svg{
+      flex-shrink: 0;
+    }
+  }
+
+  &__designations{
+    margin-bottom: 120px;
+    @include md-block{
+      margin-bottom: 90px;
+    }
+    @include xs-block{
+      margin-bottom: 80px;
+    }
+  }
+}

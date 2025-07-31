@@ -1,0 +1,45 @@
+@use "../helpers/index" as *;
+
+.status-banner{
+  padding: 70px 50px;
+  border-radius: 24px;
+  background: var(--bg-inverted, #15182A) url("/upload/images/status-banner/bg.svg") 0 0 no-repeat;
+  background-size: cover;
+
+  color: var(--text-inverted, #FFF);
+
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  align-items: center;
+  @include md-block{
+    padding: 50px 40px;
+    grid-template-columns: 100%;
+    gap: 30px;
+  }
+  @include xs-block{
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  &__left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__right{
+    display: flex;
+    justify-content: end;
+    @include md-block{
+        justify-content: start;
+    }
+  }
+
+  &__link{
+    width: 265px;
+    @include xs-block{
+      width: 100%;
+    }
+  }
+}

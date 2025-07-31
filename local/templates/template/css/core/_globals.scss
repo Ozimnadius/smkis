@@ -32,7 +32,7 @@ h1, .h1 {
   @include xlg-block {
     font-size: 84px;
   }
-  @include lg-block{
+  @include lg-block {
     font-size: 60px;
   }
   @include md-block {
@@ -236,6 +236,7 @@ button {
   display: flex;
   padding-inline: 27px;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   @include tr;
 
@@ -450,5 +451,18 @@ button {
   @include xs-block {
     font-size: 32px;
   }
+}
+
+.color-error {
+  color: var(--text-error);
+}
+.color-success {
+  color: var(--text-success);
+}
+.color-accent {
+  color: var(--text-accent);
+}
+.color-secondary {
+  color: var(--text-secondary);
 }
 
