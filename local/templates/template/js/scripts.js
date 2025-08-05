@@ -522,7 +522,6 @@ class Search {
 
 class Registration {
     constructor(root) {
-
         this.root = root;
         this.countWrapper = root.querySelector('[data-registration-count]');
         this.countInput = this.countWrapper.querySelector('[data-registration-count-value]');
@@ -541,9 +540,6 @@ class Registration {
       </div>
     `;
 
-
-        console.log(this);
-
         this._bindEvents();
         this._updateCountFromDOM();
     }
@@ -556,18 +552,20 @@ class Registration {
 
     _changeCount(delta) {
         let value = this._getCountValue();
-        value = Math.max(0, value + delta);
+        value = Math.max(1, value + delta);
         this.countInput.value = value;
         this._syncRegistrationNumbers(value);
     }
 
     _getCountValue() {
-        return parseInt(this.countInput.value, 10) || 0;
+        return Math.max(1, parseInt(this.countInput.value, 10) || 1);
     }
 
     _filterAndSync() {
         this.countInput.value = this.countInput.value.replace(/\D/g, '');
-        this._syncRegistrationNumbers(this._getCountValue());
+        const value = this._getCountValue();
+        this.countInput.value = value;
+        this._syncRegistrationNumbers(value);
     }
 
     _syncRegistrationNumbers(desiredCount) {
@@ -591,8 +589,7 @@ class Registration {
         const deleteBtn = newElement.querySelector('.registration__number-delete');
 
         deleteBtn.addEventListener('click', () => {
-            newElement.remove();
-            this._updateCountInput();
+            this._removeRegistrationNumber(newElement);
         });
 
         this.grid.appendChild(newElement);
@@ -600,8 +597,16 @@ class Registration {
 
     _removeLastRegistrationNumber() {
         const items = this.grid.querySelectorAll('.registration__number');
-        if (items.length > 0) {
+        if (items.length > 1) {
             items[items.length - 1].remove();
+        }
+    }
+
+    _removeRegistrationNumber(element) {
+        const items = this.grid.querySelectorAll('.registration__number');
+        if (items.length > 1) {
+            element.remove();
+            this._updateCountInput();
         }
     }
 
@@ -611,7 +616,6 @@ class Registration {
     }
 
     _updateCountFromDOM() {
-        // Поддержка начального состояния при value="1"
         const current = this._getCountValue();
         this._syncRegistrationNumbers(current);
     }
