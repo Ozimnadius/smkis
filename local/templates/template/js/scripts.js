@@ -625,16 +625,6 @@ class Registration {
     }
 }
 
-function showScrollUpButton() {
-    const scrollUpButton = document.querySelector('.footer__up');
-    const oneScreen = window.innerHeight;
-    if (window.scrollY > oneScreen) {
-        scrollUpButton.classList.add('visible');
-    } else {
-        scrollUpButton.classList.remove('visible');
-    }
-}
-
 function setInlinePadding() {
     const windowWidth = document.documentElement.clientWidth;
     const containerElement = document.querySelector('.container');
