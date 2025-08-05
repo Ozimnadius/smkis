@@ -1,3 +1,67 @@
 @use "../helpers/index" as *;
 
-.registration {}
+.registration {
+
+  &__desc {
+    margin-bottom: 45px;
+    max-width: 60ch;
+  }
+
+  &__top {
+    margin-bottom: 20px;
+    padding: 50px 40px;
+    border-radius: 16px;
+    background: var(--bg-secondary, #F4F4F5);
+
+    input {
+      width: 100%;
+      border-radius: 100vmax;
+      padding: 0 20px;
+      height: 58px;
+      background: var(--bg-primary, #FFF);
+    }
+  }
+
+  &__fields {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px 80px;
+    grid-template-areas: 'email email' 'serial count';
+  }
+
+  &__email {
+    grid-area: email;
+  }
+
+  &__serial {
+    grid-area: serial;
+  }
+
+  &__count {
+    grid-area: count;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  &__number{
+    position: relative;
+
+    input{
+      padding-right: 50px;
+    }
+  }
+
+  &__number-delete{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    translate: 0 -50%;
+
+  }
+
+}

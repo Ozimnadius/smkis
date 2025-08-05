@@ -3024,6 +3024,17 @@ button {
   font-style: normal;
   font-weight: 400;
 }
+.count {
+  display: grid;
+  grid-template-columns: 58px 100px 58px;
+  gap: 20px;
+}
+.count__input {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
 .catalog__items {
   margin-top: 24px;
 }
@@ -4162,6 +4173,57 @@ button {
   .status-banner__link {
     width: 100%;
   }
+}
+
+.registration__desc {
+  margin-bottom: 45px;
+  max-width: 60ch;
+}
+.registration__top {
+  margin-bottom: 20px;
+  padding: 50px 40px;
+  border-radius: 16px;
+  background: var(--bg-secondary, #F4F4F5);
+}
+.registration__top input {
+  width: 100%;
+  border-radius: 100vmax;
+  padding: 0 20px;
+  height: 58px;
+  background: var(--bg-primary, #FFF);
+}
+.registration__fields {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px 80px;
+  grid-template-areas: "email email" "serial count";
+}
+.registration__email {
+  grid-area: email;
+}
+.registration__serial {
+  grid-area: serial;
+}
+.registration__count {
+  grid-area: count;
+}
+.registration__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.registration__number {
+  position: relative;
+}
+.registration__number input {
+  padding-right: 50px;
+}
+.registration__number-delete {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  translate: 0 -50%;
 }
 
 .glossary {
