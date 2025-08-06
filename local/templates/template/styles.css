@@ -2997,11 +2997,23 @@ button {
   fill: currentColor;
 }
 
+.form-accept {
+  --opacity: 0;
+  --fill: transparent;
+  --stroke: var(--border-on-primary);
+}
+.form-accept--white {
+  --stroke: var(--border-inverted);
+}
+.form-accept--white .form-accept__input:checked + .form-accept__fake {
+  --fill: var(--bg-primary);
+}
 .form-accept__input {
   display: none;
 }
-.form-accept__input:checked + .form-accept__fake path {
-  opacity: 1;
+.form-accept__input:checked + .form-accept__fake {
+  --opacity: 1;
+  --fill: var(--text-accent);
 }
 .form-accept__fake {
   cursor: pointer;
@@ -3009,9 +3021,18 @@ button {
   gap: 12px;
   font-size: 14px;
 }
-.form-accept__fake path {
+.form-accept__checkbox {
+  flex-shrink: 0;
+}
+.form-accept__checkbox rect {
   transition: var(--transition);
-  opacity: 0;
+  fill: var(--fill);
+  stroke: var(--stroke);
+  stroke-width: 1px;
+}
+.form-accept__checkbox path {
+  transition: var(--transition);
+  opacity: var(--opacity);
 }
 
 .form-select {
@@ -4175,15 +4196,33 @@ button {
   }
 }
 
+.registration {
+  --error: var(--text-error);
+}
 .registration__desc {
   margin-bottom: 45px;
   max-width: 60ch;
+}
+@media screen and (max-width: 767.98px) {
+  .registration__desc {
+    margin-bottom: 30px;
+  }
 }
 .registration__top {
   margin-bottom: 20px;
   padding: 50px 40px;
   border-radius: 16px;
   background: var(--bg-secondary, #F4F4F5);
+}
+@media screen and (max-width: 1279.98px) {
+  .registration__top {
+    padding: 40px 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .registration__top {
+    padding: 40px 10px;
+  }
 }
 .registration__top input {
   width: 100%;
@@ -4199,6 +4238,22 @@ button {
   gap: 30px 80px;
   grid-template-areas: "email email" "serial count";
 }
+@media screen and (max-width: 1919.98px) {
+  .registration__fields {
+    column-gap: 60px;
+  }
+}
+@media screen and (max-width: 1439.98px) {
+  .registration__fields {
+    column-gap: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .registration__fields {
+    grid-template-columns: 100%;
+    grid-template-areas: "email" "serial" "count";
+  }
+}
 .registration__email {
   grid-area: email;
 }
@@ -4208,10 +4263,26 @@ button {
 .registration__count {
   grid-area: count;
 }
+@media screen and (max-width: 767.98px) {
+  .registration__count {
+    display: flex;
+    justify-content: center;
+  }
+}
 .registration__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+@media screen and (max-width: 1279.98px) {
+  .registration__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .registration__grid {
+    grid-template-columns: 100%;
+  }
 }
 .registration__number {
   position: relative;
@@ -4224,6 +4295,26 @@ button {
   top: 50%;
   right: 20px;
   translate: 0 -50%;
+}
+.registration__bottom {
+  padding: 0 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .registration__bottom {
+    padding: 0 20px;
+  }
+}
+.registration__accept {
+  margin-bottom: 30px;
+  position: relative;
+}
+@media screen and (max-width: 767.98px) {
+  .registration__accept .form__error-label {
+    position: static;
+  }
+}
+.registration__submit {
+  width: 100%;
 }
 
 .glossary {

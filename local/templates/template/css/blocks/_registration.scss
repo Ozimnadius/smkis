@@ -1,10 +1,14 @@
 @use "../helpers/index" as *;
 
 .registration {
+  --error: var(--text-error);
 
   &__desc {
     margin-bottom: 45px;
     max-width: 60ch;
+    @include xs-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__top {
@@ -12,6 +16,12 @@
     padding: 50px 40px;
     border-radius: 16px;
     background: var(--bg-secondary, #F4F4F5);
+    @include md-block {
+      padding: 40px 30px;
+    }
+    @include xs-block {
+      padding: 40px 10px;
+    }
 
     input {
       width: 100%;
@@ -28,6 +38,16 @@
     grid-template-columns: 1fr auto;
     gap: 30px 80px;
     grid-template-areas: 'email email' 'serial count';
+    @include xlg-block {
+      column-gap: 60px;
+    }
+    @include lg-block {
+      column-gap: 30px;
+    }
+    @include xs-block {
+      grid-template-columns: 100%;
+      grid-template-areas: 'email' 'serial' 'count';
+    }
   }
 
   &__email {
@@ -40,28 +60,60 @@
 
   &__count {
     grid-area: count;
+    @include xs-block {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    @include md-block {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include xs-block {
+      grid-template-columns: 100%;
+    }
   }
 
-  &__number{
+  &__number {
     position: relative;
 
-    input{
+    input {
       padding-right: 50px;
     }
   }
 
-  &__number-delete{
+  &__number-delete {
     position: absolute;
     top: 50%;
     right: 20px;
     translate: 0 -50%;
 
+  }
+
+  &__bottom {
+    padding: 0 30px;
+    @include xs-block {
+      padding: 0 20px;
+    }
+  }
+
+  &__accept {
+    margin-bottom: 30px;
+    position: relative;
+
+    .form__error-label{
+      @include xs-block{
+        position: static;
+      }
+    }
+  }
+
+  &__submit {
+    width: 100%;
   }
 
 }

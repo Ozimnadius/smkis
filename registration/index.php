@@ -2,181 +2,240 @@
 
 <!-- main -->
 <div class="page">
-    <div class="page__breadcrumbs">
-        <div class="container-inner">
-            <? component('breadcrumbs') ?>
-        </div>
+  <div class="page__breadcrumbs">
+    <div class="container-inner">
+      <? component('breadcrumbs') ?>
     </div>
-    <div class="page__title">
-        <div class="container-inner">
-            <h1 class="title">Регистрация анкерных устройств</h1>
-        </div>
+  </div>
+  <div class="page__title">
+    <div class="container-inner">
+      <h1 class="title">Регистрация анкерных устройств</h1>
     </div>
-    <div class="page__border">
-        <div class="container-inner">
-            <div class="page__grid">
-                <main class="page__main">
-                    <form class="registration"
-                          action="/registration/"
-                          method="post"
-                          data-registration-root
+  </div>
+  <div class="page__border">
+    <div class="container-inner">
+      <div class="page__grid">
+        <main class="page__main">
+          <form class="registration"
+                action="/registration/"
+                method="post"
+                data-registration-root
+          >
+            <div class="registration__desc subtitle">
+              Гарантийные обязательства распространяются только на анкерные устройства, зарегистрированные
+              на сайте производителя
+            </div>
+            <div class="registration__form">
+              <div class="registration__top">
+                <div class="registration__fields">
+                  <div class="registration__field registration__email">
+                    <input type="email"
+                           name="email"
+                           placeholder="Email"
                     >
-                        <div class="registration__desc subtitle">
-                            Гарантийные обязательства распространяются только на анкерные устройства, зарегистрированные
-                            на сайте производителя
-                        </div>
-                        <div class="registration__form">
-                            <div class="registration__top">
-                                <div class="registration__fields">
-                                    <div class="registration__field registration__email">
-                                        <input type="email" name="email" placeholder="Email">
-                                    </div>
-                                    <div class="registration__field registration__serial">
-                                        <input type="text" name="serial" placeholder="Введите серийный номер устройства">
-                                    </div>
-                                    <div class="registration__field registration__count">
-                                        <div class="count" data-registration-count>
-                                            <button type="button" class="count__btn" data-registration-count-down>
-                                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="1" y="1" width="58" height="58" rx="29" fill="white"/>
-                                                    <circle cx="30" cy="30" r="29" stroke="#DDDEE2" stroke-width="1.4"/>
-                                                    <path d="M21.5 30.1C21.5 30.5971 21.9029 31 22.4 31L37.6 31C38.0971 31 38.5 30.5971 38.5 30.1C38.5 29.6029 38.0971 29.2 37.6 29.2L22.4 29.2C21.9029 29.2 21.5 29.6029 21.5 30.1Z"
-                                                          fill="#15182A"/>
-                                                </svg>
-                                            </button>
-                                            <input class="count__input" type="text" name="count" value="1" data-registration-count-value>
-                                            <button type="button" class="count__btn" data-registration-count-up>
-                                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <rect x="1" y="1" width="58" height="58" rx="29" fill="white"/>
-                                                    <circle cx="30" cy="30" r="29" stroke="#DDDEE2" stroke-width="1.4"/>
-                                                    <path d="M21.5 30.1C21.5 30.5971 21.9029 31 22.4 31H37.6C38.0971 31 38.5 30.5971 38.5 30.1C38.5 29.6029 38.0971 29.2 37.6 29.2H22.4C21.9029 29.2 21.5 29.6029 21.5 30.1Z"
-                                                          fill="#15182A"/>
-                                                    <path d="M30 21.5C29.4477 21.5 29 21.9477 29 22.5V37.5C29 38.0523 29.4477 38.5 30 38.5C30.5523 38.5 31 38.0523 31 37.5V22.5C31 21.9477 30.5523 21.5 30 21.5Z"
-                                                          fill="#15182A"/>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="registration__grid" data-registration-grid>
-                                    <div class="registration__number">
-                                        <input class="registration__number-input" type="text" name="number" placeholder="Введите номер">
-                                        <button type="button" class="registration__number-delete">
-                                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17.4193 8.5146C17.4193 8.5146 16.9216 14.6884 16.6328 17.2889C16.4953 18.531 15.7281 19.2589 14.4713 19.2818C12.0798 19.3249 9.68542 19.3276 7.29476 19.2772C6.08567 19.2524 5.33126 18.5154 5.19651 17.2954C4.90592 14.6719 4.41092 8.5146 4.41092 8.5146M18.6874 5.5552H3.14258M15.6918 5.55518C14.9722 5.55518 14.3525 5.04643 14.2113 4.34152L13.9886 3.22685C13.8511 2.7126 13.3854 2.35693 12.8547 2.35693H8.97443C8.44368 2.35693 7.97801 2.7126 7.84051 3.22685L7.61776 4.34152C7.4766 5.04643 6.85693 5.55518 6.13735 5.55518" stroke="#15182A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="registration__bottom">
-                                <div class="registration__accept">
-                                    <label class="form-accept form-accept--white">
-                                        <input type="checkbox"
-                                               class="form-accept__input"
-                                               name="accept"
-                                               required
-                                        >
-                                        <span class="form-accept__fake">
-              <span class="form-accept__checkbox">
-                <svg width="22"
-                     height="22"
-                     viewBox="0 0 22 22"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg"
+                  </div>
+                  <div class="registration__field registration__serial">
+                    <input type="text"
+                           name="serial"
+                           placeholder="Введите серийный номер устройства"
+                    >
+                  </div>
+                  <div class="registration__field registration__count">
+                    <div class="count"
+                         data-registration-count
+                    >
+                      <button type="button"
+                              class="count__btn"
+                              data-registration-count-down
+                      >
+                        <svg width="60"
+                             height="60"
+                             viewBox="0 0 60 60"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect x="1"
+                                y="1"
+                                width="58"
+                                height="58"
+                                rx="29"
+                                fill="white"
+                          />
+                          <circle cx="30"
+                                  cy="30"
+                                  r="29"
+                                  stroke="#DDDEE2"
+                                  stroke-width="1.4"
+                          />
+                          <path d="M21.5 30.1C21.5 30.5971 21.9029 31 22.4 31L37.6 31C38.0971 31 38.5 30.5971 38.5 30.1C38.5 29.6029 38.0971 29.2 37.6 29.2L22.4 29.2C21.9029 29.2 21.5 29.6029 21.5 30.1Z"
+                                fill="#15182A"
+                          />
+                        </svg>
+                      </button>
+                      <input class="count__input"
+                             type="text"
+                             name="count"
+                             value="1"
+                             data-registration-count-value
+                      >
+                      <button type="button"
+                              class="count__btn"
+                              data-registration-count-up
+                      >
+                        <svg width="60"
+                             height="60"
+                             viewBox="0 0 60 60"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect x="1"
+                                y="1"
+                                width="58"
+                                height="58"
+                                rx="29"
+                                fill="white"
+                          />
+                          <circle cx="30"
+                                  cy="30"
+                                  r="29"
+                                  stroke="#DDDEE2"
+                                  stroke-width="1.4"
+                          />
+                          <path d="M21.5 30.1C21.5 30.5971 21.9029 31 22.4 31H37.6C38.0971 31 38.5 30.5971 38.5 30.1C38.5 29.6029 38.0971 29.2 37.6 29.2H22.4C21.9029 29.2 21.5 29.6029 21.5 30.1Z"
+                                fill="#15182A"
+                          />
+                          <path d="M30 21.5C29.4477 21.5 29 21.9477 29 22.5V37.5C29 38.0523 29.4477 38.5 30 38.5C30.5523 38.5 31 38.0523 31 37.5V22.5C31 21.9477 30.5523 21.5 30 21.5Z"
+                                fill="#15182A"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="registration__grid"
+                     data-registration-grid
                 >
-              <rect width="22"
-                    height="22"
-                    rx="4"
-                    fill="white"
-              />
-              <path d="M7 10.75L10.4904 13.5L15.25 8"
-                    stroke="#005AFF"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-              />
-              </svg>
+                  <div class="registration__number">
+                    <input class="registration__number-input"
+                           type="text"
+                           name="number"
+                           placeholder="Введите номер"
+                    >
+                    <button type="button"
+                            class="registration__number-delete"
+                    >
+                      <svg width="22"
+                           height="22"
+                           viewBox="0 0 22 22"
+                           fill="none"
+                           xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M17.4193 8.5146C17.4193 8.5146 16.9216 14.6884 16.6328 17.2889C16.4953 18.531 15.7281 19.2589 14.4713 19.2818C12.0798 19.3249 9.68542 19.3276 7.29476 19.2772C6.08567 19.2524 5.33126 18.5154 5.19651 17.2954C4.90592 14.6719 4.41092 8.5146 4.41092 8.5146M18.6874 5.5552H3.14258M15.6918 5.55518C14.9722 5.55518 14.3525 5.04643 14.2113 4.34152L13.9886 3.22685C13.8511 2.7126 13.3854 2.35693 12.8547 2.35693H8.97443C8.44368 2.35693 7.97801 2.7126 7.84051 3.22685L7.61776 4.34152C7.4766 5.04643 6.85693 5.55518 6.13735 5.55518"
+                              stroke="#15182A"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="registration__bottom">
+                <div class="registration__accept">
+                  <label class="form-accept">
+                    <input type="checkbox"
+                           class="form-accept__input"
+                           name="accept"
+                           required
+                    >
+                    <span class="form-accept__fake">
+              <span class="form-accept__checkbox">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="22" height="22" rx="4" fill="#005AFF"/>
+                <path d="M7 10.75L10.4904 13.5L15.25 8" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
               </span>
               <span class="form-accept__text">Отправляя заявку вы соглашаетесь с политикой конфиденциальности</span>
             </span>
-                                    </label>
-                                </div>
-                                <button class="registration__submit btn btn--large btn--blue" type="submit">
-                                    Зарегистрировать
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </main>
-            </div>
-        </div>
-    </div>
-    <div class="page__feedback">
-        <div class="container">
-            <form action="/ajax/ajax.php"
-                  method="POST"
-                  class="form form--feedback"
-                  id="feedback"
-                  enctype="multipart/form-data"
-                  data-event="submit.sendForm"
-            >
-                <div class="form__top">
-                    <h2 class="form__title">
-                        Отправить заявку <br> на расчет анкерной линии
-                    </h2>
-                    <div class="form__caption caption">
-                        Связаться с нами
-                    </div>
+                  </label>
                 </div>
+                <button class="registration__submit btn btn--large btn--blue"
+                        type="submit"
+                >
+                  Зарегистрировать
+                </button>
+              </div>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div>
+  </div>
+  <div class="page__feedback">
+    <div class="container">
+      <form action="/ajax/ajax.php"
+            method="POST"
+            class="form form--feedback"
+            id="feedback"
+            enctype="multipart/form-data"
+            data-event="submit.sendForm"
+      >
+        <div class="form__top">
+          <h2 class="form__title">
+            Отправить заявку <br> на расчет анкерной линии
+          </h2>
+          <div class="form__caption caption">
+            Связаться с нами
+          </div>
+        </div>
 
-                <div class="form__fields">
-                    <div class="form__field">
-                        <label for="email"
-                               class="form__label"
-                        >Ваш email
-                        </label>
-                        <input type="email"
-                               class="form__input"
-                               id="email"
-                               name="email"
-                               placeholder="Введите email"
-                        >
-                    </div>
-                    <div class="form__field">
-                        <label for="name"
-                               class="form__label"
-                        >Ваше Имя
-                        </label>
-                        <input type="text"
-                               class="form__input"
-                               id="name"
-                               name="name"
-                               placeholder="Ваше Имя"
-                        >
-                    </div>
-                    <div class="form__field form__field--2">
-                        <label for="comment"
-                               class="form__label"
-                        >Комментарий
-                        </label>
-                        <input type="text"
-                               class="form__input"
-                               id="comment"
-                               name="comment"
-                               placeholder="Опишите ситуацию"
-                        >
-                    </div>
-                    <div class="form__field form__field--2">
-                        <div class="form-file">
-                            <label class="form-file__label">
-                                <input type="file"
-                                       class="form-file__input"
-                                       name="file[]"
-                                       multiple
-                                >
-                                <span class="form-file__sub">
+        <div class="form__fields">
+          <div class="form__field">
+            <label for="email"
+                   class="form__label"
+            >Ваш email
+            </label>
+            <input type="email"
+                   class="form__input"
+                   id="email"
+                   name="email"
+                   placeholder="Введите email"
+            >
+          </div>
+          <div class="form__field">
+            <label for="name"
+                   class="form__label"
+            >Ваше Имя
+            </label>
+            <input type="text"
+                   class="form__input"
+                   id="name"
+                   name="name"
+                   placeholder="Ваше Имя"
+            >
+          </div>
+          <div class="form__field form__field--2">
+            <label for="comment"
+                   class="form__label"
+            >Комментарий
+            </label>
+            <input type="text"
+                   class="form__input"
+                   id="comment"
+                   name="comment"
+                   placeholder="Опишите ситуацию"
+            >
+          </div>
+          <div class="form__field form__field--2">
+            <div class="form-file">
+              <label class="form-file__label">
+                <input type="file"
+                       class="form-file__input"
+                       name="file[]"
+                       multiple
+                >
+                <span class="form-file__sub">
                 <span class="form-file__icon">
                   <svg width="32"
                        height="32"
@@ -199,8 +258,8 @@
                   Загрузить
                 </span>
               </span>
-                            </label>
-                            <span class="form-file__info">
+              </label>
+              <span class="form-file__info">
                 <span class="form-file__clear">
                   <svg width="28"
                        height="28"
@@ -219,18 +278,18 @@
                 <span class="form-file__list">
                 </span>
               </span>
-                        </div>
-                    </div>
-                </div>
+            </div>
+          </div>
+        </div>
 
-                <div class="form__accept">
-                    <label class="form-accept form-accept--white">
-                        <input type="checkbox"
-                               class="form-accept__input"
-                               name="accept"
-                               required
-                        >
-                        <span class="form-accept__fake">
+        <div class="form__accept">
+          <label class="form-accept form-accept--white">
+            <input type="checkbox"
+                   class="form-accept__input"
+                   name="accept"
+                   required
+            >
+            <span class="form-accept__fake">
               <span class="form-accept__checkbox">
                 <svg width="22"
                      height="22"
@@ -252,16 +311,16 @@
               </span>
               <span class="form-accept__text">Отправляя заявку вы соглашаетесь с политикой конфиденциальности</span>
             </span>
-                    </label>
-                </div>
-                <button class="btn btn--large btn--white form__submit"
-                        type="submit"
-                >
-                    Оставить заявку
-                </button>
-            </form>
+          </label>
         </div>
+        <button class="btn btn--large btn--white form__submit"
+                type="submit"
+        >
+          Оставить заявку
+        </button>
+      </form>
     </div>
+  </div>
 </div>
 <!-- END main -->
 

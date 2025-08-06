@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e646abb2-d826-4e3e-a5eb-95a9d51b0a6a" name="ftp" url="http://141.8.192.151">
+        <fileTransfer rootFolder="/domains/f1156731.xsph.ru/public_html" host="141.8.192.151" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,25 +1,53 @@
 @use "../helpers/index" as *;
 
-.form-accept{
+.form-accept {
+  --opacity: 0;
+  --fill: transparent;
+  --stroke: var(--border-on-primary);
 
-  &__input{
-    display: none;
-    &:checked+.form-accept__fake{
-      path{
-        opacity: 1;
+  &--white {
+    --stroke: var(--border-inverted);
+
+    .form-accept {
+      &__input {
+        &:checked + .form-accept__fake {
+          --fill: var(--bg-primary);
+        }
       }
     }
   }
 
-  &__fake{
+  &__input {
+    display: none;
+
+    &:checked + .form-accept__fake {
+      --opacity: 1;
+      --fill: var(--text-accent);
+    }
+  }
+
+  &__fake {
     cursor: pointer;
     display: flex;
     gap: 12px;
     font-size: 14px;
 
-    path{
+
+
+  }
+
+  &__checkbox{
+    flex-shrink: 0;
+    rect {
       @include tr;
-      opacity: 0;
+      fill: var(--fill);
+      stroke: var(--stroke);
+      stroke-width: 1px;
+    }
+
+    path {
+      @include tr;
+      opacity: var(--opacity);
     }
   }
 }
