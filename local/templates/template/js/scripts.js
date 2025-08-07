@@ -539,15 +539,15 @@ class Search {
 }
 
 class Registration {
-    constructor(root) {
-        this.root = root;
-        this.countWrapper = root.querySelector('[data-registration-count]');
-        this.countInput = this.countWrapper.querySelector('[data-registration-count-value]');
-        this.btnUp = this.countWrapper.querySelector('[data-registration-count-up]');
-        this.btnDown = this.countWrapper.querySelector('[data-registration-count-down]');
-        this.grid = root.querySelector('[data-registration-grid]');
+  constructor(root) {
+    this.root = root;
+    this.countWrapper = root.querySelector('[data-registration-count]');
+    this.countInput = this.countWrapper.querySelector('[data-registration-count-value]');
+    this.btnUp = this.countWrapper.querySelector('[data-registration-count-up]');
+    this.btnDown = this.countWrapper.querySelector('[data-registration-count-down]');
+    this.grid = root.querySelector('[data-registration-grid]');
 
-        this.templateHTML = `
+    this.templateHTML = `
       <div class="registration__number">
         <input class="registration__number-input" type="text" name="" placeholder="Введите номер">
         <button type="button" class="registration__number-delete">
@@ -558,102 +558,102 @@ class Registration {
       </div>
     `;
 
-        this._bindEvents();
-        this._updateCountFromDOM();
+    this._bindEvents();
+    this._updateCountFromDOM();
+  }
+
+  _bindEvents() {
+    this.btnUp.addEventListener('click', () => this._changeCount(1));
+    this.btnDown.addEventListener('click', () => this._changeCount(-1));
+    this.countInput.addEventListener('input', () => this._filterAndSync());
+  }
+
+  _changeCount(delta) {
+    let value = this._getCountValue();
+    value = Math.max(1, value + delta);
+    this.countInput.value = value;
+    this._syncRegistrationNumbers(value);
+    this._updateInputNames();
+  }
+
+  _getCountValue() {
+    return Math.max(1, parseInt(this.countInput.value, 10) || 1);
+  }
+
+  _filterAndSync() {
+    this.countInput.value = this.countInput.value.replace(/\D/g, '');
+    const value = this._getCountValue();
+    this.countInput.value = value;
+    this._syncRegistrationNumbers(value);
+    this._updateInputNames();
+  }
+
+  _syncRegistrationNumbers(desiredCount) {
+    const currentCount = this.grid.querySelectorAll('.registration__number').length;
+
+    if (desiredCount > currentCount) {
+      for (let i = currentCount; i < desiredCount; i++) {
+        this._addRegistrationNumber();
+      }
+    } else if (desiredCount < currentCount) {
+      for (let i = currentCount; i > desiredCount; i--) {
+        this._removeLastRegistrationNumber();
+      }
     }
 
-    _bindEvents() {
-        this.btnUp.addEventListener('click', () => this._changeCount(1));
-        this.btnDown.addEventListener('click', () => this._changeCount(-1));
-        this.countInput.addEventListener('input', () => this._filterAndSync());
+    this._updateInputNames();
+  }
+
+  _addRegistrationNumber() {
+    const wrapper = document.createElement('div');
+    wrapper.innerHTML = this.templateHTML.trim();
+    const newElement = wrapper.firstChild;
+    const deleteBtn = newElement.querySelector('.registration__number-delete');
+
+    deleteBtn.addEventListener('click', () => {
+      this._removeRegistrationNumber(newElement);
+    });
+
+    this.grid.appendChild(newElement);
+  }
+
+  _removeLastRegistrationNumber() {
+    const items = this.grid.querySelectorAll('.registration__number');
+    if (items.length > 1) {
+      items[items.length - 1].remove();
     }
+  }
 
-    _changeCount(delta) {
-        let value = this._getCountValue();
-        value = Math.max(1, value + delta);
-        this.countInput.value = value;
-        this._syncRegistrationNumbers(value);
-        this._updateInputNames();
+  _removeRegistrationNumber(element) {
+    const items = this.grid.querySelectorAll('.registration__number');
+    if (items.length > 1) {
+      element.remove();
+      this._updateCountInput();
+      this._updateInputNames();
     }
+  }
 
-    _getCountValue() {
-        return Math.max(1, parseInt(this.countInput.value, 10) || 1);
-    }
+  _updateCountInput() {
+    const count = this.grid.querySelectorAll('.registration__number').length;
+    this.countInput.value = count;
+  }
 
-    _filterAndSync() {
-        this.countInput.value = this.countInput.value.replace(/\D/g, '');
-        const value = this._getCountValue();
-        this.countInput.value = value;
-        this._syncRegistrationNumbers(value);
-        this._updateInputNames();
-    }
+  _updateInputNames() {
+    const inputs = this.grid.querySelectorAll('.registration__number-input');
+    inputs.forEach((input, index) => {
+      input.name = `number[${index}]`;
+    });
+  }
 
-    _syncRegistrationNumbers(desiredCount) {
-        const currentCount = this.grid.querySelectorAll('.registration__number').length;
+  _updateCountFromDOM() {
+    const current = this._getCountValue();
+    this._syncRegistrationNumbers(current);
+    this._updateInputNames();
+  }
 
-        if (desiredCount > currentCount) {
-            for (let i = currentCount; i < desiredCount; i++) {
-                this._addRegistrationNumber();
-            }
-        } else if (desiredCount < currentCount) {
-            for (let i = currentCount; i > desiredCount; i--) {
-                this._removeLastRegistrationNumber();
-            }
-        }
-
-        this._updateInputNames();
-    }
-
-    _addRegistrationNumber() {
-        const wrapper = document.createElement('div');
-        wrapper.innerHTML = this.templateHTML.trim();
-        const newElement = wrapper.firstChild;
-        const deleteBtn = newElement.querySelector('.registration__number-delete');
-
-        deleteBtn.addEventListener('click', () => {
-            this._removeRegistrationNumber(newElement);
-        });
-
-        this.grid.appendChild(newElement);
-    }
-
-    _removeLastRegistrationNumber() {
-        const items = this.grid.querySelectorAll('.registration__number');
-        if (items.length > 1) {
-            items[items.length - 1].remove();
-        }
-    }
-
-    _removeRegistrationNumber(element) {
-        const items = this.grid.querySelectorAll('.registration__number');
-        if (items.length > 1) {
-            element.remove();
-            this._updateCountInput();
-            this._updateInputNames();
-        }
-    }
-
-    _updateCountInput() {
-        const count = this.grid.querySelectorAll('.registration__number').length;
-        this.countInput.value = count;
-    }
-
-    _updateInputNames() {
-        const inputs = this.grid.querySelectorAll('.registration__number-input');
-        inputs.forEach((input, index) => {
-            input.name = `number[${index}]`;
-        });
-    }
-
-    _updateCountFromDOM() {
-        const current = this._getCountValue();
-        this._syncRegistrationNumbers(current);
-        this._updateInputNames();
-    }
-
-    static initAll() {
-        document.querySelectorAll('[data-registration-root]').forEach(el => new Registration(el));
-    }
+  static initAll() {
+    document.querySelectorAll('[data-registration-root]').forEach(el => new Registration(el));
+  }
 }
 
 function setInlinePadding() {
