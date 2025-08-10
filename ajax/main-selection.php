@@ -3,7 +3,6 @@ header('Content-Type: application/json');
 $data = json_decode(file_get_contents('php://input'), true);
 
 ob_start(); ?>
-
 <? if ($data['step'] == 0): ?>
   <div class="main-selection__step main-selection__step--main">
     <h3 class="main-selection__title">
