@@ -2603,6 +2603,7 @@ button {
 }
 @media screen and (max-width: 767.98px) {
   .main-selection__btn {
+    min-width: 262px;
     width: 100%;
   }
 }

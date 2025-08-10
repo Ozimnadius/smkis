@@ -188,6 +188,7 @@
   &__btn {
     width: 262px;
     @include xs-block {
+      min-width: 262px;
       width: 100%;
     }
 
