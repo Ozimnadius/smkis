@@ -456,13 +456,20 @@ button {
 .color-error {
   color: var(--text-error);
 }
+
 .color-success {
   color: var(--text-success);
 }
+
 .color-accent {
   color: var(--text-accent);
 }
+
 .color-secondary {
   color: var(--text-secondary);
+}
+
+.hidden{
+  display: none!important;
 }
 

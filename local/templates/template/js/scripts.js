@@ -425,6 +425,57 @@ class Events {
     this.enableScrollbar();
   }
 
+  validateSelection(e, elem) {
+    e.preventDefault();
+    elem.querySelector('.main-selection__next').removeAttribute('disabled');
+  }
+
+  nextSelection(e, elem) {
+    e.preventDefault();
+    const root = document.querySelector('.main-selection');
+    const stepId = elem.dataset.step;
+    const form = elem.closest('form');
+    let formData = new FormData(form);
+    formData.append('step', stepId);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    }).then(response => response.json()).then(function (data) {
+      if (data.status) {
+        root.innerHTML = data.html;
+
+        root.querySelectorAll('.main-selection__items').forEach((elem) => {
+          new Swiper(elem.querySelector('.main-selection__swiper'), {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            loop: true,
+            speed: 700,
+            /*autoplay: {
+              delay: 5000,
+            },*/
+            breakpoints: {
+              768: {
+                slidesPerView: 3,
+              },
+              1440: {
+                slidesPerView: 4,
+              },
+
+            }
+          });
+        });
+
+      } else {
+        alert("Произошла ошибка.");
+      }
+
+    }).catch(function (err) {
+      alert('Fetch Error :-S', err);
+    });
+
+  }
+
   enableScrollbar() {
     const htmlElem = document.querySelector('html');
     htmlElem.classList.remove('with-fancybox');

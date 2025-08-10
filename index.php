@@ -847,19 +847,36 @@
           <div class="container">
             <section class="main__selection">
               <div class="main-selection">
-                <div class="main-selection__step main-selection__step--main">
+
+                <form class="main-selection__step main-selection__step--main"
+                      action="/ajax/main-selection.php"
+                      method="post"
+                      data-event="change.validateSelection"
+                >
                   <h3 class="main-selection__title">
                     Подбор анкерного устройства
                   </h3>
                   <div class="main-selection__text">
                     Изготовлен из нержавеющей стали. Используется
                   </div>
-                  <a href="/"
-                     class="main-selection__btn btn btn--large btn--black"
-                  >
-                    Начать
-                  </a>
-                </div>
+                  <div class="main-selection__btns">
+                    <button type="button"
+                            class="main-selection__btn btn btn--large btn--border hidden"
+                            data-event="click.nextSelection"
+                            data-step="0"
+                    >
+                      Назад
+                    </button>
+                    <button type="button"
+                            class="main-selection__btn btn btn--large btn--black"
+                            data-event="click.nextSelection"
+                            data-step="1"
+                    >
+                      Начать
+                    </button>
+                  </div>
+                </form>
+
               </div>
             </section>
             <section class="main__applications">
