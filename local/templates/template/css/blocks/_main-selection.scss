@@ -12,12 +12,16 @@
     background: var(--bg-primary, #FFF);
     display: flex;
     flex-direction: column;
-
+    @include xlg-block {
+      padding: 50px 40px;
+    }
     @include md-block {
+      padding: 40px;
       min-height: 814px;
     }
     @include xs-block {
       min-height: 518px;
+      padding: 20px;
     }
 
 
@@ -46,6 +50,9 @@
   &__subtitle {
     color: var(--black-black-300, #DDDEE2);
     margin-bottom: 50px;
+    @include xs-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__desc {
@@ -58,6 +65,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    @include md-block {
+      grid-template-columns: 100%;
+      margin-top: 20px;
+    }
+    @include xs-block {
+      margin-bottom: 30px;
+    }
   }
 
   &__radio {
@@ -90,17 +104,34 @@
     border: 1px solid var(--border-on-primary, #DDDEE2);
   }
 
-  &__items{
+  &__items {
     margin-top: 40px;
     margin-bottom: 40px;
   }
 
-  &__slide{
-    display: flex;
-    flex-direction: column;
+  &__swiper {
+    @include md-block {
+      margin-inline: -40px;
+      padding-inline: 40px;
+    }
+    @include xs-block {
+      margin-inline: -20px;
+      padding-inline: 20px;
+    }
   }
 
-  &__slide-img{
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    @include md-block {
+      width: 288px;
+    }
+    @include xs-block {
+
+    }
+  }
+
+  &__slide-img {
     aspect-ratio: 310/229;
     display: flex;
     justify-content: center;
@@ -118,7 +149,7 @@
     }
   }
 
-  &__slide-info{
+  &__slide-info {
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -128,7 +159,7 @@
     margin-bottom: 6px;
   }
 
-  &__slide-cat{
+  &__slide-cat {
     color: var(--text-secondary, #797B8B);
     font-size: 12px;
     font-weight: 300;
@@ -148,10 +179,17 @@
     display: flex;
     justify-content: space-between;
     margin-top: auto;
+    @include xs-block {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &__btn {
     width: 262px;
+    @include xs-block {
+      width: 100%;
+    }
 
     &[disabled] {
       pointer-events: none;

@@ -2437,14 +2437,21 @@ button {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 1919.98px) {
+  .main-selection__step {
+    padding: 50px 40px;
+  }
+}
 @media screen and (max-width: 1279.98px) {
   .main-selection__step {
+    padding: 40px;
     min-height: 814px;
   }
 }
 @media screen and (max-width: 767.98px) {
   .main-selection__step {
     min-height: 518px;
+    padding: 20px;
   }
 }
 .main-selection__step--main {
@@ -2465,6 +2472,11 @@ button {
   color: var(--black-black-300, #DDDEE2);
   margin-bottom: 50px;
 }
+@media screen and (max-width: 767.98px) {
+  .main-selection__subtitle {
+    margin-bottom: 30px;
+  }
+}
 .main-selection__desc {
   margin-top: 20px;
   max-width: 87ch;
@@ -2474,6 +2486,17 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+@media screen and (max-width: 1279.98px) {
+  .main-selection__radios {
+    grid-template-columns: 100%;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .main-selection__radios {
+    margin-bottom: 30px;
+  }
 }
 .main-selection__radio {
   cursor: pointer;
@@ -2503,9 +2526,26 @@ button {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+@media screen and (max-width: 1279.98px) {
+  .main-selection__swiper {
+    margin-inline: -40px;
+    padding-inline: 40px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .main-selection__swiper {
+    margin-inline: -20px;
+    padding-inline: 20px;
+  }
+}
 .main-selection__slide {
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 1279.98px) {
+  .main-selection__slide {
+    width: 288px;
+  }
 }
 .main-selection__slide-img {
   aspect-ratio: 310/229;
@@ -2552,8 +2592,19 @@ button {
   justify-content: space-between;
   margin-top: auto;
 }
+@media screen and (max-width: 767.98px) {
+  .main-selection__btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 .main-selection__btn {
   width: 262px;
+}
+@media screen and (max-width: 767.98px) {
+  .main-selection__btn {
+    width: 100%;
+  }
 }
 .main-selection__btn[disabled] {
   pointer-events: none;

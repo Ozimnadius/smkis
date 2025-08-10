@@ -455,7 +455,7 @@ class Events {
               delay: 5000,
             },*/
             breakpoints: {
-              768: {
+              1280: {
                 slidesPerView: 3,
               },
               1440: {
