@@ -8,19 +8,11 @@
     justify-content: space-between;
     gap: 20px;
     align-items: end;
-    margin-bottom: 40px;
-    @include md-block {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 20px;
   }
 
   &__title {
-    margin-bottom: 30px;
-    max-width: 25ch;
-    @include md-block {
-      max-width: 100%;
-      margin-bottom: 20px;
-    }
+    margin-bottom: 10px;
   }
 
   &__description {
@@ -41,10 +33,7 @@
   }
 
   &__bottom {
-    margin-bottom: 40px;
-    @include md-block {
-      margin-bottom: 30px;
-    }
+    margin-bottom: 20px;
   }
 
   &__item {
@@ -70,7 +59,7 @@
   display: flex;
 
   &__img {
-    aspect-ratio: 610/390;
+    aspect-ratio: 610/370;
     border-radius: 24px;
     overflow: hidden;
     background: #F5F5F5;

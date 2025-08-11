@@ -195,13 +195,13 @@ button {
   width: 100%;
   margin-inline: auto;
   padding: 0 20px;
-  @include xlg-block{
+  @include xlg-block {
     max-width: 1150px;
   }
-  @include md-block{
+  @include md-block {
     padding: 0 40px;
   }
-  @include xs-block{
+  @include xs-block {
     padding: 0 20px;
   }
 }

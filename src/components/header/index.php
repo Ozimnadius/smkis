@@ -3,8 +3,11 @@
     <div class="header__logo">
       <a href="/">
         <img src="/upload/images/logo.webp"
-             width="56"
-             height="46"
+             srcset="/upload/images/logo.webp 1x,
+                        /upload/images/logo@2x.webp 2x,
+                        /upload/images/logo@3x.webp 3x"
+             width="567"
+             height="457"
              alt="Logo"
              loading="lazy"
         >

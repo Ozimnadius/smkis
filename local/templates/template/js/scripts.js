@@ -327,7 +327,7 @@ class Events {
 
     if (!target) return;
 
-    const top = target.getBoundingClientRect().top + window.scrollY - 60;
+    const top = target.getBoundingClientRect().top + window.scrollY - 100;
 
     window.scrollTo({
       top: top,

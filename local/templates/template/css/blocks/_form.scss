@@ -2,7 +2,7 @@
 
 .form {
   --error: var(--text-error);
-  @include md-block{
+  @include md-block {
     display: flex;
     flex-direction: column;
   }
@@ -19,7 +19,7 @@
   }
 
   &__top {
-    margin-bottom: 56px;
+    margin-bottom: 30px;
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -34,15 +34,15 @@
     }
   }
 
-  &__title{
-    @include md-block{
+  &__title {
+    @include md-block {
       order: 1;
     }
   }
 
   &__caption {
     line-height: 50px;
-    @include md-block{
+    @include md-block {
       line-height: 1;
     }
   }
@@ -50,20 +50,20 @@
   &__fields {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px 30px;
+    gap: 30px;
     margin-bottom: 20px;
     @include xlg-block {
-      gap: 40px 20px;
+      gap: 20px;
     }
   }
 
   &__field {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 6px;
     position: relative;
-    @include md-block{
-        grid-column: span 2;
+    @include md-block {
+      grid-column: span 2;
     }
 
     &--2 {
@@ -98,8 +98,8 @@
 
   &__accept {
     position: relative;
-    margin-bottom: 40px;
-    @include md-block{
+    margin-bottom: 20px;
+    @include md-block {
       margin-bottom: 0;
       order: 1;
     }
@@ -108,7 +108,7 @@
   &__submit {
     width: 284px;
     margin-inline: auto;
-    @include md-block{
+    @include md-block {
       width: 100%;
       margin-bottom: 20px;
     }

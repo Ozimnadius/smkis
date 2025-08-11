@@ -30,10 +30,19 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    font-size: 90px;
+    @include xlg-block {
+      font-size: 84px;
+    }
+    @include lg-block {
+      font-size: 60px;
+    }
     @include md-block {
+      font-size: 64px;
       grid-area: title;
     }
-    @include xs-block{
+    @include xs-block {
+      font-size: 32px;
       margin-bottom: -30px;
     }
   }
@@ -47,7 +56,7 @@
 
   &__word-2 {
     margin-left: 3.7ch;
-    @include xs-block{
+    @include xs-block {
       margin-left: 0;
     }
   }
@@ -61,7 +70,7 @@
     @include md-block {
       padding-left: 2.8ch;
     }
-    @include xs-block{
+    @include xs-block {
       padding-left: 0;
       position: static;
     }
@@ -73,14 +82,18 @@
     translate: 0 50%;
     left: 0;
     max-width: 12ch;
+    font-size: 14px;
 
+    @include lg-block{
+      font-size: 12px;
+    }
     @include md-block {
       translate: initial;
       bottom: initial;
       top: -15px;
       font-size: 14px;
     }
-    @include xs-block{
+    @include xs-block {
       top: initial;
       bottom: calc(100% + 9px);
     }
@@ -99,13 +112,14 @@
     }
     @include lg-block {
       left: calc(100% + 40px);
+      bottom: 0;
     }
     @include md-block {
       bottom: 0;
       top: calc(100% + 62px);
       left: 0;
     }
-    @include xs-block{
+    @include xs-block {
       top: initial;
       bottom: 80px;
       width: 100%;
@@ -115,12 +129,17 @@
     }
   }
 
-  &__desc{
-    @include xs-block{
-        br{
-          display: none;
-        }
+  &__desc {
+    font-size: 20px;
+    @include md-block {
+      font-size: 20px;
     }
+    @include xs-block {
+      br {
+        display: none;
+      }
+    }
+
   }
 
   &__btn {
@@ -144,7 +163,7 @@
       translate: 0 -20px;
       margin-left: -15ch;
     }
-    @include xs-block{
+    @include xs-block {
       translate: initial;
       margin-left: 0;
     }
