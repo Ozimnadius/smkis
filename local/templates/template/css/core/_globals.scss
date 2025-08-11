@@ -190,6 +190,22 @@ button {
   }
 }
 
+.container-small {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 0 20px;
+  @include xlg-block{
+    max-width: 1150px;
+  }
+  @include md-block{
+    padding: 0 40px;
+  }
+  @include xs-block{
+    padding: 0 20px;
+  }
+}
+
 .icon-fill {
   display: flex;
   --color: var(--icon-primary);
@@ -469,7 +485,7 @@ button {
   color: var(--text-secondary);
 }
 
-.hidden{
-  display: none!important;
+.hidden {
+  display: none !important;
 }
 

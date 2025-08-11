@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
     new Search(element);
   });
   Registration.initAll();
+  RangeControl.initAll();
 
   initSliders();
   initValidators();
@@ -476,6 +477,24 @@ class Events {
 
   }
 
+  nextStep(e, elem) {
+    e.preventDefault();
+    const rootElem = elem.closest('.calculator__step');
+    const nextElem = rootElem.nextElementSibling;
+
+    rootElem.classList.remove('active');
+    nextElem.classList.add('active');
+  }
+
+  prevStep(e, elem) {
+    e.preventDefault();
+    const rootElem = elem.closest('.calculator__step');
+    const prevElem = rootElem.previousElementSibling;
+
+    rootElem.classList.remove('active');
+    prevElem.classList.add('active');
+  }
+
   enableScrollbar() {
     const htmlElem = document.querySelector('html');
     htmlElem.classList.remove('with-fancybox');
@@ -704,6 +723,39 @@ class Registration {
 
   static initAll() {
     document.querySelectorAll('[data-registration-root]').forEach(el => new Registration(el));
+  }
+}
+
+class RangeControl {
+  constructor(element) {
+    this.root = element;
+    this.numInput = this.root.querySelector('[data-range-count]');
+    this.slider = this.root.querySelector('[data-range-slider]');
+
+    this.min = parseInt(this.slider.min, 10) || 0;
+    this.max = parseInt(this.slider.max, 10) || 100;
+
+    this._bindEvents();
+  }
+
+  _bindEvents() {
+    // Изменение числа → меняем слайдер
+    this.numInput.addEventListener('input', () => {
+      let val = parseInt(this.numInput.value, 10) || this.min;
+      if (val < this.min) val = this.min;
+      if (val > this.max) val = this.max;
+      this.numInput.value = val;
+      this.slider.value = val;
+    });
+
+    // Изменение слайдера → меняем число
+    this.slider.addEventListener('input', () => {
+      this.numInput.value = this.slider.value;
+    });
+  }
+
+  static initAll(selector = '[data-range]') {
+    document.querySelectorAll(selector).forEach(el => new RangeControl(el));
   }
 }
 
