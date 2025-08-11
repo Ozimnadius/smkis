@@ -189,6 +189,46 @@
         </section>
         <section class="main__zones">
           <div class="main-zones">
+            <svg>
+              <filter id="filter0_d_243_11498"
+                      x="0.499999"
+                      y="0.215819"
+                      width="67"
+                      height="75.2842"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0"
+                         result="BackgroundImageFix"
+                />
+                <feColorMatrix in="SourceAlpha"
+                               type="matrix"
+                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                               result="hardAlpha"
+                />
+                <feOffset dy="12" />
+                <feGaussianBlur stdDeviation="6.75" />
+                <feComposite in2="hardAlpha"
+                             operator="out"
+                />
+                <feColorMatrix type="matrix"
+                               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                />
+                <feBlend mode="normal"
+                         in2="BackgroundImageFix"
+                         result="effect1_dropShadow_243_11498"
+                />
+                <feBlend mode="normal"
+                         in="SourceGraphic"
+                         in2="effect1_dropShadow_243_11498"
+                         result="shape"
+                />
+              </filter>
+              <clipPath id="bgblur_0_243_11498_clip_path"
+                        transform="translate(-5 7.28418)"
+              ><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
+              </clipPath>
+            </svg>
             <div class="main-zones__img">
               <img
                 src="/upload/images/main-zones/img.webp"
@@ -239,44 +279,8 @@
 />
 </g>
 <defs>
-<filter id="filter0_d_243_11498"
-        x="0.499999"
-        y="0.215819"
-        width="67"
-        height="75.2842"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
->
-<feFlood flood-opacity="0"
-         result="BackgroundImageFix"
-/>
-<feColorMatrix in="SourceAlpha"
-               type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-               result="hardAlpha"
-/>
-<feOffset dy="12" />
-<feGaussianBlur stdDeviation="6.75" />
-<feComposite in2="hardAlpha"
-             operator="out"
-/>
-<feColorMatrix type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-/>
-<feBlend mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow_243_11498"
-/>
-<feBlend mode="normal"
-         in="SourceGraphic"
-         in2="effect1_dropShadow_243_11498"
-         result="shape"
-/>
-</filter>
-<clipPath id="bgblur_0_243_11498_clip_path"
-          transform="translate(-5 7.28418)"
-><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
-</clipPath></defs>
+
+</defs>
 </svg>
                 <span class="main-zones__label">
                 Кровля из металл. профиля
@@ -332,44 +336,7 @@
 />
 </g>
 <defs>
-<filter id="filter0_d_243_11498"
-        x="0.499999"
-        y="0.215819"
-        width="67"
-        height="75.2842"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
->
-<feFlood flood-opacity="0"
-         result="BackgroundImageFix"
-/>
-<feColorMatrix in="SourceAlpha"
-               type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-               result="hardAlpha"
-/>
-<feOffset dy="12" />
-<feGaussianBlur stdDeviation="6.75" />
-<feComposite in2="hardAlpha"
-             operator="out"
-/>
-<feColorMatrix type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-/>
-<feBlend mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow_243_11498"
-/>
-<feBlend mode="normal"
-         in="SourceGraphic"
-         in2="effect1_dropShadow_243_11498"
-         result="shape"
-/>
-</filter>
-<clipPath id="bgblur_0_243_11498_clip_path"
-          transform="translate(-5 7.28418)"
-><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
-</clipPath></defs>
+</defs>
 </svg>
                 <span class="main-zones__label">
                 Плоская кровля
@@ -425,44 +392,8 @@
 />
 </g>
 <defs>
-<filter id="filter0_d_243_11498"
-        x="0.499999"
-        y="0.215819"
-        width="67"
-        height="75.2842"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
->
-<feFlood flood-opacity="0"
-         result="BackgroundImageFix"
-/>
-<feColorMatrix in="SourceAlpha"
-               type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-               result="hardAlpha"
-/>
-<feOffset dy="12" />
-<feGaussianBlur stdDeviation="6.75" />
-<feComposite in2="hardAlpha"
-             operator="out"
-/>
-<feColorMatrix type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-/>
-<feBlend mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow_243_11498"
-/>
-<feBlend mode="normal"
-         in="SourceGraphic"
-         in2="effect1_dropShadow_243_11498"
-         result="shape"
-/>
-</filter>
-<clipPath id="bgblur_0_243_11498_clip_path"
-          transform="translate(-5 7.28418)"
-><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
-</clipPath></defs>
+
+</defs>
 </svg>
                 <span class="main-zones__label">
                 Фальцевая кровля
@@ -518,44 +449,7 @@
 />
 </g>
 <defs>
-<filter id="filter0_d_243_11498"
-        x="0.499999"
-        y="0.215819"
-        width="67"
-        height="75.2842"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
->
-<feFlood flood-opacity="0"
-         result="BackgroundImageFix"
-/>
-<feColorMatrix in="SourceAlpha"
-               type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-               result="hardAlpha"
-/>
-<feOffset dy="12" />
-<feGaussianBlur stdDeviation="6.75" />
-<feComposite in2="hardAlpha"
-             operator="out"
-/>
-<feColorMatrix type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-/>
-<feBlend mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow_243_11498"
-/>
-<feBlend mode="normal"
-         in="SourceGraphic"
-         in2="effect1_dropShadow_243_11498"
-         result="shape"
-/>
-</filter>
-<clipPath id="bgblur_0_243_11498_clip_path"
-          transform="translate(-5 7.28418)"
-><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
-</clipPath></defs>
+</defs>
 </svg>
                 <span class="main-zones__label">
                 Лестницы
@@ -611,44 +505,8 @@
 />
 </g>
 <defs>
-<filter id="filter0_d_243_11498"
-        x="0.499999"
-        y="0.215819"
-        width="67"
-        height="75.2842"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
->
-<feFlood flood-opacity="0"
-         result="BackgroundImageFix"
-/>
-<feColorMatrix in="SourceAlpha"
-               type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-               result="hardAlpha"
-/>
-<feOffset dy="12" />
-<feGaussianBlur stdDeviation="6.75" />
-<feComposite in2="hardAlpha"
-             operator="out"
-/>
-<feColorMatrix type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-/>
-<feBlend mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow_243_11498"
-/>
-<feBlend mode="normal"
-         in="SourceGraphic"
-         in2="effect1_dropShadow_243_11498"
-         result="shape"
-/>
-</filter>
-<clipPath id="bgblur_0_243_11498_clip_path"
-          transform="translate(-5 7.28418)"
-><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
-</clipPath></defs>
+
+</defs>
 </svg>
                 <span class="main-zones__label">
                 Эстакада
@@ -704,44 +562,7 @@
 />
 </g>
 <defs>
-<filter id="filter0_d_243_11498"
-        x="0.499999"
-        y="0.215819"
-        width="67"
-        height="75.2842"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
->
-<feFlood flood-opacity="0"
-         result="BackgroundImageFix"
-/>
-<feColorMatrix in="SourceAlpha"
-               type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-               result="hardAlpha"
-/>
-<feOffset dy="12" />
-<feGaussianBlur stdDeviation="6.75" />
-<feComposite in2="hardAlpha"
-             operator="out"
-/>
-<feColorMatrix type="matrix"
-               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
-/>
-<feBlend mode="normal"
-         in2="BackgroundImageFix"
-         result="effect1_dropShadow_243_11498"
-/>
-<feBlend mode="normal"
-         in="SourceGraphic"
-         in2="effect1_dropShadow_243_11498"
-         result="shape"
-/>
-</filter>
-<clipPath id="bgblur_0_243_11498_clip_path"
-          transform="translate(-5 7.28418)"
-><path d="M19.8548 44.1421C12.0444 36.3317 12.0444 23.6684 19.8548 15.8579L33.997 1.71573L48.1391 15.8579C55.9496 23.6684 55.9496 36.3317 48.1391 44.1421C40.3286 51.9526 27.6653 51.9526 19.8548 44.1421Z" />
-</clipPath></defs>
+</defs>
 </svg>
                 <span class="main-zones__label">
                 Автотранспорт

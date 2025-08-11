@@ -216,9 +216,7 @@
             <div class="container">
               <div class="accordion">
                 <div class="accordion__item ">
-                  <details class="accordion__details"
-                           name="product"
-                  >
+                  <details class="accordion__details">
                     <summary class="accordion__summary">
                       Описание
                     </summary>
@@ -243,9 +241,7 @@
                   </div>
                 </div>
                 <div class="accordion__item ">
-                  <details class="accordion__details"
-                           name="product"
-                  >
+                  <details class="accordion__details">
                     <summary class="accordion__summary">
                       Все характеристики
                     </summary>
@@ -270,9 +266,7 @@
                   </div>
                 </div>
                 <div class="accordion__item ">
-                  <details class="accordion__details"
-                           name="product"
-                  >
+                  <details class="accordion__details">
                     <summary class="accordion__summary">
                       периодический осмотр
                     </summary>
@@ -297,9 +291,7 @@
                   </div>
                 </div>
                 <div class="accordion__item ">
-                  <details class="accordion__details"
-                           name="product"
-                  >
+                  <details class="accordion__details">
                     <summary class="accordion__summary">
                       как купить
                     </summary>
@@ -324,9 +316,7 @@
                   </div>
                 </div>
                 <div class="accordion__item ">
-                  <details class="accordion__details"
-                           name="product"
-                  >
+                  <details class="accordion__details">
                     <summary class="accordion__summary">
                       оплата
                     </summary>
@@ -351,9 +341,7 @@
                   </div>
                 </div>
                 <div class="accordion__item ">
-                  <details class="accordion__details"
-                           name="product"
-                  >
+                  <details class="accordion__details">
                     <summary class="accordion__summary">
                       доставка
                     </summary>
@@ -378,9 +366,7 @@
                   </div>
                 </div>
                 <div class="accordion__item ">
-                  <details class="accordion__details"
-                           name="product"
-                  >
+                  <details class="accordion__details">
                     <summary class="accordion__summary">
                       необходимая документация
                     </summary>

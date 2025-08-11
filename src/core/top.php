@@ -13,8 +13,7 @@
         sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="<?=$GLOBALS['templatePath'];?>/images/favicon/favicon.svg" />
   <link rel="shortcut icon" href="<?=$GLOBALS['templatePath'];?>/images/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="<?=$GLOBALS['templatePath'];?>/images/favicon/apple-touch-icon
-  .png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="<?=$GLOBALS['templatePath'];?>/images/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Сайт" />
   <link rel="manifest" href="<?=$GLOBALS['templatePath'];?>/images/favicon/site.webmanifest" />
 

@@ -167,7 +167,7 @@
                       </div>
                     </div>
                     <div class="company-contacts__item">
-                      <a href="tel:+7 (812) 426-12-08">
+                      <a href="tel:+7(812)426-12-08">
                         <svg width="28"
                              height="28"
                              viewBox="0 0 28 28"

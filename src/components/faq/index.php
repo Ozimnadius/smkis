@@ -7,11 +7,11 @@
   <div class="faq__items">
     <div class="faq__item ">
       <details class="faq__details"
-               name="faq"
+
       >
         <summary class="faq__summary h6">
           Как выбрать несущие конструкции для закрепления на них элементов горизонтальных анкерных линий и анкерных точек?
-          <div class="faq__plus"></div>
+          <span class="faq__plus"></span>
         </summary>
       </details>
       <div class="faq__content">
@@ -134,11 +134,11 @@
     </div>
     <div class="faq__item ">
       <details class="faq__details"
-               name="faq"
+
       >
         <summary class="faq__summary h6">
           Какую анкерную линию выбрать: гибкую класс С или жёсткую класс D?
-          <div class="faq__plus"></div>
+          <span class="faq__plus"></span>
         </summary>
       </details>
       <div class="faq__content">
@@ -261,11 +261,11 @@
     </div>
     <div class="faq__item ">
       <details class="faq__details"
-               name="faq"
+
       >
         <summary class="faq__summary h6">
           Как следует делать выбор между анкерной линией и анкерной точкой?
-          <div class="faq__plus"></div>
+          <span class="faq__plus"></span>
         </summary>
       </details>
       <div class="faq__content">
@@ -388,11 +388,11 @@
     </div>
     <div class="faq__item ">
       <details class="faq__details"
-               name="faq"
+
       >
         <summary class="faq__summary h6">
           Чем руководствоваться при определении трассы анкерной линии?
-          <div class="faq__plus"></div>
+          <span class="faq__plus"></span>
         </summary>
       </details>
       <div class="faq__content">
