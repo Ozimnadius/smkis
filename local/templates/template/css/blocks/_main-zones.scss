@@ -83,6 +83,9 @@
       --width: 28.05%;
       --top: 45.2%;
       --right: 0;
+      .main-zones__item-bg{
+        mix-blend-mode: overlay;
+      }
     }
 
     &:nth-child(4) {
@@ -101,6 +104,10 @@
       --width: 15.2%;
       --top: 68%;
       --right: 13.4%;
+
+      .main-zones__item-bg{
+        mix-blend-mode: multiply;
+      }
     }
 
     &:nth-child(6) {
@@ -111,6 +118,9 @@
 
       --bottom: 13.9%;
       --left: 26.5%;
+      .main-zones__item-bg{
+        mix-blend-mode: multiply;
+      }
     }
 
   }
@@ -120,7 +130,6 @@
     inset: 0;
     opacity: var(--opacity);
     pointer-events: none;
-//    mix-blend-mode: overlay;
     @include tr;
   }
 

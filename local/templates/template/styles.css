@@ -2311,6 +2311,9 @@ button {
   --top: 45.2%;
   --right: 0;
 }
+.main-zones__item:nth-child(3) .main-zones__item-bg {
+  mix-blend-mode: overlay;
+}
 .main-zones__item:nth-child(4) {
   --pointTop: 30%;
   --pointleft: -80%;
@@ -2327,6 +2330,9 @@ button {
   --top: 68%;
   --right: 13.4%;
 }
+.main-zones__item:nth-child(5) .main-zones__item-bg {
+  mix-blend-mode: multiply;
+}
 .main-zones__item:nth-child(6) {
   --pointTop: 37%;
   --pointleft: 35.2%;
@@ -2334,6 +2340,9 @@ button {
   --width: 18.5%;
   --bottom: 13.9%;
   --left: 26.5%;
+}
+.main-zones__item:nth-child(6) .main-zones__item-bg {
+  mix-blend-mode: multiply;
 }
 .main-zones__item-bg {
   position: absolute;
