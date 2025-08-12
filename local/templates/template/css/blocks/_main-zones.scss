@@ -5,11 +5,11 @@
   height: 1000px;
   border-radius: 24px;
   overflow: hidden;
-  @include xlg-block{
+  @include xlg-block {
     height: 800px;
     border-radius: 24px;
   }
-  @media screen and (max-width: 1500px){
+  @media screen and (max-width: 1500px) {
     height: 600px;
   }
   @include lg-block {
@@ -25,10 +25,10 @@
     top: -2%;
     left: 0;
     width: 100%;
-    @include xlg-block{
+    @include xlg-block {
       top: 0;
     }
-    @media screen and (max-width: 1500px){
+    @media screen and (max-width: 1500px) {
       top: -20%;
     }
     @include lg-block {
@@ -120,6 +120,7 @@
     inset: 0;
     opacity: var(--opacity);
     pointer-events: none;
+//    mix-blend-mode: overlay;
     @include tr;
   }
 
