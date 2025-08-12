@@ -74,6 +74,9 @@
       --width: 23.95%;
       --top: 32.2%;
       --left: 39%;
+      .main-zones__item-bg{
+        mix-blend-mode: overlay;
+      }
     }
 
     &:nth-child(3) {

@@ -2303,6 +2303,9 @@ button {
   --top: 32.2%;
   --left: 39%;
 }
+.main-zones__item:nth-child(2) .main-zones__item-bg {
+  mix-blend-mode: overlay;
+}
 .main-zones__item:nth-child(3) {
   --pointTop: 33%;
   --pointleft: 29%;
