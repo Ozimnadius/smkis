@@ -2403,6 +2403,7 @@ button {
   display: flex;
   align-items: center;
   gap: 20px;
+  display: none;
 }
 @media screen and (max-width: 1919.98px) {
   .main-zones__btns {
