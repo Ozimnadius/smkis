@@ -2,7 +2,9 @@
 
 .product {
   --mt: 80px;
+  padding-top: 40px;
   @include md-block {
+    padding-top: 0;
     --mt: 60px;
   }
 

@@ -9,7 +9,7 @@
   </div>
   <div class="page__title">
     <div class="container-inner">
-      <h1 class="title">Глоссарий</h1>
+      <h1 class="title h2">Глоссарий</h1>
     </div>
   </div>
   <div class="page__border">

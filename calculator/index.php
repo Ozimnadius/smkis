@@ -9,9 +9,9 @@
   </div>
   <div class="page__title">
     <div class="container-small">
-      <h2 class="title">
+      <h1 class="title h2 ">
         Калькулятор для расчета стоимости анкерных линий
-      </h2>
+      </h1>
     </div>
   </div>
   <div class="page__border">

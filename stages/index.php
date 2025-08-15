@@ -9,7 +9,7 @@
   </div>
   <div class="page__title">
     <div class="container-inner">
-      <h1 class="title">Этапы работы</h1>
+      <h1 class="title h2">Этапы работы</h1>
     </div>
   </div>
   <div class="page__border">

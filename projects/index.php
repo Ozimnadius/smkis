@@ -10,7 +10,7 @@
   </div>
   <div class="page__title">
     <div class="container-inner">
-      <h1 class="title">Реализованные проекты</h1>
+      <h1 class="title h2">Реализованные проекты</h1>
     </div>
   </div>
   <div class="page__border">
